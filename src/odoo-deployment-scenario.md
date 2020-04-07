@@ -17,7 +17,8 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 - Le déploiement final se feait de manière progressive (par module) avec une durrée d'absorption d'au moins une semaine. 
 - Groupes de 8 à 10 apprenants ayant chacun mis à jour son profil utilisateur.
 - Processus métier simples. 
-- outils de collaboration : tableau blanc, post-it, marqueurs, ... 
+- Outils de collaboration : tableau blanc, post-it, marqueurs, ... 
+- Equipe projet composé d'un chef de projet et de membres ayant une autorité suffisante sur les activités qui seront implémentées (RH, Stocks, Ventes, ...) 
 
 
 # Module Messages 

@@ -14,18 +14,20 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 
 - [Module Messages](./odoo-mod-messages-fr.md)
 - [Module Employés](./odoo-mod-employee-fr.md)
+- [Module Stock](./odoo-mod-stock-fr.md)
 
 ## TODO
-1. Module Notes
-1. Stocks
+
 1. Facturation 
 1. Ventes
+1. Website
+1. Projets
 1. Contacts
 1. Achats 
 1. Production
+1. Module Notes
 1. Maintenance 
 1. Reparation
-1. Parc automobile
 
 # Ressources supplémentaires 
 
