@@ -44,3 +44,32 @@ Les activités d'apprentissage de ce module sont :
 1. associés des employés à des comptes utilisateurs et inviter les à se connecter.
     1. lancer des conversations directes avec ces employés.
     1. vérifier les informations affichées à ces utilisateurs dans leur annuaire des salariés.
+
+
+# Module Stock
+
+Les activités d'apprentissage de ce module sont : 
+1. identifier **sur papier** tous les articles gérés par l'entrprise (consommables, services, produits finis), ainsi que leurs emplacements (entrpots, étagères).
+1. mettre à jour les informations de l'entrepot de l'entreprise.
+1. identifer les types d'opérations standards dans l'entreprise et les renseigner.
+1. identifer les catégories d'articles gérés par l'entreprise et les renseigner.
+1. renseigner les informations relatives à au moins 10 articles gérés par l'entreprise avec leurs quantités réels.
+1. définir les règles de réapprovisionnement pour chaque article.
+1. exécuter quelque opérations manuelles sur les stocks en suivant les mises à jour du tableau de bord **_Vue d'ensemble_** :
+    1. transferts pour chaque type d'opération (passer par tous les états)
+    1. inventaire en modifiant manuellement les quantités disponibles afin de constater les changements. Passer par tous les états jusqu'à la validation.
+    1. rebuter quelques articles et vérifier les changements dans les stocks.
+1. exécuter les **_Analyse_** et visualiser les résultats sous différentes formes (liste, tableau, graphes).     
+
+## Exercices avancés module stock
+
+Activer un à un les options suivantes :
+1. les variantes d'articles
+1. les unités de mesures
+1. le conditionnement des produits
+1. les emplacements de stockage
+1. le multi-entrepots
+1. les routes en plusieurs étapes 
+
+
+
