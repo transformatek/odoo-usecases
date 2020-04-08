@@ -4,18 +4,18 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 
 ## Configuration
 
-- [Aperçu général](./odoo-overview-fr.md)
-- [Applications (admin)](./odoo-applications-fr.md)
-- [Configuration (admin)](./odoo-configuration-fr.md)
-- [Préférences utilisateur](./odoo-user-preferences-fr.md)
-- [Conversations](./odoo-conversations.md)
+* [Aperçu général](./odoo-overview-fr.md)
+* [Applications (admin)](./odoo-applications-fr.md)
+* [Configuration (admin)](./odoo-configuration-fr.md)
+* [Préférences utilisateur](./odoo-user-preferences-fr.md)
+* [Conversations](./odoo-conversations.md)
 
 ## Détail des modules
 
-- [Module Messages](./odoo-mod-messages-fr.md)
-- [Module Employés](./odoo-mod-employee-fr.md)
-- [Module Stock](./odoo-mod-stock-fr.md)
-- [Module Facturation](./odoo-mod-facturation-fr.md)
+* [Module Messages](./odoo-mod-messages-fr.md)
+* [Module Employés](./odoo-mod-employee-fr.md)
+* [Module Stock](./odoo-mod-stock-fr.md)
+* [Module Facturation](./odoo-mod-facturation-fr.md)
 
 ## TODO
 
@@ -29,7 +29,7 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 
 ## Activités d'apprentissage 
 
-- [Scénario de déploiement simplifié](./odoo-deployment-scenario.md)
+* [Scénario de déploiement simplifié](./odoo-deployment-scenario.md)
 
 # Ressources supplémentaires 
 
