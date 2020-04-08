@@ -2,20 +2,22 @@
 
 Ce document fait référence aux explications étapes par étapes du déploiment des modules standards d'odoo 13 Community.
 
-## Configuration
+## Contents 
+<!--ts-->
 
-* [Aperçu général](./odoo-overview-fr.md)
-* [Applications (admin)](./odoo-applications-fr.md)
-* [Configuration (admin)](./odoo-configuration-fr.md)
-* [Préférences utilisateur](./odoo-user-preferences-fr.md)
-* [Conversations](./odoo-conversations.md)
+* Configuration
+    * [Aperçu général](./odoo-overview-fr.md)
+    * [Applications (admin)](./odoo-applications-fr.md)
+    * [Configuration (admin)](./odoo-configuration-fr.md)
+    * [Préférences utilisateur](./odoo-user-preferences-fr.md)
+    * [Conversations](./odoo-conversations.md)
+* Détail des modules
+    * [Module Messages](./odoo-mod-messages-fr.md)
+    * [Module Employés](./odoo-mod-employee-fr.md)
+    * [Module Stock](./odoo-mod-stock-fr.md)
+    * [Module Facturation](./odoo-mod-facturation-fr.md)
 
-## Détail des modules
-
-* [Module Messages](./odoo-mod-messages-fr.md)
-* [Module Employés](./odoo-mod-employee-fr.md)
-* [Module Stock](./odoo-mod-stock-fr.md)
-* [Module Facturation](./odoo-mod-facturation-fr.md)
+<!--te-->
 
 ## TODO
 
