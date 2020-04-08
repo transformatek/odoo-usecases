@@ -4,7 +4,7 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 
 ## Prérequis 
 
-- une installation propre d'odoo ERP. Pour un deployment avec docker consulter [setup odoo on docker.](../setup-images-on-docker/odoo-on-docker.md) 
+- une installation propre d'odoo ERP. Pour un deployment avec docker consulter [setup odoo on docker.](https://enlight-me.github.io/docker-usecases/setup-images-on-docker/odoo-on-docker.html) 
 - préconfiguration et personnalisation d'odoo selon les spécificités de l'entreprise, particulièrement la **création des comptes utilisateurs pour chaque apprenant**. Pour plus de détails consulter la section [configuration](./odoo-deploy-guidelines-fr.md#configuration).
 
 ## Sommaire
