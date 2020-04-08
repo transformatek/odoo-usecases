@@ -7,19 +7,17 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 - une installation propre d'odoo ERP. Pour un deployment avec docker consulter [setup odoo on docker.](../setup-images-on-docker/odoo-on-docker.md) 
 - préconfiguration et personnalisation d'odoo selon les spécificités de l'entreprise, particulièrement la **création des comptes utilisateurs pour chaque apprenant**. Pour plus de détails consulter la section [configuration](./odoo-deploy-guidelines-fr.md#configuration).
 
-
 ## Sommaire
 - [Module Messages](#module-messages)
 - [Module Employés](#module-employés)
 
 ## Hypothèses
-- Petite ou Moyenne Entreprise/Industrie (PME/PMI).
-- Le déploiement final se feait de manière progressive (par module) avec une durrée d'absorption d'au moins une semaine. 
+- Petite ou Moyenne Entreprise/Industrie (PME/PMI) de 20 personnes.
+- Le déploiement final se feait de manière progressive (par module) avec une durrée d'absorption d'au moins **deux (02) semaines**. 
 - Groupes de 8 à 10 apprenants ayant chacun mis à jour son profil utilisateur.
 - Processus métier simples. 
 - Outils de collaboration : tableau blanc, post-it, marqueurs, ... 
 - Equipe projet composé d'un chef de projet et de membres ayant une autorité suffisante sur les activités qui seront implémentées (RH, Stocks, Ventes, ...) 
-
 
 # Module Messages 
 
@@ -45,7 +43,6 @@ Les activités d'apprentissage de ce module sont :
     1. lancer des conversations directes avec ces employés.
     1. vérifier les informations affichées à ces utilisateurs dans leur annuaire des salariés.
 
-
 # Module Stock
 
 Les activités d'apprentissage de ce module sont : 
@@ -63,7 +60,7 @@ Les activités d'apprentissage de ce module sont :
 
 ## Exercices avancés module stock
 
-Activer un à un les options suivantes :
+Activer un à un les options suivantes et constater les améliorations apportés :
 1. les variantes d'articles
 1. les unités de mesures
 1. le conditionnement des produits

@@ -20,19 +20,19 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 
 1. Facturation 
 1. Ventes
+1. CRM
 1. Website
 1. Projets
-1. Contacts
-1. Achats 
 1. Production
-1. Module Notes
-1. Maintenance 
-1. Reparation
+1. Achats 
+
+## Activités d'apprentissage 
+
+- [Scénario de déploiement simplifié](odoo-deployement-scenario.md)
 
 # Ressources supplémentaires 
 
-
 - [Site web odoo](https://www.odoo.com/fr_FR/page/all-apps)
 - [Documentation utilisateur odoo](https://www.odoo.com/documentation/user/13.0/fr/index.html)
+- [Odoo Connaissances](https://www.odoo.com/fr_FR/slides)
 - [Odoo eLearning sur YouTube](https://www.youtube.com/watch?v=u4uJTeqskxc&list=PL1-aSABtP6AD-t0GEoxMXgCa_qLsHs5PR)
-- [Scénario de déploiement simplifié](odoo-deployement-scenario.md)
