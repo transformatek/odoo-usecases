@@ -15,10 +15,11 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 - [Module Messages](./odoo-mod-messages-fr.md)
 - [Module Employés](./odoo-mod-employee-fr.md)
 - [Module Stock](./odoo-mod-stock-fr.md)
+- [Module Facturation](./odoo-mod-facturation-fr.md)
 
 ## TODO
 
-1. Facturation 
+1. Facturation (scenario)
 1. Ventes
 1. CRM
 1. Website
