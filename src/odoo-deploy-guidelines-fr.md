@@ -29,7 +29,7 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 
 ## Activités d'apprentissage 
 
-- [Scénario de déploiement simplifié](odoo-deployement-scenario.md)
+- [Scénario de déploiement simplifié](./odoo-deployment-scenario.md)
 
 # Ressources supplémentaires 
 
