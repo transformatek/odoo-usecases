@@ -12,7 +12,7 @@ Ce module est destiné à gérer efficacement les employés en centralisant tout
 
 ![](./images/employes-overview.png)
 
-## Configuration (admin)
+# Configuration (admin)
 
 Cette section, réservée aux **administrateurs**, permet de définir les paramètres généraux du module, tel que l'organisation professionelle et les droits d'accès de l'employé à ces informations.
 
@@ -42,7 +42,7 @@ Le responsable des ressources humaines peut créer plusieurs plans en fonction d
 
 Les types d'activités peuvent être définis dans la section [Configuration / Paramètres généraux / Messages / Activités](./odoo-configuration-fr.md#messages).
 
-## Emlpoyés 
+# Emlpoyés 
 
 Cette section, réservée aux **responsables des ressources humaines**, permet de gérer les informations relatives aux employés de l'entreprise.
 
@@ -56,7 +56,7 @@ La section **_Paramètres RH_** permet de **_lier_** l'employé à un utilisateu
 
 ![](./images/employes-badge.png)
 
-## Annuaire des salariés
+# Annuaire des salariés
 
 L'annuaire des salariés est disponibles à tous les **utilistateurs internes** de l'entreprise afin de faciliter l'accès aux informations essentielles tel que les contacts. Les informations personnelles et les paramètres RH des employés ne sont pas accessibles.
 

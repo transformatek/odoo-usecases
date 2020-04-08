@@ -8,7 +8,7 @@ Ce module est destiné à optimisez l'organisation des entrepôts de l'entrepris
 
 ![](./images/stock-overview.png)
 
-## Configuration (admin)
+# Configuration (admin)
 
 Cette section, réservée aux **administrateurs** et **Gestionnaires des stocks**, permet de définir les paramètres généraux du module, tel que les opérations (préparation par lots, Colis), les confirmations d'expédition (email, SMS), les options des articles, la traçabilité et les entrepots.
 
@@ -52,11 +52,11 @@ Les opérations peuvent avoir un code, un type (Reçu, Livraison, Transfert inte
 
 Cette section permet de définir une **hiérarchie** des catégories d'articles gérés par l'entreprise, tel que les articles disponibles à la vente, les matières premières, les fournitures, ...
 
-## Données de base
+# Données de base
 
 Le menu Données de base permet de resneigner les informations relatives aux **_Articles_** et aux **_Règles de réapprovisionnement_**. 
 
-### Articles 
+## Articles 
 
 Cette section permet de renseigner les informations relatives à tous les articles gérés par l'entreprise. 
 
@@ -64,15 +64,15 @@ Cette section permet de renseigner les informations relatives à tous les articl
 
 Les articles peuvent être vendu et/ou acheté et selon leur type (consommable, service, stockable) des informations relatives à leur stockage peuvent être renseignées.
 
-### Règles de réapprovisionnement 
+## Règles de réapprovisionnement 
 
 Les règles de réapprovisionnement définissent, pour chaque article, les quantités min/max ainsi que les délai de réception/achat.
 
-## Opérations 
+# Opérations 
 
 Le menu opération permet de resneigner les informations relatives aux **_Transferts_**, **_Adjustement de stock_** et les **_Rebuts_**. Il permet aussi de **_lancer le planificateur_** afin de créer les opérations nécessaires au réapprovisionnement des stocks selon les régles prédifinis dans les [Données de base](#données-de-base). 
 
-### Transferts
+## Transferts
 
 Les transferts permettent d'exécuter des opérations sur les stocks dont les types sont définis dans [Types d'opérations](#types-dopérations). 
 
@@ -82,7 +82,7 @@ Une fois définie, l'opération passe par en ensemble d'états, identifiables su
 
 **NB**: de manière générale ces transferts sont rarement exécutés manuellement puisqu'ils sont intégrés avec les modules **Achats** pour les réceptions et **Ventes** pour les livraisons. Ils sont aussi utilisés par le module **_Compatabilité_**. 
 
-### Adjustement de stocks
+## Adjustement de stocks
 
 Les adjusments de stocks sont réallisés dans le cadre **d'inventaires** périodiques et affectes un ou plusieurs articles gérés par l'entreprise. Pour ce faire il faut créer un nouveau **_inventaire_** (Référence, articles concernés) et le **_démarrer_**.
 
@@ -90,17 +90,17 @@ Les adjusments de stocks sont réallisés dans le cadre **d'inventaires** pério
 
 Après le décompte physique des stocks, les quantités sont repotrtés dans la colone **_Compté_** de chque article. A la fin l'inventaire, le **Gestionnaire des stocks** le valide et les stocks sont automatiquement mis à jours en cas de différences. 
 
-### Rebuts
+## Rebuts
 
 Les rebuts sont des produits décomptés dans les stocks mais inutilisables pour un quelconque cause. Pour les défalquer des stocks il faut créer un nouveau **_Rebuts_** et renseigner l'article concerné et la quantité à défalquer. Une le que **Rebut** est validé par le **Gestionnaire des stocks** les quantités des articles disponibles sont automatiquement mises à jours. 
 
-## Analyse 
+# Analyse 
 
 La partie analyse permet aux **Gestionnaires des stocks** de visualiser des vues synthétiques de la situation des stocks sous différentes formes : listes, tableau croisé, graphes.
 
 ![](./images/stock-analyse.png)
 
-## Vue d'ensemble 
+# Vue d'ensemble 
 
 La partie vue d'ensemble est un tableau de bord permettant de visualiser en temps réel l'état des différentes opérations selon leur types.
 
