@@ -4,7 +4,7 @@ Ce document illustre les différentes fonctionnalités du module **Facturation**
 
 ## Présentation du module 
 
-Ce module est destiné à simplifier la facturation afin de se faire payés plus rapidement. Il permet de facturez automatiquement sur la base des bons de commandes, des commandes de livraison, des contrats ou des feuilles de frais générés. Odoo facturation permet aussi :
+Ce module est destiné à simplifier la facturation afin de se faire payés plus rapidement. Il permet de facturer automatiquement sur la base des bons de commandes, des commandes de livraison, des contrats ou des feuilles de frais générés. Odoo facturation permet aussi :
 * d'acceptez les paiements en ligne. 
 * d'éliminez les soucis des rappels pour des paiements en retard. 
 * de simplifier la configuration du suivi automatique.

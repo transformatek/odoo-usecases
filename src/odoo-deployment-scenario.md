@@ -69,4 +69,26 @@ Activer un à un les options suivantes et constater les améliorations apportés
 1. les routes en plusieurs étapes 
 
 
+# Module Facturation
+
+Les activités d'apprentissage de ce module sont : 
+1. identifier **sur papier** tous les paramètres liés à la facturation utilisés par l'entrprise, tel que : 
+    - les taxes applicables.
+    - les termes et conditions de vente.
+    - les catégories de conditions de paiement (délais, montant global/partiel, ...)
+    - les journaux comptables.
+    - les comptes bancaires.
+    - les intermédaires de paiements.
+    - les pièces réccurentes (frais bancaires, ..). 
+1. en groupe, mettre à jour les paramètres du module avce les données collectés.
+1. pour les parties factures clients/fournisseurs :
+    - lister au moin 10 clients/fournisseurs de l'entreprise et renseigner leurs informations.
+    - ajouter des **articles** vendus/achetés par l'entreprise dans la section correspondante (voir module [Stock](./odoo-mod-stock-fr.md) pour plus de détails)
+    - créer de nouvelles **factures** pour chaque client/fournisseur, enregister des paiements et marqué les comme comptabilisé.
+    - créer de nouveaux **avoirs** pour chaque client/fournisseur, enregister des paiements et marqué les comme comptabilisé.
+    - créer de nouvelles **réceptions** pour chaque client/fournisseur, enregister des paiements et marqué comme comptabilisé.
+    - créer de nouveaux **paiement** manuels et marqué les comme Validés.
+1. A chaque étape consulter le pannaux **Analyse** pour constater l'effet des changements opérés.
+
+     
 

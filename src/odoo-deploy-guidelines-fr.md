@@ -21,7 +21,6 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 
 ## TODO
 
-1. Facturation (scenario)
 1. Ventes
 1. CRM
 1. Website
