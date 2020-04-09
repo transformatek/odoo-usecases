@@ -19,7 +19,7 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 - Outils de collaboration : tableau blanc, post-it, marqueurs, ... 
 - Equipe projet composé d'un chef de projet et de membres ayant une autorité suffisante sur les activités qui seront implémentées (RH, Stocks, Ventes, ...) 
 
-# Module Messages 
+## Module Messages 
 
 Les activités d'apprentissage de ce module sont : 
 1. lister les départements / fonctions / projets existants dans l'entreprise et constituer des groupes dont les conversations sont privés selon la liste ci-dessus.
@@ -29,7 +29,7 @@ Les activités d'apprentissage de ce module sont :
 
 Pour chaque activité, créer les cannaux correspondants et produire du contenu (texte, emojis, fichiers attachés, ...).
 
-# Module Employés
+## Module Employés
 
 Les activités d'apprentissage de ce module sont : 
 1. identifier la hiérarchie des structures existantes dans l'entreprise et les postes de travail.
@@ -43,7 +43,7 @@ Les activités d'apprentissage de ce module sont :
     1. lancer des conversations directes avec ces employés.
     1. vérifier les informations affichées à ces utilisateurs dans leur annuaire des salariés.
 
-# Module Stock
+## Module Stock
 
 Les activités d'apprentissage de ce module sont : 
 1. identifier **sur papier** tous les articles gérés par l'entrprise (consommables, services, produits finis), ainsi que leurs emplacements (entrpots, étagères).
@@ -58,7 +58,7 @@ Les activités d'apprentissage de ce module sont :
     1. rebuter quelques articles et vérifier les changements dans les stocks.
 1. exécuter les **_Analyse_** et visualiser les résultats sous différentes formes (liste, tableau, graphes).     
 
-## Exercices avancés module stock
+### Exercices avancés module stock
 
 Activer un à un les options suivantes et constater les améliorations apportés :
 1. les variantes d'articles
@@ -68,8 +68,7 @@ Activer un à un les options suivantes et constater les améliorations apportés
 1. le multi-entrepots
 1. les routes en plusieurs étapes 
 
-
-# Module Facturation
+## Module Facturation
 
 Les activités d'apprentissage de ce module sont : 
 1. identifier **sur papier** tous les paramètres liés à la facturation utilisés par l'entrprise, tel que : 
@@ -89,6 +88,3 @@ Les activités d'apprentissage de ce module sont :
     - créer de nouvelles **réceptions** pour chaque client/fournisseur, enregister des paiements et marqué comme comptabilisé.
     - créer de nouveaux **paiement** manuels et marqué les comme Validés.
 1. A chaque étape consulter le pannaux **Analyse** pour constater l'effet des changements opérés.
-
-     
-

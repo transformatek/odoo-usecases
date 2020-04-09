@@ -38,7 +38,7 @@ Les messages envoyés dans les cannaux publics, privés ou directes peuvent cont
 - avec **@** vous pouver alerter un utilisateur qui recevrera une notifcation dans la barre des **conversations**.
 - avec **:** vous pouver faire appel a une activité (nécessite module LiveChat).
 
-# Plus de détails 
+## Plus de détails 
 
 - Pour la collaboration, consulter la fonctionnalité [conversations](./odoo-conversations.md).
 - [Site officiel d'odoo](https://www.odoo.com/fr_FR/page/discuss).  

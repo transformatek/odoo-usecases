@@ -32,7 +32,7 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 
 * [Scénario de déploiement simplifié](./odoo-deployment-scenario.md)
 
-# Ressources supplémentaires 
+## Ressources supplémentaires 
 
 - [Site web odoo](https://www.odoo.com/fr_FR/page/all-apps)
 - [Documentation utilisateur odoo](https://www.odoo.com/documentation/user/13.0/fr/index.html)

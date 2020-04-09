@@ -24,7 +24,7 @@ Dans quasiement tous les modules d'odoo, vous constater en bas des formulaires u
 
 **To be continued**...
 
-# Plus de détails 
+## Plus de détails 
 
 - [Discuss sur odoo eLearning](https://www.youtube.com/watch?v=EMAWvsyu3cI&list=PL1-aSABtP6AD-t0GEoxMXgCa_qLsHs5PR&index=4)
 
