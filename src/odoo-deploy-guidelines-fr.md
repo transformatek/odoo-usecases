@@ -16,12 +16,13 @@ Ce document fait référence aux explications étapes par étapes du déploiment
     * [Module Employés](./odoo-mod-employee-fr.md)
     * [Module Stock](./odoo-mod-stock-fr.md)
     * [Module Facturation](./odoo-mod-facturation-fr.md)
+    * [Module Ventes](./odoo-mod-ventes-fr.md)
 
 <!--te-->
 
 ## TODO
 
-1. Ventes
+1. Ventes (1/2 + scenario)
 1. CRM
 1. Website
 1. Projets
