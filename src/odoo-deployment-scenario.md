@@ -8,8 +8,11 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 - préconfiguration et personnalisation d'odoo selon les spécificités de l'entreprise, particulièrement la **création des comptes utilisateurs pour chaque apprenant**. Pour plus de détails consulter la section [configuration](./odoo-deploy-guidelines-fr.md#configuration).
 
 ## Sommaire
-- [Module Messages](#module-messages)
-- [Module Employés](#module-employés)
+* [Module Messages](#module-messages)
+* [Module Employés](#module-employés)
+* [Module Stock](#module-stock)
+* [Module Facturation](#module-facturation)
+* [Module Vente](#module-vente)
 
 ## Hypothèses
 - Petite ou Moyenne Entreprise/Industrie (PME/PMI) de 20 personnes.
@@ -60,7 +63,7 @@ Les activités d'apprentissage de ce module sont :
 
 ### Exercices avancés module stock
 
-Activer un à un les options suivantes et constater les améliorations apportés :
+Activer une à une les options suivantes et constater les améliorations apportés :
 1. les variantes d'articles
 1. les unités de mesures
 1. le conditionnement des produits
@@ -88,3 +91,32 @@ Les activités d'apprentissage de ce module sont :
     - créer de nouvelles **réceptions** pour chaque client/fournisseur, enregister des paiements et marqué comme comptabilisé.
     - créer de nouveaux **paiement** manuels et marqué les comme Validés.
 1. A chaque étape consulter le pannaux **Analyse** pour constater l'effet des changements opérés.
+
+
+## Module Vente
+
+Les activités d'apprentissage de ce module sont : 
+1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
+    1. caractéristiques principales des articles vendus par l'entreprise ainsi que les éventuelles variantes.
+    1. Modèle de devis.
+    1. Validité par défaut des devis.
+1. créer des comptes utilisateurs pour les commerciaux de l'entreprise, puis intégrer dans des équipes commerciales.
+1. selon le cas, renseigner au moins 10 articles vendus par l'entreprise, ainsi que 10 clients.
+1. constituer des équipes commerciales où chaque participant prend l'un des roles suivants : gestionnaire des ventes, vendeur, gestionnaire des stocks, gestionnaire de la facturation.
+1. chaque équipe commerciale, crée au moins 05 devis avec toutes les informations nécessaires y compris des articles optionnels. Imprimer-les et envoyer-les par mail puis Confirmer-les.
+1. demander au gestionnaire des stocks de valider les livraisons.
+1. créer des factures pour les bon de commandes.
+1. demander au gestionnaire des factures de les compatibiliser et d'enregistrer un paiement.
+1. visualiser la progression des performances de votre équipe sur le tableau de bord Equipes commerciales.
+1. constater régulièrement les changement dans la liste des commandes à facturer et sur les graphiques d'analyse des ventes.
+1. créer des discussion entre équipe autour des devis et des bons de commandes.
+1. Changer de role et refaire le même exercice.
+
+### Exercices avancés 
+
+Activer une à une les options suivantes et constater les améliorations apportés :
+1. Variantes d'articles
+1. Configurateur d'article.
+1. Remises.
+1. Bons et promotions
+1. Liste de prix. 
