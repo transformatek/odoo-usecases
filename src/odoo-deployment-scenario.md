@@ -13,14 +13,17 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 * [Module Stock](#module-stock)
 * [Module Facturation](#module-facturation)
 * [Module Vente](#module-vente)
+* [Module CRM](#module-crm)
 
 ## Hypothèses
 - Petite ou Moyenne Entreprise/Industrie (PME/PMI) de 20 personnes.
 - Le déploiement final se feait de manière progressive (par module) avec une durrée d'absorption d'au moins **deux (02) semaines**. 
 - Groupes de 8 à 10 apprenants ayant chacun mis à jour son profil utilisateur.
-- Processus métier simples. 
+- Processus métier simples et maturés. Si les processus n'existent pas il faudra les créer. 
+- Choix préalable des modules à implémenter. 
 - Outils de collaboration : tableau blanc, post-it, marqueurs, ... 
-- Equipe projet composé d'un chef de projet et de membres ayant une autorité suffisante sur les activités qui seront implémentées (RH, Stocks, Ventes, ...) 
+- Equipe projet composé d'un chef de projet et de membres ayant une autorité suffisante sur les activités qui seront implémentées (RH, Stocks, Ventes, ...).
+
 
 ## Module Messages 
 
@@ -100,7 +103,7 @@ Les activités d'apprentissage de ce module sont :
     1. caractéristiques principales des articles vendus par l'entreprise ainsi que les éventuelles variantes.
     1. Modèle de devis.
     1. Validité par défaut des devis.
-1. créer des comptes utilisateurs pour les commerciaux de l'entreprise, puis intégrer dans des équipes commerciales.
+    1. créer des comptes utilisateurs pour les commerciaux de l'entreprise, puis intégrer les dans des équipes commerciales.
 1. selon le cas, renseigner au moins 10 articles vendus par l'entreprise, ainsi que 10 clients.
 1. constituer des équipes commerciales où chaque participant prend l'un des roles suivants : gestionnaire des ventes, vendeur, gestionnaire des stocks, gestionnaire de la facturation.
 1. chaque équipe commerciale, crée au moins 05 devis avec toutes les informations nécessaires y compris des articles optionnels. Imprimer-les et envoyer-les par mail puis Confirmer-les.
@@ -109,7 +112,7 @@ Les activités d'apprentissage de ce module sont :
 1. demander au gestionnaire des factures de les compatibiliser et d'enregistrer un paiement.
 1. visualiser la progression des performances de votre équipe sur le tableau de bord Equipes commerciales.
 1. constater régulièrement les changement dans la liste des commandes à facturer et sur les graphiques d'analyse des ventes.
-1. créer des discussion entre équipe autour des devis et des bons de commandes.
+1. créer des discussion entre équipes autour des devis et des bons de commandes.
 1. Changer de role et refaire le même exercice.
 
 ### Exercices avancés 
@@ -120,3 +123,32 @@ Activer une à une les options suivantes et constater les améliorations apport�
 1. Remises.
 1. Bons et promotions
 1. Liste de prix. 
+
+
+## Module CRM
+
+Les activités d'apprentissage de ce module sont :
+1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
+    1. Types d'activtés.
+    1. Etiquettes.
+    1. Motifs de pertes. 
+    1. créer des comptes utilisateurs pour les commerciaux de l'entreprise, puis intégrer les dans des équipes commerciales.
+1. selon le cas, renseigner au moins 10 clients.
+1. chaque vendeur, crée au moins 10 opportunités avec toutes les informations nécessaires.
+1. créer des activités à partir des opprtunités.
+1. créer des réunions à partir des opprtunités.
+1. créer des devis à partir des opprtunités.
+1. visualiser la progression des performances de votre équipe sur le Pipelines des équipes.
+1. constater régulièrement les changement sur les graphiques d'analyse.
+1. créer des discussion entre équipes autour des opportunités.
+
+### Exercices avancés 
+
+Activer l'option **Pistes** et exécuter les  taches suivantes :
+1. créer au moin 10 nouvelles pistes.
+1. convertir les pistes en opportunités avec les différentes options :
+    1. nouveau client.
+    1. client existant.
+    1. fusion avec opprtunité existante. 
+
+

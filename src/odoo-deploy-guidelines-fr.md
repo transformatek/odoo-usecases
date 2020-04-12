@@ -17,15 +17,14 @@ Ce document fait référence aux explications étapes par étapes du déploiment
     * [Module Stock](./odoo-mod-stock-fr.md)
     * [Module Facturation](./odoo-mod-facturation-fr.md)
     * [Module Vente](./odoo-mod-vente-fr.md)
-
+    * [Module CRM (Gestion de la Relation Client)](./odoo-mod-crm-fr.md)
+    
 <!--te-->
 
 ## TODO
 
-1. CRM
 1. Projets
-
-1. Website
+1. Email Marketing 
 1. Production
 1. Achats 
 

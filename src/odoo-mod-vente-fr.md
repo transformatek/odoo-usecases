@@ -85,7 +85,6 @@ Une fois que les articles livrés au client, le **Gestionnaire des ventes** peut
 
 Cette section offre une tableau de bord synthétique des ventes effectuées pour chaque équipe commerciale.
 
-
 ![](./images/ventes-equipes-com-dashbord.png)
 
 ### Clients
@@ -102,7 +101,7 @@ Cette section permet de consulter les articles gérés par l'entreprise et **pou
 
 ## Analyse 
 
-La partie analyse permet aux **Gestionnaires des ventes** de visualiser des vues synthétiques de la situation des stocks sous différentes formes : tableau croisé, graphes.
+La partie analyse permet aux **Gestionnaires des ventes** de visualiser des vues synthétiques de la situation des ventes sous différentes formes : tableau croisé, graphes.
 
 ## Plus de détails 
 
