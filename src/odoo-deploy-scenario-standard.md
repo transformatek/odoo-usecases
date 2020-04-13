@@ -1,6 +1,6 @@
-# Scénario de déploiement odoo 
+# Scénario de déploiement standard d'odoo
 
-Ce document décrit quelques lignes directrices pour un déploiement progressif d'odoo 13 community dans une petite ou une moyenne entreprise (PME/PMI). Il est structuré sous forme d'activités d'apprentissage destinées au utilisateurs finaux et dédiées à chaque module.
+Ce document décrit quelques lignes directrices pour un déploiement progressif d'odoo 13 community dans une petite ou moyenne entreprise/industrie (PME/PMI) **standard**. Il est structuré sous forme d'activités d'apprentissage destinées aux utilisateurs finaux et dédiées à chaque module.
 
 ## Prérequis 
 
@@ -181,3 +181,6 @@ Les activités d'apprentissage de ce module sont :
 1. modifier l'état des taches et constater le indicateurs couleurs sur le kanban projet et dans la partie **Toutes les taches**. 
 
 [Retour au sommaire](#sommaire)
+
+----
+[Sommaire général](./odoo-deploy-guidelines-fr.md)

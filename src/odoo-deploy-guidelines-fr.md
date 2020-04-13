@@ -3,6 +3,7 @@
 Ce document fait référence aux explications étapes par étapes du déploiment des modules standards d'odoo 13 Community.
 
 ## Contents 
+
 <!--ts-->
 
 * Configuration
@@ -11,7 +12,7 @@ Ce document fait référence aux explications étapes par étapes du déploiment
     * [Configuration (admin)](./odoo-configuration-fr.md)
     * [Préférences utilisateur](./odoo-user-preferences-fr.md)
     * [Conversations](./odoo-conversations.md)
-* Détail des modules
+* Modules
     * [Module Messages](./odoo-mod-messages-fr.md)
     * [Module Employés](./odoo-mod-employee-fr.md)
     * [Module Stock](./odoo-mod-stock-fr.md)
@@ -22,14 +23,25 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 
 <!--te-->
 
-## TODO
-1. Production
-1. Achats 
-1. Email Marketing 
+**TODO Modules**
+1. Fabrication
+1. Achats
+1. Contacts
 
-## Activités d'apprentissage 
+## Scénarios de déploiement 
 
-* [Scénario de déploiement simplifié](./odoo-deployment-scenario.md)
+<!--ts-->
+
+* [Déploiement standard](./odoo-deploy-scenario-standard.md)
+* [Déploiement pour une gestion par projet](./odoo-deploy-scenario-projet.md)
+
+<!--te-->
+
+**TODO Scénarios**
+1. Déploiement pour industries (achats/stock/fabrication/maintenance/vente).
+1. Déploiement orienté digital marketing (website/CRM/marketing/eCommerce/sondage/évenements).
+1. Déploiement pour entreprise de service (recrutement/compétences/présences/eLearning/notes de frais/ventes)
+1. Déploiement pour boutique (achats/stock/point de vente)
 
 ## Ressources supplémentaires 
 
