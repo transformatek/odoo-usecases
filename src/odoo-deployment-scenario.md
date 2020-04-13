@@ -8,12 +8,14 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 - préconfiguration et personnalisation d'odoo selon les spécificités de l'entreprise, particulièrement la **création des comptes utilisateurs pour chaque apprenant**. Pour plus de détails consulter la section [configuration](./odoo-deploy-guidelines-fr.md#configuration).
 
 ## Sommaire
+* [Hypothèses](#hypothèses)
 * [Module Messages](#module-messages)
 * [Module Employés](#module-employés)
 * [Module Stock](#module-stock)
 * [Module Facturation](#module-facturation)
 * [Module Vente](#module-vente)
 * [Module CRM](#module-crm)
+* [Module Projet](#module-projet)
 
 ## Hypothèses
 - Petite ou Moyenne Entreprise/Industrie (PME/PMI) de 20 personnes.
@@ -24,7 +26,6 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 - Outils de collaboration : tableau blanc, post-it, marqueurs, ... 
 - Equipe projet composé d'un chef de projet et de membres ayant une autorité suffisante sur les activités qui seront implémentées (RH, Stocks, Ventes, ...).
 
-
 ## Module Messages 
 
 Les activités d'apprentissage de ce module sont : 
@@ -34,6 +35,8 @@ Les activités d'apprentissage de ce module sont :
 1. définir les types d'informations dont la diffusion est générale à tous les employés.
 
 Pour chaque activité, créer les cannaux correspondants et produire du contenu (texte, emojis, fichiers attachés, ...).
+
+[Retour au sommaire](#sommaire)
 
 ## Module Employés
 
@@ -48,6 +51,8 @@ Les activités d'apprentissage de ce module sont :
 1. associés des employés à des comptes utilisateurs et inviter les à se connecter.
     1. lancer des conversations directes avec ces employés.
     1. vérifier les informations affichées à ces utilisateurs dans leur annuaire des salariés.
+
+[Retour au sommaire](#sommaire)
 
 ## Module Stock
 
@@ -74,6 +79,8 @@ Activer une à une les options suivantes et constater les améliorations apport�
 1. le multi-entrepots
 1. les routes en plusieurs étapes 
 
+[Retour au sommaire](#sommaire)
+
 ## Module Facturation
 
 Les activités d'apprentissage de ce module sont : 
@@ -95,6 +102,7 @@ Les activités d'apprentissage de ce module sont :
     - créer de nouveaux **paiement** manuels et marqué les comme Validés.
 1. A chaque étape consulter le pannaux **Analyse** pour constater l'effet des changements opérés.
 
+[Retour au sommaire](#sommaire)
 
 ## Module Vente
 
@@ -124,6 +132,7 @@ Activer une à une les options suivantes et constater les améliorations apport�
 1. Bons et promotions
 1. Liste de prix. 
 
+[Retour au sommaire](#sommaire)
 
 ## Module CRM
 
@@ -151,4 +160,24 @@ Activer l'option **Pistes** et exécuter les  taches suivantes :
     1. client existant.
     1. fusion avec opprtunité existante. 
 
+[Retour au sommaire](#sommaire)
 
+## Module Projet
+
+Les activités d'apprentissage de ce module sont :
+1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
+    1. Types d'activtés.
+    1. Etiquettes des taches. 
+1. créer des employés pour les memebres des équipes projet de l'entreprise.
+1. selon le cas, renseigner au moins 05 clients.
+1. créer au moins 02 projets et renseigner les informations y relatives.
+1. ajouter des pièces jointes de différents formats aux projets.
+1. dans la partie **Projets** sélection un des projets :
+    1. ajouter des colonnes (TODO, WIP, DONE).
+    1. paramétrer chaque colone.
+1. ajouter des taches dans chaque étape du projets.
+1. faite glisser les taches entre les différentes étapes et constater les changments dans la partie analyse.
+1. editer les taches et renseigner les informations y relatives.
+1. modifier l'état des taches et constater le indicateurs couleurs sur le kanban projet et dans la partie **Toutes les taches**. 
+
+[Retour au sommaire](#sommaire)
