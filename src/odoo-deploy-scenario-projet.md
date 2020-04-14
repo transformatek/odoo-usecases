@@ -118,14 +118,57 @@ Les activités de base d'apprentissage avancées de ce module sont :
         1. changer l'option **_Unité d'encodage_** dans la configuration et visualiser les modifications apportées aux informations projets / taches / feuilles de temps du module Projet.
     1. refaire l'opération pour les autres projets identifiés.
 
-1. dans le cas où le module vente est installé, on peut définir **_Créer un bon de commande_** directement à partir de la page de configuration du projet
-    1. dans le module vente créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**.
-    1. un service pour chaque type d'employé ????
-    1. 
+## Intégration modules Projet avec Vente 
 
-comment facturer les feuilles de temps. ???
+**NB :** Il est primordiale de créer des lignes de ventes (artciles de type service) indépendantes des aspects techniques, et de gérer ces derniers (aspects techniques) comme des tâches dans le projet.
 
-Facturation des horaires travailés
+**Workflow 1 : Bon de Commandes à partir d'un projet**
+
+1. dans le module **Vente** créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**. et **_Suivi du service_** sur **_Ne pas créer la tâche_**.
+1. pour l'un des projets identifiés, activé l'option **_Feuilles de temps_**.
+1. lancer la commande **_Créer un bon de commande_**. 
+1. si le type de facturation est définie sur **_Au taux du projet_**.
+    1. selectionner un des artciles de type service. 
+    1. un bon de commande est crée avec comme référence le projet en cours. 
+    1. on constate qu'une seule **ligne de commande** est ajoutée, celle du service séléctionné.
+1. si le type de facturation est définie sur **_Au taux de l'employé_**.
+    1. ajouter des lignes employé / service. 
+    1. un employé ne peut être séléctionner qu'une seule fois, çad qu'il ne peut contribuer qu'à un seul service.
+    1. un bon de commande est crée avec comme référence le projet en cours.
+    1. on constate que plusieurs **lignes de commande** sont ajoutées, chacune pour correspondant à un des services séléctionnés.     
+1. retour dans le module projet.
+1. sélectionner quelques tâches du projet en cours et ajouter des **_feuilles de temps_**, pour faire progrésser le taux d'avancement.
+1. dans les paramètres du projet en cours, onglet **_Facturation_**,  sélectionner le lien du **_Bon de commande_** correspondant.
+1. les heures (feuilles de temps) réalisées dans le projet sont automatiquement renseigné dans la colonne Livré.
+1. lancer la commande **_Créer une facture_**, sélectionner **_Facture normale_**. 
+1. une nouvelle facture est crée pour le projet / bon de commande.
+1. revenir aux paramètres du **Bon de commande**. on constate que la quanitié facturée est mise à jour.
+1. si on vérifie les feuilles de temps enregistrées dans la **Tâches**, on constate qu'elles sont grisées et impossible à modifier puisqu'elles ont déjà été facturées.  
+1. revenir aux paramètres du **Bon de commande** du projet. lancer la commande **_Vue d'ensemble du projet_**, on obtient un rapport détaillant les Heures encodées, la Profitabilité, les feuilles de temps par employé, ...
+1. pour facturer de nouveau, il faute faire progrésser le projet en renseignant de nouvelles lignes de feuilles de temps dans les paramètres des Tâches. ainsi, à chaque jalon du projet, une facture particulière peut être générée.
+
+----------
+
+**Workflow 2 : Service (article) spécifique à un seul Projet**
+
+1. dans le module **Vente** créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**. et **_Suivi du service_** sur **_Créer une tâche dans un projet existant_**.
+
+**Workflow 3 : Projet à partir d'un ou plusieurs Bon de commande**
+
+1. dans le module **Vente** créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**. et **_Suivi du service_** sur **_Créer une tâche dans un projet de bon de commande_** (çad Devis).
+
+Modèle de projet ???
+
+**Workflow 4 : Service (article) non lié automatiquement à une seule tâche**
+
+1. dans le module **Vente** créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**. et **_Suivi du service_** sur **_Créer un nouveau projet sans tâche_** (çad Devis).
+
+Modèle de projet ???
+
+
+
+
+
 
 
 
