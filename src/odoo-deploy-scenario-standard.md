@@ -28,7 +28,7 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 
 ## Module Messages 
 
-Les activités d'apprentissage de ce module sont : 
+Les activités d'apprentissage du [Module Messages](./odoo-mod-messages-fr.md) sont : 
 1. lister les départements / fonctions / projets existants dans l'entreprise et constituer des groupes dont les conversations sont privés selon la liste ci-dessus.
 1. définir les interactions entre les différents groupes.
 1. définir des sujets de discussions directes entre deux (02) interloculteurs. 
@@ -40,7 +40,7 @@ Pour chaque activité, créer les cannaux correspondants et produire du contenu 
 
 ## Module Employés
 
-Les activités d'apprentissage de ce module sont : 
+Les activités d'apprentissage du [Module Employés](./odoo-mod-employee-fr.md) sont : 
 1. identifier la hiérarchie des structures existantes dans l'entreprise et les postes de travail.
 1. créer les départements.
 1. créer les postes de travail.
@@ -56,7 +56,7 @@ Les activités d'apprentissage de ce module sont :
 
 ## Module Stock
 
-Les activités d'apprentissage de ce module sont : 
+Les activités d'apprentissage du [Module Stock](./odoo-mod-stock-fr.md) sont : 
 1. identifier **sur papier** tous les articles gérés par l'entrprise (consommables, services, produits finis), ainsi que leurs emplacements (entrpots, étagères).
 1. mettre à jour les informations de l'entrepot de l'entreprise.
 1. identifer les types d'opérations standards dans l'entreprise et les renseigner.
@@ -83,7 +83,7 @@ Activer une à une les options suivantes et constater les améliorations apport�
 
 ## Module Facturation
 
-Les activités d'apprentissage de ce module sont : 
+Les activités d'apprentissage du [Module Facturation](./odoo-mod-facturation-fr.md) sont : 
 1. identifier **sur papier** tous les paramètres liés à la facturation utilisés par l'entrprise, tel que : 
     - les taxes applicables.
     - les termes et conditions de vente.
@@ -106,7 +106,7 @@ Les activités d'apprentissage de ce module sont :
 
 ## Module Vente
 
-Les activités d'apprentissage de ce module sont : 
+Les activités d'apprentissage du [Module Vente](./odoo-mod-vente-fr.md) sont : 
 1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
     1. caractéristiques principales des articles vendus par l'entreprise ainsi que les éventuelles variantes.
     1. Modèle de devis.
@@ -136,7 +136,7 @@ Activer une à une les options suivantes et constater les améliorations apport�
 
 ## Module CRM
 
-Les activités d'apprentissage de ce module sont :
+Les activités d'apprentissage du [Module CRM](./odoo-mod-crm-fr.md) sont :
 1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
     1. Types d'activtés.
     1. Etiquettes.
@@ -164,7 +164,7 @@ Activer l'option **Pistes** et exécuter les  taches suivantes :
 
 ## Module Projet
 
-Les activités d'apprentissage de ce module sont :
+Les activités d'apprentissage du [Module Projet](./odoo-mod-projet-fr.md) sont :
 1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
     1. Types d'activtés.
     1. Etiquettes des taches. 

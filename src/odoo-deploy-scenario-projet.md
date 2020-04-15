@@ -30,7 +30,7 @@ Il est structuré sous forme d'activités d'apprentissage destinées aux utilisa
 
 ## Module Messages 
 
-Les activités d'apprentissage de ce module sont : 
+Les activités d'apprentissage du [Module Messages](./odoo-mod-messages-fr.md) sont : 
 1. lister les départements / fonctions / projets existants dans l'entreprise et constituer des groupes dont les conversations sont privés selon la liste ci-dessus.
 1. définir les interactions entre les différents groupes.
 1. définir des sujets de discussions directes entre deux (02) interloculteurs. 
@@ -42,7 +42,7 @@ Pour chaque activité, créer les cannaux correspondants et produire du contenu 
 
 ## Module Employés
 
-Les activités d'apprentissage de ce module sont : 
+Les activités d'apprentissage du [Module Employés](./odoo-mod-employee-fr.md) sont : 
 1. identifier la hiérarchie des structures existantes dans l'entreprise et les postes de travail.
 1. créer les départements.
 1. créer les postes de travail.
@@ -54,7 +54,7 @@ Les activités d'apprentissage de ce module sont :
 
 ## Module Vente
 
-Les activités d'apprentissage de ce module sont : 
+Les activités d'apprentissage du [Module Vente](./odoo-mod-vente-fr.md) sont : 
 1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
     1. caractéristiques principales des articles vendus par l'entreprise ainsi que les éventuelles variantes.
     1. créer des comptes utilisateurs pour les commerciaux de l'entreprise, puis intégrer les dans des équipes commerciales.
@@ -66,7 +66,7 @@ Les activités d'apprentissage de ce module sont :
 
 ## Module Projet - activités de base
 
-Les activités de base d'apprentissage de ce module sont :
+Les activités de base d'apprentissage du [Module Projet](./odoo-mod-projet-fr.md) sont :
 1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
     1. Types d'activités.
     1. Etiquettes des taches. 
@@ -81,6 +81,8 @@ Les activités de base d'apprentissage de ce module sont :
 1. faite glisser les taches entre les différentes étapes et constater les changments dans la partie analyse.
 1. editer les tâches et renseigner les informations y relatives.
 1. modifier l'état des tâches et constater le indicateurs couleurs sur le kanban projet et dans la partie **Toutes les taches**. 
+
+[Retour au sommaire](#sommaire)
 
 ## Module projet - activités avancées
 
@@ -118,6 +120,8 @@ Les activités de base d'apprentissage avancées de ce module sont :
         1. changer l'option **_Unité d'encodage_** dans la configuration et visualiser les modifications apportées aux informations projets / taches / feuilles de temps du module Projet.
     1. refaire l'opération pour les autres projets identifiés.
 
+[Retour au sommaire](#sommaire)
+
 ## Intégration modules Projet avec Vente 
 
 **NB :** Il est primordiale de créer des lignes de ventes (artciles de type service) indépendantes des aspects techniques, et de gérer ces derniers (aspects techniques) comme des tâches dans le projet.
@@ -145,32 +149,37 @@ Les activités de base d'apprentissage avancées de ce module sont :
 1. revenir aux paramètres du **Bon de commande**. on constate que la quanitié facturée est mise à jour.
 1. si on vérifie les feuilles de temps enregistrées dans la **Tâches**, on constate qu'elles sont grisées et impossible à modifier puisqu'elles ont déjà été facturées.  
 1. revenir aux paramètres du **Bon de commande** du projet. lancer la commande **_Vue d'ensemble du projet_**, on obtient un rapport détaillant les Heures encodées, la Profitabilité, les feuilles de temps par employé, ...
+1. aussi, dans la page des paramètres du **Bon de commande** du projet, lancer la commande **_Aperçu client_**, on obtient un rapport mise en forme tel qu'il sera visible par le client. 
 1. pour facturer de nouveau, il faute faire progrésser le projet en renseignant de nouvelles lignes de feuilles de temps dans les paramètres des Tâches. ainsi, à chaque jalon du projet, une facture particulière peut être générée.
-
-----------
+1. pour associer plusieurs tâches techniques à une même **ligne de vente** (cas général), créer une nouvelle tache dans le projet. dans l'onglet **_infos supplémentaires_** de la tâche sélectionner la **Ligne de vente** désirée. ajouter des **feuilles de temps** à cette tâche.
+1. revenir aux paramètres du **Bon de commande**. on constate que la quantité livrée est automatiquement mise à jours comme étant la somme des heurs réalisées sur l'ensemble des tâches liées à la **ligne de vente**.   
 
 **Workflow 2 : Service (article) spécifique à un seul Projet**
 
+1. pour l'un des projets identifiés, activé l'option **_Feuilles de temps_**.
 1. dans le module **Vente** créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**. et **_Suivi du service_** sur **_Créer une tâche dans un projet existant_**.
+1. créer un nouveau **Devis** et insérer l'article configuré précédement. on constate que le devis est automatiquement lié au projet référencé dans les paramètres de l'article (service).
+1. confirmer le **Devis** pour le transformer en **Bon de commande**. 
+1. dans le module projet, on constate qu'une nouvelle tache est automatiquement ajoutée au projet en cours et la ligne de vente fait référence au bon de commande crée.
+1. la facturation est effectuée de la même manière que dans le workflow précédent (ajout de feuilles de temps dans les tâches -> création d'une facture -> aprçu).
+1. pour associer plusieurs tâches techniques à cette **ligne de vente**, créer une nouvelle tache dans le projet. dans l'onglet **_infos supplémentaires_** de la tâche, définir la tâche **parent** sur la tâche liée à la **ligne de vente**. on constate que la ligne de vente de la sous-tâche est automatiquement définie sur la ligne de vente de la tache parente. ajouter des **feuilles de temps** à cette sous-tâche.
+1. revenir aux paramètres du **Bon de commande**. on constate que la quantité livrée est automatiquement mise à jours comme étant la somme des heurs réalisées sur l'ensemble des tâches liées à la **ligne de vente**.   
 
 **Workflow 3 : Projet à partir d'un ou plusieurs Bon de commande**
 
-1. dans le module **Vente** créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**. et **_Suivi du service_** sur **_Créer une tâche dans un projet de bon de commande_** (çad Devis).
-
-Modèle de projet ???
+1. dans le module **Vente** créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**. et **_Suivi du service_** sur **_Créer une tâche dans un projet de bon de commande_**.
+1. créer un nouveau **Devis** et insérer l'article configuré précédement. dans l'onglet **_Autres informations_**, sélectionner le projet souhaité. **_Confirmer_** le **Devis** (transformer en **Bon de commande**).  
+1. si dans l'étape précédente le projet est laissé vide, un nouveau projet avec la référence du Bon de commande sera crée (**situation indésirable**).
+1. dans le module projet, on constate qu'une nouvelle tache est automatiquement ajoutée au projet en cours et la ligne de vente fait référence au bon de commande crée.
+1. la facturation est effectuée de la même manière que dans les workflows précédents (ajout de tâches/sous-tâches techniques -> ajout de feuilles de temps -> création d'une facture -> aprçu).
 
 **Workflow 4 : Service (article) non lié automatiquement à une seule tâche**
 
 1. dans le module **Vente** créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**. et **_Suivi du service_** sur **_Créer un nouveau projet sans tâche_** (çad Devis).
-
-Modèle de projet ???
-
-
-
-
-
-
-
+1. créer un nouveau **Devis** et insérer l'article configuré précédement. **_Confirmer_** le **Devis** (transformer en **Bon de commande**). 
+1. un nouveau projet avec la référence du **Bon de commande** sera crée sans aucune tâche.
+1. toutes les nouvelles tâches créer dans ce projet seront par défaut liées à la ligne de vente définie lors de la création du bon de commande. bien sûre le gestionnaire de projet peut les **lignes de ventes** à tout moment.
+1. la facturation est effectuée de la même manière que dans les workflows précédents (ajout de tâches/sous-tâches techniques -> ajout de feuilles de temps -> création d'une facture -> aprçu).
 
 [Retour au sommaire](#sommaire)
 
@@ -178,8 +187,14 @@ Modèle de projet ???
 
 ### Module Scrum 
 
+
+
+
+[Retour au sommaire](#sommaire)
+
 ### Module Support
 
+[Retour au sommaire](#sommaire)
 
 ----
 [Sommaire général](./odoo-deploy-guidelines-fr.md)
