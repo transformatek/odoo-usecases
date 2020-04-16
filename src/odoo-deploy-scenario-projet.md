@@ -17,8 +17,7 @@ Il est structuré sous forme d'activités d'apprentissage destinées aux utilisa
 * [Module Projet - activités de base](#module-projet- )
 * [Module Projet - activités avancés](#module-projet-activités-avancées)
 * [Modules additionnels](#modules-additionnels)
-    * [Module Scrum](#module-scrum)
-    * [Module Support](#module-support)
+* [Module Additionnel Scrum](#module-scrum)
 
 ## Hypothèses
 - Petite ou Moyenne Entreprise/Industrie (PME/PMI) de 20 personnes.
@@ -183,16 +182,15 @@ Les activités de base d'apprentissage avancées de ce module sont :
 
 [Retour au sommaire](#sommaire)
 
-## Modules additionnels 
+## Module Additionnel Scrum 
 
-### Module Scrum 
-
-
-
-
-[Retour au sommaire](#sommaire)
-
-### Module Support
+Les activités de base d'apprentissage du [Module Projet Scrum](./odoo-mod-add-project-scrum-fr.md) sont :
+1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
+    1. Les projets gérés par la méthode Scrum.
+    1. Les périodes durant lesquelles les **Sprints** sont exécutés et les éventuelles périodes **Breath**. 
+    1. Les Equipes Scrum impliquées.
+1. créer un nouevau projet et lui associer un équipe Scrum.
+1. créer des tâches dans le projet et associées les aux sprints.
 
 [Retour au sommaire](#sommaire)
 

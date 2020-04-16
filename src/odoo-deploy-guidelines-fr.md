@@ -12,7 +12,7 @@ Ce document fait référence aux explications étapes par étapes du déploiment
     * [Configuration (admin)](./odoo-configuration-fr.md)
     * [Préférences utilisateur](./odoo-user-preferences-fr.md)
     * [Conversations](./odoo-conversations.md)
-* Modules
+* Modules de base
     * [Module Messages](./odoo-mod-messages-fr.md)
     * [Module Employés](./odoo-mod-employee-fr.md)
     * [Module Stock](./odoo-mod-stock-fr.md)
@@ -20,6 +20,8 @@ Ce document fait référence aux explications étapes par étapes du déploiment
     * [Module Vente](./odoo-mod-vente-fr.md)
     * [Module CRM (Gestion de la Relation Client)](./odoo-mod-crm-fr.md)
     * [Module Projet](./odoo-mod-projet-fr.md)
+* Modules additionnels 
+    * [Module Projet Scrum](./odoo-mod-add-project-scrum-fr.md)
 
 <!--te-->
 
