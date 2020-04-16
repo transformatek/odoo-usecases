@@ -180,6 +180,18 @@ Les activités de base d'apprentissage avancées de ce module sont :
 1. toutes les nouvelles tâches créer dans ce projet seront par défaut liées à la ligne de vente définie lors de la création du bon de commande. bien sûre le gestionnaire de projet peut les **lignes de ventes** à tout moment.
 1. la facturation est effectuée de la même manière que dans les workflows précédents (ajout de tâches/sous-tâches techniques -> ajout de feuilles de temps -> création d'une facture -> aprçu).
 
+
+**Workflow X : Devis et Projets crées séparément**
+
+1. dans le module **Vente** créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**. et **_Suivi du service_** sur **_Ne pas créer la tâche_**.
+1. créer un nouveau **Devis** et insérer le sevice (article) configuré précédement.
+1. confirmer le **Devis** pour le transformer en **Bon de commande**.
+1. dans le module projet, crée un nouveau projet ou sélectionner un projet existant. s'assurer que l'option **_Feuilles de temps_** est activé.
+1. créer une nouvelle tâche. dans l'onglet **Info supplémentaires** séléctionner la société pour laquelle le Devis a été crée.
+1. un nouveau champ **Ligne de vente** apparait. séléctionner le service (article) précédement définit.
+1. la facturation est effectuée de la même manière que dans les workflows précédents (ajout de tâches/sous-tâches techniques -> ajout de feuilles de temps -> création d'une facture -> aprçu).
+1. maintenant vous pouver ajouter autant de services au bon de commande et y lier autant de tâches que nécessaires :).
+
 [Retour au sommaire](#sommaire)
 
 ## Module Additionnel Scrum 
