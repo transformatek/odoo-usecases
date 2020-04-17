@@ -1,5 +1,5 @@
 # odoo-usecases
-This Repository contains documentation for **Odoo** use cases dedtacted to small businesses
+This repository contains documentation for **Odoo** use cases dediacated to small businesses. It includes guidelines for use, deploy, administrate and develop custom geospatially enabled modules.    
 
 ## Summary 
 
