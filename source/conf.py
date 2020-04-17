@@ -63,11 +63,11 @@ html_static_path = ['_static']
 
 # github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
 
-github_doc_root = 'https://enlight-me.github.io/odoo-usecases/'
+github_doc_root = 'https://github.com/enlight-me/odoo-usecases/tree/master/docs/'
 
 def setup(app):
     app.add_config_value('recommonmark_config', {
-            # 'url_resolver': lambda url: github_doc_root + url,
+            'url_resolver': lambda url: github_doc_root + url,
             'auto_toc_tree_section': 'Sommaire',
             'auto_toc_maxdepth' : 5
             }, True)
