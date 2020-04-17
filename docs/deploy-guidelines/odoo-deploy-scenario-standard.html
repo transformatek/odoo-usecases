@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Scénario de déploiement standard d’odoo &mdash; odoo-usecases 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scénario de déploiement pour une gestion par projet" href="odoo-deploy-scenario-projet.html" />
+    <link rel="prev" title="Module Projet Scrum" href="odoo-mod-add-project-scrum-fr.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> odoo-usecases
+          
+
+          
+            
+            <img src="../_static/logo-enlightme.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-guidelines-fr.html">Sommaire des cas d’utilisation d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-overview-fr.html">Vue d’ensemble d’odoo (overview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-user-preferences-fr.html">Préférences d’utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-configuration-fr.html">Vue d’ensemble de la configuration (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-applications-fr.html">Vue d’ensemble des Applications (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-conversations.html">Conversations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-messages-fr.html">Module Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-employee-fr.html">Module Employés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-stock-fr.html">Module Stock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-facturation-fr.html">Module Facturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-vente-fr.html">Module Vente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-crm-fr.html">Module CRM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-projet-fr.html">Module Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-add-project-scrum-fr.html">Module Projet Scrum</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scénario de déploiement standard d’odoo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequis">Prérequis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sommaire">Sommaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hypotheses">Hypothèses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-messages">Module Messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-employes">Module Employés</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-stock">Module Stock</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exercices-avances-module-stock">Exercices avancés module stock</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-facturation">Module Facturation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-vente">Module Vente</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exercices-avances">Exercices avancés</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crm">Module CRM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Exercices avancés</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-projet">Module Projet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-projet.html">Scénario de déploiement pour une gestion par projet</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">odoo-usecases</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Scénario de déploiement standard d’odoo</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deploy-guidelines/odoo-deploy-scenario-standard.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scenario-de-deploiement-standard-d-odoo">
+<h1>Scénario de déploiement standard d’odoo<a class="headerlink" href="#scenario-de-deploiement-standard-d-odoo" title="Permalink to this headline">¶</a></h1>
+<p>Ce document décrit quelques lignes directrices pour un déploiement progressif d’odoo 13 community dans une petite ou moyenne entreprise/industrie (PME/PMI) <strong>standard</strong>. Il est structuré sous forme d’activités d’apprentissage destinées aux utilisateurs finaux et dédiées à chaque module.</p>
+<div class="section" id="prerequis">
+<h2>Prérequis<a class="headerlink" href="#prerequis" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>une installation propre d’odoo ERP. Pour un deployment avec docker consulter <a class="reference external" href="https://enlight-me.github.io/docker-usecases/setup-images-on-docker/odoo-on-docker.html">setup odoo on docker.</a></p></li>
+<li><p>préconfiguration et personnalisation d’odoo selon les spécificités de l’entreprise, particulièrement la <strong>création des comptes utilisateurs pour chaque apprenant</strong>. Pour plus de détails consulter la section <a class="reference external" href="./odoo-deploy-guidelines-fr.md#configuration">configuration</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="sommaire">
+<h2>Sommaire<a class="headerlink" href="#sommaire" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#hypoth%C3%A8ses">Hypothèses</a></p></li>
+<li><p><a class="reference external" href="#module-messages">Module Messages</a></p></li>
+<li><p><a class="reference external" href="#module-employ%C3%A9s">Module Employés</a></p></li>
+<li><p><a class="reference external" href="#module-stock">Module Stock</a></p></li>
+<li><p><a class="reference external" href="#module-facturation">Module Facturation</a></p></li>
+<li><p><a class="reference external" href="#module-vente">Module Vente</a></p></li>
+<li><p><a class="reference external" href="#module-crm">Module CRM</a></p></li>
+<li><p><a class="reference external" href="#module-projet">Module Projet</a></p></li>
+</ul>
+</div>
+<div class="section" id="hypotheses">
+<h2>Hypothèses<a class="headerlink" href="#hypotheses" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Petite ou Moyenne Entreprise/Industrie (PME/PMI) de 20 personnes.</p></li>
+<li><p>Le déploiement final se feait de manière progressive (par module) avec une durrée d’absorption d’au moins <strong>deux (02) semaines</strong>.</p></li>
+<li><p>Groupes de 8 à 10 apprenants ayant chacun mis à jour son profil utilisateur.</p></li>
+<li><p>Processus métier simples et maturés. Si les processus n’existent pas il faudra les créer.</p></li>
+<li><p>Choix préalable des modules à implémenter.</p></li>
+<li><p>Outils de collaboration : tableau blanc, post-it, marqueurs, …</p></li>
+<li><p>Equipe projet composé d’un chef de projet et de membres ayant une autorité suffisante sur les activités qui seront implémentées (RH, Stocks, Ventes, …).</p></li>
+</ul>
+</div>
+<div class="section" id="module-messages">
+<h2>Module Messages<a class="headerlink" href="#module-messages" title="Permalink to this headline">¶</a></h2>
+<p>Les activités d’apprentissage du <a class="reference internal" href="odoo-mod-messages-fr.html"><span class="doc">Module Messages</span></a> sont :</p>
+<ol class="simple">
+<li><p>lister les départements / fonctions / projets existants dans l’entreprise et constituer des groupes dont les conversations sont privés selon la liste ci-dessus.</p></li>
+<li><p>définir les interactions entre les différents groupes.</p></li>
+<li><p>définir des sujets de discussions directes entre deux (02) interloculteurs.</p></li>
+<li><p>définir les types d’informations dont la diffusion est générale à tous les employés.</p></li>
+</ol>
+<p>Pour chaque activité, créer les cannaux correspondants et produire du contenu (texte, emojis, fichiers attachés, …).</p>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+<div class="section" id="module-employes">
+<h2>Module Employés<a class="headerlink" href="#module-employes" title="Permalink to this headline">¶</a></h2>
+<p>Les activités d’apprentissage du <a class="reference internal" href="odoo-mod-employee-fr.html"><span class="doc">Module Employés</span></a> sont :</p>
+<ol class="simple">
+<li><p>identifier la hiérarchie des structures existantes dans l’entreprise et les postes de travail.</p></li>
+<li><p>créer les départements.</p></li>
+<li><p>créer les postes de travail.</p></li>
+<li><p>créer des employés gestionnaires et les associés aux départements.</p></li>
+<li><p>créer des employés collaborateurs.</p></li>
+<li><p>identifier les parcours (plans) standards des employés dans l’entreprise et les renseigner.</p></li>
+<li><p>lancer des plans sur des employés.</p></li>
+<li><p>associés des employés à des comptes utilisateurs et inviter les à se connecter.</p>
+<ol class="simple">
+<li><p>lancer des conversations directes avec ces employés.</p></li>
+<li><p>vérifier les informations affichées à ces utilisateurs dans leur annuaire des salariés.</p></li>
+</ol>
+</li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+<div class="section" id="module-stock">
+<h2>Module Stock<a class="headerlink" href="#module-stock" title="Permalink to this headline">¶</a></h2>
+<p>Les activités d’apprentissage du <a class="reference internal" href="odoo-mod-stock-fr.html"><span class="doc">Module Stock</span></a> sont :</p>
+<ol class="simple">
+<li><p>identifier <strong>sur papier</strong> tous les articles gérés par l’entrprise (consommables, services, produits finis), ainsi que leurs emplacements (entrpots, étagères).</p></li>
+<li><p>mettre à jour les informations de l’entrepot de l’entreprise.</p></li>
+<li><p>identifer les types d’opérations standards dans l’entreprise et les renseigner.</p></li>
+<li><p>identifer les catégories d’articles gérés par l’entreprise et les renseigner.</p></li>
+<li><p>renseigner les informations relatives à au moins 10 articles gérés par l’entreprise avec leurs quantités réels.</p></li>
+<li><p>définir les règles de réapprovisionnement pour chaque article.</p></li>
+<li><p>exécuter quelque opérations manuelles sur les stocks en suivant les mises à jour du tableau de bord <strong><em>Vue d’ensemble</em></strong> :</p>
+<ol class="simple">
+<li><p>transferts pour chaque type d’opération (passer par tous les états)</p></li>
+<li><p>inventaire en modifiant manuellement les quantités disponibles afin de constater les changements. Passer par tous les états jusqu’à la validation.</p></li>
+<li><p>rebuter quelques articles et vérifier les changements dans les stocks.</p></li>
+</ol>
+</li>
+<li><p>exécuter les <strong><em>Analyse</em></strong> et visualiser les résultats sous différentes formes (liste, tableau, graphes).</p></li>
+</ol>
+<div class="section" id="exercices-avances-module-stock">
+<h3>Exercices avancés module stock<a class="headerlink" href="#exercices-avances-module-stock" title="Permalink to this headline">¶</a></h3>
+<p>Activer une à une les options suivantes et constater les améliorations apportés :</p>
+<ol class="simple">
+<li><p>les variantes d’articles</p></li>
+<li><p>les unités de mesures</p></li>
+<li><p>le conditionnement des produits</p></li>
+<li><p>les emplacements de stockage</p></li>
+<li><p>le multi-entrepots</p></li>
+<li><p>les routes en plusieurs étapes</p></li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+</div>
+<div class="section" id="module-facturation">
+<h2>Module Facturation<a class="headerlink" href="#module-facturation" title="Permalink to this headline">¶</a></h2>
+<p>Les activités d’apprentissage du <a class="reference internal" href="odoo-mod-facturation-fr.html"><span class="doc">Module Facturation</span></a> sont :</p>
+<ol class="simple">
+<li><p>identifier <strong>sur papier</strong> tous les paramètres liés à la facturation utilisés par l’entrprise, tel que :</p>
+<ul class="simple">
+<li><p>les taxes applicables.</p></li>
+<li><p>les termes et conditions de vente.</p></li>
+<li><p>les catégories de conditions de paiement (délais, montant global/partiel, …)</p></li>
+<li><p>les journaux comptables.</p></li>
+<li><p>les comptes bancaires.</p></li>
+<li><p>les intermédaires de paiements.</p></li>
+<li><p>les pièces réccurentes (frais bancaires, ..).</p></li>
+</ul>
+</li>
+<li><p>en groupe, mettre à jour les paramètres du module avce les données collectés.</p></li>
+<li><p>pour les parties factures clients/fournisseurs :</p>
+<ul class="simple">
+<li><p>lister au moin 10 clients/fournisseurs de l’entreprise et renseigner leurs informations.</p></li>
+<li><p>ajouter des <strong>articles</strong> vendus/achetés par l’entreprise dans la section correspondante (voir module <a class="reference internal" href="odoo-mod-stock-fr.html"><span class="doc">Stock</span></a> pour plus de détails)</p></li>
+<li><p>créer de nouvelles <strong>factures</strong> pour chaque client/fournisseur, enregister des paiements et marqué les comme comptabilisé.</p></li>
+<li><p>créer de nouveaux <strong>avoirs</strong> pour chaque client/fournisseur, enregister des paiements et marqué les comme comptabilisé.</p></li>
+<li><p>créer de nouvelles <strong>réceptions</strong> pour chaque client/fournisseur, enregister des paiements et marqué comme comptabilisé.</p></li>
+<li><p>créer de nouveaux <strong>paiement</strong> manuels et marqué les comme Validés.</p></li>
+</ul>
+</li>
+<li><p>A chaque étape consulter le pannaux <strong>Analyse</strong> pour constater l’effet des changements opérés.</p></li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+<div class="section" id="module-vente">
+<h2>Module Vente<a class="headerlink" href="#module-vente" title="Permalink to this headline">¶</a></h2>
+<p>Les activités d’apprentissage du <a class="reference internal" href="odoo-mod-vente-fr.html"><span class="doc">Module Vente</span></a> sont :</p>
+<ol class="simple">
+<li><p>identifier <strong>sur papier</strong> puis mettre à jours les paramètres suivants :</p>
+<ol class="simple">
+<li><p>caractéristiques principales des articles vendus par l’entreprise ainsi que les éventuelles variantes.</p></li>
+<li><p>Modèle de devis.</p></li>
+<li><p>Validité par défaut des devis.</p></li>
+<li><p>créer des comptes utilisateurs pour les commerciaux de l’entreprise, puis intégrer les dans des équipes commerciales.</p></li>
+</ol>
+</li>
+<li><p>selon le cas, renseigner au moins 10 articles vendus par l’entreprise, ainsi que 10 clients.</p></li>
+<li><p>constituer des équipes commerciales où chaque participant prend l’un des roles suivants : gestionnaire des ventes, vendeur, gestionnaire des stocks, gestionnaire de la facturation.</p></li>
+<li><p>chaque équipe commerciale, crée au moins 05 devis avec toutes les informations nécessaires y compris des articles optionnels. Imprimer-les et envoyer-les par mail puis Confirmer-les.</p></li>
+<li><p>demander au gestionnaire des stocks de valider les livraisons.</p></li>
+<li><p>créer des factures pour les bon de commandes.</p></li>
+<li><p>demander au gestionnaire des factures de les compatibiliser et d’enregistrer un paiement.</p></li>
+<li><p>visualiser la progression des performances de votre équipe sur le tableau de bord Equipes commerciales.</p></li>
+<li><p>constater régulièrement les changement dans la liste des commandes à facturer et sur les graphiques d’analyse des ventes.</p></li>
+<li><p>créer des discussion entre équipes autour des devis et des bons de commandes.</p></li>
+<li><p>Changer de role et refaire le même exercice.</p></li>
+</ol>
+<div class="section" id="exercices-avances">
+<h3>Exercices avancés<a class="headerlink" href="#exercices-avances" title="Permalink to this headline">¶</a></h3>
+<p>Activer une à une les options suivantes et constater les améliorations apportés :</p>
+<ol class="simple">
+<li><p>Variantes d’articles</p></li>
+<li><p>Configurateur d’article.</p></li>
+<li><p>Remises.</p></li>
+<li><p>Bons et promotions</p></li>
+<li><p>Liste de prix.</p></li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+</div>
+<div class="section" id="module-crm">
+<h2>Module CRM<a class="headerlink" href="#module-crm" title="Permalink to this headline">¶</a></h2>
+<p>Les activités d’apprentissage du <a class="reference internal" href="odoo-mod-crm-fr.html"><span class="doc">Module CRM</span></a> sont :</p>
+<ol class="simple">
+<li><p>identifier <strong>sur papier</strong> puis mettre à jours les paramètres suivants :</p>
+<ol class="simple">
+<li><p>Types d’activtés.</p></li>
+<li><p>Etiquettes.</p></li>
+<li><p>Motifs de pertes.</p></li>
+<li><p>créer des comptes utilisateurs pour les commerciaux de l’entreprise, puis intégrer les dans des équipes commerciales.</p></li>
+</ol>
+</li>
+<li><p>selon le cas, renseigner au moins 10 clients.</p></li>
+<li><p>chaque vendeur, crée au moins 10 opportunités avec toutes les informations nécessaires.</p></li>
+<li><p>créer des activités à partir des opprtunités.</p></li>
+<li><p>créer des réunions à partir des opprtunités.</p></li>
+<li><p>créer des devis à partir des opprtunités.</p></li>
+<li><p>visualiser la progression des performances de votre équipe sur le Pipelines des équipes.</p></li>
+<li><p>constater régulièrement les changement sur les graphiques d’analyse.</p></li>
+<li><p>créer des discussion entre équipes autour des opportunités.</p></li>
+</ol>
+<div class="section" id="id1">
+<h3>Exercices avancés<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Activer l’option <strong>Pistes</strong> et exécuter les  taches suivantes :</p>
+<ol class="simple">
+<li><p>créer au moin 10 nouvelles pistes.</p></li>
+<li><p>convertir les pistes en opportunités avec les différentes options :</p>
+<ol class="simple">
+<li><p>nouveau client.</p></li>
+<li><p>client existant.</p></li>
+<li><p>fusion avec opprtunité existante.</p></li>
+</ol>
+</li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+</div>
+<div class="section" id="module-projet">
+<h2>Module Projet<a class="headerlink" href="#module-projet" title="Permalink to this headline">¶</a></h2>
+<p>Les activités d’apprentissage du <a class="reference internal" href="odoo-mod-projet-fr.html"><span class="doc">Module Projet</span></a> sont :</p>
+<ol class="simple">
+<li><p>identifier <strong>sur papier</strong> puis mettre à jours les paramètres suivants :</p>
+<ol class="simple">
+<li><p>Types d’activtés.</p></li>
+<li><p>Etiquettes des taches.</p></li>
+</ol>
+</li>
+<li><p>créer des employés pour les memebres des équipes projet de l’entreprise.</p></li>
+<li><p>selon le cas, renseigner au moins 05 clients.</p></li>
+<li><p>créer au moins 02 projets et renseigner les informations y relatives.</p></li>
+<li><p>ajouter des pièces jointes de différents formats aux projets.</p></li>
+<li><p>dans la partie <strong>Projets</strong> sélection un des projets :</p>
+<ol class="simple">
+<li><p>ajouter des colonnes (TODO, WIP, DONE).</p></li>
+<li><p>paramétrer chaque colone.</p></li>
+</ol>
+</li>
+<li><p>ajouter des taches dans chaque étape du projets.</p></li>
+<li><p>faite glisser les taches entre les différentes étapes et constater les changments dans la partie analyse.</p></li>
+<li><p>editer les taches et renseigner les informations y relatives.</p></li>
+<li><p>modifier l’état des taches et constater le indicateurs couleurs sur le kanban projet et dans la partie <strong>Toutes les taches</strong>.</p></li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+<hr class="docutils" />
+<p><a class="reference internal" href="odoo-deploy-guidelines-fr.html"><span class="doc">Sommaire général</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="odoo-deploy-scenario-projet.html" class="btn btn-neutral float-right" title="Scénario de déploiement pour une gestion par projet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="odoo-mod-add-project-scrum-fr.html" class="btn btn-neutral float-left" title="Module Projet Scrum" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Enlight.me
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

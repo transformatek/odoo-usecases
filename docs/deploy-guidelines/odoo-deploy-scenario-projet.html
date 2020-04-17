@@ -1,0 +1,477 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Scénario de déploiement pour une gestion par projet &mdash; odoo-usecases 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Scénario de déploiement standard d’odoo" href="odoo-deploy-scenario-standard.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> odoo-usecases
+          
+
+          
+            
+            <img src="../_static/logo-enlightme.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-guidelines-fr.html">Sommaire des cas d’utilisation d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-overview-fr.html">Vue d’ensemble d’odoo (overview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-user-preferences-fr.html">Préférences d’utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-configuration-fr.html">Vue d’ensemble de la configuration (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-applications-fr.html">Vue d’ensemble des Applications (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-conversations.html">Conversations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-messages-fr.html">Module Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-employee-fr.html">Module Employés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-stock-fr.html">Module Stock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-facturation-fr.html">Module Facturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-vente-fr.html">Module Vente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-crm-fr.html">Module CRM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-projet-fr.html">Module Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-add-project-scrum-fr.html">Module Projet Scrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-standard.html">Scénario de déploiement standard d’odoo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scénario de déploiement pour une gestion par projet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequis">Prérequis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sommaire">Sommaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hypotheses">Hypothèses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-messages">Module Messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-employes">Module Employés</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-vente">Module Vente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-projet-activites-de-base">Module Projet - activités de base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-projet-activites-avancees">Module projet - activités avancées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#integration-modules-projet-avec-vente">Intégration modules Projet avec Vente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-additionnel-scrum">Module Additionnel Scrum</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">odoo-usecases</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Scénario de déploiement pour une gestion par projet</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deploy-guidelines/odoo-deploy-scenario-projet.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scenario-de-deploiement-pour-une-gestion-par-projet">
+<h1>Scénario de déploiement pour une gestion par projet<a class="headerlink" href="#scenario-de-deploiement-pour-une-gestion-par-projet" title="Permalink to this headline">¶</a></h1>
+<p>Ce document décrit quelques lignes directrices pour un déploiement progressif d’odoo 13 community dans une petite ou moyenne entreprise/industrie (PME/PMI) dont la gestion est <strong>orientée Projets</strong>.</p>
+<p>Il est structuré sous forme d’activités d’apprentissage destinées aux utilisateurs finaux et dédiées à chaque module.</p>
+<div class="section" id="prerequis">
+<h2>Prérequis<a class="headerlink" href="#prerequis" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>une installation propre d’odoo ERP. Pour un deployment avec docker consulter <a class="reference external" href="https://enlight-me.github.io/docker-usecases/setup-images-on-docker/odoo-on-docker.html">setup odoo on docker.</a></p></li>
+<li><p>préconfiguration et personnalisation d’odoo selon les spécificités de l’entreprise, particulièrement la <strong>création des comptes utilisateurs pour chaque apprenant</strong>. Pour plus de détails consulter la section <a class="reference external" href="./odoo-deploy-guidelines-fr.md#configuration">configuration</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="sommaire">
+<h2>Sommaire<a class="headerlink" href="#sommaire" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#hypoth%C3%A8ses">Hypothèses</a></p></li>
+<li><p><a class="reference external" href="#module-messages">Module Messages</a></p></li>
+<li><p><a class="reference external" href="#module-employ%C3%A9s">Module Employés</a></p></li>
+<li><p><a class="reference external" href="#module-vente">Module Vente</a></p></li>
+<li><p><a class="reference external" href="#module-projet-">Module Projet - activités de base</a></p></li>
+<li><p><a class="reference external" href="#module-projet-activit%C3%A9s-avanc%C3%A9es">Module Projet - activités avancés</a></p></li>
+<li><p><a class="reference external" href="#modules-additionnels">Modules additionnels</a></p></li>
+<li><p><a class="reference external" href="#module-scrum">Module Additionnel Scrum</a></p></li>
+</ul>
+</div>
+<div class="section" id="hypotheses">
+<h2>Hypothèses<a class="headerlink" href="#hypotheses" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Petite ou Moyenne Entreprise/Industrie (PME/PMI) de 20 personnes.</p></li>
+<li><p>Le déploiement final se feait de manière progressive (par module) avec une durrée d’absorption d’au moins <strong>deux (02) semaines</strong>.</p></li>
+<li><p>Groupes de 8 à 10 apprenants ayant chacun mis à jour son profil utilisateur.</p></li>
+<li><p>Processus métier simples et maturés. Si les processus n’existent pas il faudra les crées.</p></li>
+<li><p>Outils de collaboration : tableau blanc, post-it, marqueurs, …</p></li>
+<li><p>Equipe projet composé d’un chef de projet et de membres ayant une autorité suffisante sur les activités qui seront implémentées.</p></li>
+</ul>
+</div>
+<div class="section" id="module-messages">
+<h2>Module Messages<a class="headerlink" href="#module-messages" title="Permalink to this headline">¶</a></h2>
+<p>Les activités d’apprentissage du <a class="reference internal" href="odoo-mod-messages-fr.html"><span class="doc">Module Messages</span></a> sont :</p>
+<ol class="simple">
+<li><p>lister les départements / fonctions / projets existants dans l’entreprise et constituer des groupes dont les conversations sont privés selon la liste ci-dessus.</p></li>
+<li><p>définir les interactions entre les différents groupes.</p></li>
+<li><p>définir des sujets de discussions directes entre deux (02) interloculteurs.</p></li>
+<li><p>définir les types d’informations dont la diffusion est générale à tous les employés.</p></li>
+</ol>
+<p>Pour chaque activité, créer les cannaux correspondants et produire du contenu (texte, emojis, fichiers attachés, …).</p>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+<div class="section" id="module-employes">
+<h2>Module Employés<a class="headerlink" href="#module-employes" title="Permalink to this headline">¶</a></h2>
+<p>Les activités d’apprentissage du <a class="reference internal" href="odoo-mod-employee-fr.html"><span class="doc">Module Employés</span></a> sont :</p>
+<ol class="simple">
+<li><p>identifier la hiérarchie des structures existantes dans l’entreprise et les postes de travail.</p></li>
+<li><p>créer les départements.</p></li>
+<li><p>créer les postes de travail.</p></li>
+<li><p>créer des employés gestionnaires et les associés aux départements.</p></li>
+<li><p>créer des employés collaborateurs.</p></li>
+<li><p>associés des employés à des comptes utilisateurs et inviter les à se connecter.</p></li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+<div class="section" id="module-vente">
+<h2>Module Vente<a class="headerlink" href="#module-vente" title="Permalink to this headline">¶</a></h2>
+<p>Les activités d’apprentissage du <a class="reference internal" href="odoo-mod-vente-fr.html"><span class="doc">Module Vente</span></a> sont :</p>
+<ol class="simple">
+<li><p>identifier <strong>sur papier</strong> puis mettre à jours les paramètres suivants :</p>
+<ol class="simple">
+<li><p>caractéristiques principales des articles vendus par l’entreprise ainsi que les éventuelles variantes.</p></li>
+<li><p>créer des comptes utilisateurs pour les commerciaux de l’entreprise, puis intégrer les dans des équipes commerciales.</p></li>
+</ol>
+</li>
+<li><p>selon le cas, renseigner au moins 10 <strong>articles</strong> vendus par l’entreprise, ainsi que 10 <strong>clients</strong>.</p></li>
+<li><p>créer au moins 05 <strong>devis</strong> avec toutes les informations nécessaires y compris des articles optionnels. Imprimer-les et envoyer-les par mail puis Confirmer-les.</p></li>
+<li><p>créer des <strong>factures</strong> pour les bon de commandes.</p></li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+<div class="section" id="module-projet-activites-de-base">
+<h2>Module Projet - activités de base<a class="headerlink" href="#module-projet-activites-de-base" title="Permalink to this headline">¶</a></h2>
+<p>Les activités de base d’apprentissage du <a class="reference internal" href="odoo-mod-projet-fr.html"><span class="doc">Module Projet</span></a> sont :</p>
+<ol class="simple">
+<li><p>identifier <strong>sur papier</strong> puis mettre à jours les paramètres suivants :</p>
+<ol class="simple">
+<li><p>Types d’activités.</p></li>
+<li><p>Etiquettes des taches.</p></li>
+</ol>
+</li>
+<li><p>si nécessaire, créer des employés pour les membres des équipes projets de l’entreprise et leur associés des utilisateurs.</p></li>
+<li><p>si nécessaire, renseigner au moins 05 clients.</p></li>
+<li><p>créer au moins 02 projets et renseigner les informations y relatives.</p></li>
+<li><p>ajouter des pièces jointes de différents formats aux projets.</p></li>
+<li><p>dans la partie <strong>Projets</strong> sélection un des projets :</p>
+<ol class="simple">
+<li><p>ajouter des colonnes (TODO, WIP, DONE).</p></li>
+<li><p>paramétrer chaque colone.</p></li>
+</ol>
+</li>
+<li><p>ajouter des tâches dans chaque étape du projets.</p></li>
+<li><p>faite glisser les taches entre les différentes étapes et constater les changments dans la partie analyse.</p></li>
+<li><p>editer les tâches et renseigner les informations y relatives.</p></li>
+<li><p>modifier l’état des tâches et constater le indicateurs couleurs sur le kanban projet et dans la partie <strong>Toutes les taches</strong>.</p></li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+<div class="section" id="module-projet-activites-avancees">
+<h2>Module projet - activités avancées<a class="headerlink" href="#module-projet-activites-avancees" title="Permalink to this headline">¶</a></h2>
+<p>Les activités de base d’apprentissage avancées de ce module sont :</p>
+<ol class="simple">
+<li><p>identifier <strong>sur papier</strong> les éléments suivants :</p>
+<ol class="simple">
+<li><p>projets en cours au niveau de l’entreprise.</p></li>
+<li><p>tâches relatives à chaque projet.</p></li>
+<li><p>sous-taches des taches listées ci-avant.</p></li>
+</ol>
+</li>
+<li><p>avec l’option <strong><em>Sous-tâches</em></strong> activé dans la configuration :</p>
+<ol class="simple">
+<li><p>renseigner les informations relatives à un des projets identifiés.</p></li>
+<li><p>renseigner les tâches du projet.</p></li>
+<li><p>créer les sous-tâches en les reliants à leurs taches parentes.</p></li>
+<li><p>assigner les taches/sous-tâches à des membres de l’équipe.</p></li>
+<li><p>chaque membre constate la liste des tâches qui lui sont assignés et les fait progrésser dans le pipeline.</p></li>
+<li><p>refaire l’opération pour les autres projets identifiés.</p></li>
+<li><p>créer une hiérarchie de projets en les reliants avec le champ <strong><em>Sous-tache du projet</em></strong>.</p></li>
+</ol>
+</li>
+<li><p>avec l’option <strong><em>Utiliser les évaluations de projet</em></strong> activé dans la configuration :</p>
+<ol class="simple">
+<li><p><strong>cette option nécessite des informations client fiables, ainsi que la configuration d’un serveur de messagerie et/ou l’accès client au portail de l’entreprise</strong>.</p></li>
+<li><p>pour l’un des projets identifiés, définir un <strong><em>Modèle d’email pour les évaluations</em></strong> pour chaque étape.</p></li>
+<li><p>le client recevra un email de demande d’evaluation chaque fois q’une tâche progresse dans le pipeline et les feedbacks seront visibles directement dans la vue kanban du projets avec chaque tâche.</p></li>
+</ol>
+</li>
+<li><p>avec l’option <strong><em>Feuilles de temps sur les tâches</em></strong> activé dans la configuration.</p>
+<ol class="simple">
+<li><p>pour l’un des projets identifiés, activé l’option <strong><em>Feuilles de temps</em></strong>.</p></li>
+<li><p>créer un nouveau modèle de <strong>Temps de travail</strong> adapté à la législation locale (Heures de travail, Congé Global).</p></li>
+<li><p>renseigner le <strong><em>Coût de la feuille de temps</em></strong> pour chaque membre de l’équipe (module employés).</p></li>
+<li><p>pour chaque tâche du projet selectionnée, renseigner le champ <strong><em>Heures planifiées</em></strong>.</p></li>
+<li><p>les membres d’équipes peuvent maintenant renseigner leurs apports en volume horaire à chaque tâche et visualiser les heures restantes dans la vue kanban du projet.</p></li>
+<li><p>visualiser les changements dans la partie analyse après chaque modification sur les horaires travailés par employé / par tache / par projet.</p></li>
+<li><p>dans le module <strong><em>Feuilles de temps</em></strong> :</p>
+<ol class="simple">
+<li><p>chaque membre de l’équipe visulise ses feuilles de temps.</p></li>
+<li><p>visualiser la liste de toutes les feuilles de temps.</p></li>
+<li><p>faite des analyses par employé / par tache / par projet.</p></li>
+<li><p>changer l’option <strong><em>Unité d’encodage</em></strong> dans la configuration et visualiser les modifications apportées aux informations projets / taches / feuilles de temps du module Projet.</p></li>
+</ol>
+</li>
+<li><p>refaire l’opération pour les autres projets identifiés.</p></li>
+</ol>
+</li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+<div class="section" id="integration-modules-projet-avec-vente">
+<h2>Intégration modules Projet avec Vente<a class="headerlink" href="#integration-modules-projet-avec-vente" title="Permalink to this headline">¶</a></h2>
+<p><strong>NB :</strong> Il est primordiale de créer des lignes de ventes (artciles de type service) indépendantes des aspects techniques, et de gérer ces derniers (aspects techniques) comme des tâches dans le projet.</p>
+<p><strong>Workflow 1 : Bon de Commandes à partir d’un projet</strong></p>
+<ol class="simple">
+<li><p>dans le module <strong>Vente</strong> créer des articles de type service et configurer la <strong><em>Politique de facturation du service</em></strong> sur <strong><em>Feuilles de temps sur les tâches</em></strong>. et <strong><em>Suivi du service</em></strong> sur <strong><em>Ne pas créer la tâche</em></strong>.</p></li>
+<li><p>pour l’un des projets identifiés, activé l’option <strong><em>Feuilles de temps</em></strong>.</p></li>
+<li><p>lancer la commande <strong><em>Créer un bon de commande</em></strong>.</p></li>
+<li><p>si le type de facturation est définie sur <strong><em>Au taux du projet</em></strong>.</p>
+<ol class="simple">
+<li><p>selectionner un des artciles de type service.</p></li>
+<li><p>un bon de commande est crée avec comme référence le projet en cours.</p></li>
+<li><p>on constate qu’une seule <strong>ligne de commande</strong> est ajoutée, celle du service séléctionné.</p></li>
+</ol>
+</li>
+<li><p>si le type de facturation est définie sur <strong><em>Au taux de l’employé</em></strong>.</p>
+<ol class="simple">
+<li><p>ajouter des lignes employé / service.</p></li>
+<li><p>un employé ne peut être séléctionner qu’une seule fois, çad qu’il ne peut contribuer qu’à un seul service.</p></li>
+<li><p>un bon de commande est crée avec comme référence le projet en cours.</p></li>
+<li><p>on constate que plusieurs <strong>lignes de commande</strong> sont ajoutées, chacune pour correspondant à un des services séléctionnés.</p></li>
+</ol>
+</li>
+<li><p>retour dans le module projet.</p></li>
+<li><p>sélectionner quelques tâches du projet en cours et ajouter des <strong><em>feuilles de temps</em></strong>, pour faire progrésser le taux d’avancement.</p></li>
+<li><p>dans les paramètres du projet en cours, onglet <strong><em>Facturation</em></strong>,  sélectionner le lien du <strong><em>Bon de commande</em></strong> correspondant.</p></li>
+<li><p>les heures (feuilles de temps) réalisées dans le projet sont automatiquement renseigné dans la colonne Livré.</p></li>
+<li><p>lancer la commande <strong><em>Créer une facture</em></strong>, sélectionner <strong><em>Facture normale</em></strong>.</p></li>
+<li><p>une nouvelle facture est crée pour le projet / bon de commande.</p></li>
+<li><p>revenir aux paramètres du <strong>Bon de commande</strong>. on constate que la quanitié facturée est mise à jour.</p></li>
+<li><p>si on vérifie les feuilles de temps enregistrées dans la <strong>Tâches</strong>, on constate qu’elles sont grisées et impossible à modifier puisqu’elles ont déjà été facturées.</p></li>
+<li><p>revenir aux paramètres du <strong>Bon de commande</strong> du projet. lancer la commande <strong><em>Vue d’ensemble du projet</em></strong>, on obtient un rapport détaillant les Heures encodées, la Profitabilité, les feuilles de temps par employé, …</p></li>
+<li><p>aussi, dans la page des paramètres du <strong>Bon de commande</strong> du projet, lancer la commande <strong><em>Aperçu client</em></strong>, on obtient un rapport mise en forme tel qu’il sera visible par le client.</p></li>
+<li><p>pour facturer de nouveau, il faute faire progrésser le projet en renseignant de nouvelles lignes de feuilles de temps dans les paramètres des Tâches. ainsi, à chaque jalon du projet, une facture particulière peut être générée.</p></li>
+<li><p>pour associer plusieurs tâches techniques à une même <strong>ligne de vente</strong> (cas général), créer une nouvelle tache dans le projet. dans l’onglet <strong><em>infos supplémentaires</em></strong> de la tâche sélectionner la <strong>Ligne de vente</strong> désirée. ajouter des <strong>feuilles de temps</strong> à cette tâche.</p></li>
+<li><p>revenir aux paramètres du <strong>Bon de commande</strong>. on constate que la quantité livrée est automatiquement mise à jours comme étant la somme des heurs réalisées sur l’ensemble des tâches liées à la <strong>ligne de vente</strong>.</p></li>
+</ol>
+<p><strong>Workflow 2 : Service (article) spécifique à un seul Projet</strong></p>
+<ol class="simple">
+<li><p>pour l’un des projets identifiés, activé l’option <strong><em>Feuilles de temps</em></strong>.</p></li>
+<li><p>dans le module <strong>Vente</strong> créer des articles de type service et configurer la <strong><em>Politique de facturation du service</em></strong> sur <strong><em>Feuilles de temps sur les tâches</em></strong>. et <strong><em>Suivi du service</em></strong> sur <strong><em>Créer une tâche dans un projet existant</em></strong>.</p></li>
+<li><p>créer un nouveau <strong>Devis</strong> et insérer l’article configuré précédement. on constate que le devis est automatiquement lié au projet référencé dans les paramètres de l’article (service).</p></li>
+<li><p>confirmer le <strong>Devis</strong> pour le transformer en <strong>Bon de commande</strong>.</p></li>
+<li><p>dans le module projet, on constate qu’une nouvelle tache est automatiquement ajoutée au projet en cours et la ligne de vente fait référence au bon de commande crée.</p></li>
+<li><p>la facturation est effectuée de la même manière que dans le workflow précédent (ajout de feuilles de temps dans les tâches -&gt; création d’une facture -&gt; aprçu).</p></li>
+<li><p>pour associer plusieurs tâches techniques à cette <strong>ligne de vente</strong>, créer une nouvelle tache dans le projet. dans l’onglet <strong><em>infos supplémentaires</em></strong> de la tâche, définir la tâche <strong>parent</strong> sur la tâche liée à la <strong>ligne de vente</strong>. on constate que la ligne de vente de la sous-tâche est automatiquement définie sur la ligne de vente de la tache parente. ajouter des <strong>feuilles de temps</strong> à cette sous-tâche.</p></li>
+<li><p>revenir aux paramètres du <strong>Bon de commande</strong>. on constate que la quantité livrée est automatiquement mise à jours comme étant la somme des heurs réalisées sur l’ensemble des tâches liées à la <strong>ligne de vente</strong>.</p></li>
+</ol>
+<p><strong>Workflow 3 : Projet à partir d’un ou plusieurs Bon de commande</strong></p>
+<ol class="simple">
+<li><p>dans le module <strong>Vente</strong> créer des articles de type service et configurer la <strong><em>Politique de facturation du service</em></strong> sur <strong><em>Feuilles de temps sur les tâches</em></strong>. et <strong><em>Suivi du service</em></strong> sur <strong><em>Créer une tâche dans un projet de bon de commande</em></strong>.</p></li>
+<li><p>créer un nouveau <strong>Devis</strong> et insérer l’article configuré précédement. dans l’onglet <strong><em>Autres informations</em></strong>, sélectionner le projet souhaité. <strong><em>Confirmer</em></strong> le <strong>Devis</strong> (transformer en <strong>Bon de commande</strong>).</p></li>
+<li><p>si dans l’étape précédente le projet est laissé vide, un nouveau projet avec la référence du Bon de commande sera crée (<strong>situation indésirable</strong>).</p></li>
+<li><p>dans le module projet, on constate qu’une nouvelle tache est automatiquement ajoutée au projet en cours et la ligne de vente fait référence au bon de commande crée.</p></li>
+<li><p>la facturation est effectuée de la même manière que dans les workflows précédents (ajout de tâches/sous-tâches techniques -&gt; ajout de feuilles de temps -&gt; création d’une facture -&gt; aprçu).</p></li>
+</ol>
+<p><strong>Workflow 4 : Service (article) non lié automatiquement à une seule tâche</strong></p>
+<ol class="simple">
+<li><p>dans le module <strong>Vente</strong> créer des articles de type service et configurer la <strong><em>Politique de facturation du service</em></strong> sur <strong><em>Feuilles de temps sur les tâches</em></strong>. et <strong><em>Suivi du service</em></strong> sur <strong><em>Créer un nouveau projet sans tâche</em></strong> (çad Devis).</p></li>
+<li><p>créer un nouveau <strong>Devis</strong> et insérer l’article configuré précédement. <strong><em>Confirmer</em></strong> le <strong>Devis</strong> (transformer en <strong>Bon de commande</strong>).</p></li>
+<li><p>un nouveau projet avec la référence du <strong>Bon de commande</strong> sera crée sans aucune tâche.</p></li>
+<li><p>toutes les nouvelles tâches créer dans ce projet seront par défaut liées à la ligne de vente définie lors de la création du bon de commande. bien sûre le gestionnaire de projet peut les <strong>lignes de ventes</strong> à tout moment.</p></li>
+<li><p>la facturation est effectuée de la même manière que dans les workflows précédents (ajout de tâches/sous-tâches techniques -&gt; ajout de feuilles de temps -&gt; création d’une facture -&gt; aprçu).</p></li>
+</ol>
+<p><strong>Workflow X : Devis et Projets crées séparément</strong></p>
+<ol class="simple">
+<li><p>dans le module <strong>Vente</strong> créer des articles de type service et configurer la <strong><em>Politique de facturation du service</em></strong> sur <strong><em>Feuilles de temps sur les tâches</em></strong>. et <strong><em>Suivi du service</em></strong> sur <strong><em>Ne pas créer la tâche</em></strong>.</p></li>
+<li><p>créer un nouveau <strong>Devis</strong> et insérer le sevice (article) configuré précédement.</p></li>
+<li><p>confirmer le <strong>Devis</strong> pour le transformer en <strong>Bon de commande</strong>.</p></li>
+<li><p>dans le module projet, crée un nouveau projet ou sélectionner un projet existant. s’assurer que l’option <strong><em>Feuilles de temps</em></strong> est activé.</p></li>
+<li><p>créer une nouvelle tâche. dans l’onglet <strong>Info supplémentaires</strong> séléctionner la société pour laquelle le Devis a été crée.</p></li>
+<li><p>un nouveau champ <strong>Ligne de vente</strong> apparait. séléctionner le service (article) précédement définit.</p></li>
+<li><p>la facturation est effectuée de la même manière que dans les workflows précédents (ajout de tâches/sous-tâches techniques -&gt; ajout de feuilles de temps -&gt; création d’une facture -&gt; aprçu).</p></li>
+<li><p>maintenant vous pouver ajouter autant de services au bon de commande et y lier autant de tâches que nécessaires :).</p></li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+</div>
+<div class="section" id="module-additionnel-scrum">
+<h2>Module Additionnel Scrum<a class="headerlink" href="#module-additionnel-scrum" title="Permalink to this headline">¶</a></h2>
+<p>Les activités de base d’apprentissage du <a class="reference internal" href="odoo-mod-add-project-scrum-fr.html"><span class="doc">Module Projet Scrum</span></a> sont :</p>
+<ol class="simple">
+<li><p>identifier <strong>sur papier</strong> puis mettre à jours les paramètres suivants :</p>
+<ol class="simple">
+<li><p>Les projets gérés par la méthode Scrum.</p></li>
+<li><p>Les périodes durant lesquelles les <strong>Sprints</strong> sont exécutés et les éventuelles périodes <strong>Breath</strong>.</p></li>
+<li><p>Les Equipes Scrum impliquées.</p></li>
+</ol>
+</li>
+<li><p>créer un nouevau projet et lui associer un équipe Scrum.</p></li>
+<li><p>créer des tâches dans le projet et associées les aux sprints.</p></li>
+</ol>
+<p><a class="reference external" href="#sommaire">Retour au sommaire</a></p>
+<hr class="docutils" />
+<p><a class="reference internal" href="odoo-deploy-guidelines-fr.html"><span class="doc">Sommaire général</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="odoo-deploy-scenario-standard.html" class="btn btn-neutral float-left" title="Scénario de déploiement standard d’odoo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Enlight.me
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

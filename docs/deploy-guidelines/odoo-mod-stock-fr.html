@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Module Stock &mdash; odoo-usecases 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Module Facturation" href="odoo-mod-facturation-fr.html" />
+    <link rel="prev" title="Module Employés" href="odoo-mod-employee-fr.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> odoo-usecases
+          
+
+          
+            
+            <img src="../_static/logo-enlightme.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-guidelines-fr.html">Sommaire des cas d’utilisation d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-overview-fr.html">Vue d’ensemble d’odoo (overview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-user-preferences-fr.html">Préférences d’utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-configuration-fr.html">Vue d’ensemble de la configuration (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-applications-fr.html">Vue d’ensemble des Applications (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-conversations.html">Conversations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-messages-fr.html">Module Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-employee-fr.html">Module Employés</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module Stock</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#presentation-du-module">Présentation du module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-admin">Configuration (admin)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-des-articles">Configuration des Articles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-des-entrepots">Configuration des Entrepots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entrepots">Entrepots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#types-d-operations">Types d’opérations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caterogies-d-articles">Catérogies d’articles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#donnees-de-base">Données de base</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#articles">Articles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#regles-de-reapprovisionnement">Règles de réapprovisionnement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#operations">Opérations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#transferts">Transferts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adjustement-de-stocks">Adjustement de stocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rebuts">Rebuts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#analyse">Analyse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vue-d-ensemble">Vue d’ensemble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plus-de-details">Plus de détails</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-facturation-fr.html">Module Facturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-vente-fr.html">Module Vente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-crm-fr.html">Module CRM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-projet-fr.html">Module Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-add-project-scrum-fr.html">Module Projet Scrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-standard.html">Scénario de déploiement standard d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-projet.html">Scénario de déploiement pour une gestion par projet</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">odoo-usecases</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Module Stock</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deploy-guidelines/odoo-mod-stock-fr.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-stock">
+<h1>Module Stock<a class="headerlink" href="#module-stock" title="Permalink to this headline">¶</a></h1>
+<p>Ce document illustre les différentes fonctionnalités du module <strong>Stock</strong> d’odoo 13 community.</p>
+<div class="section" id="presentation-du-module">
+<h2>Présentation du module<a class="headerlink" href="#presentation-du-module" title="Permalink to this headline">¶</a></h2>
+<p>Ce module est destiné à optimisez l’organisation des entrepôts de l’entreprise grâce à un système d’inventaire intelligent de double entrée. Il permet d’optimisez toutes les opérations internes, et d’obtenir la méthode de stockage la plus efficace possible. L’inventaire en double entrée d’Odoo n’a pas de saisie, de sortie ou de transformation de stock. A la place, toutes ces opérations consistent en des mouvements d’inventaire entre les emplacements disponibles.</p>
+<p><img alt="../_images/stock-overview.png" src="../_images/stock-overview.png" /></p>
+</div>
+<div class="section" id="configuration-admin">
+<h2>Configuration (admin)<a class="headerlink" href="#configuration-admin" title="Permalink to this headline">¶</a></h2>
+<p>Cette section, réservée aux <strong>administrateurs</strong> et <strong>Gestionnaires des stocks</strong>, permet de définir les paramètres généraux du module, tel que les opérations (préparation par lots, Colis), les confirmations d’expédition (email, SMS), les options des articles, la traçabilité et les entrepots.</p>
+<div class="section" id="configuration-des-articles">
+<h3>Configuration des Articles<a class="headerlink" href="#configuration-des-articles" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet de définir les paramètres des articles tel que les variantes, les unités de mesures et le conditionnement de produits.</p>
+<p><img alt="../_images/stock-config-article.png" src="../_images/stock-config-article.png" /></p>
+<ul class="simple">
+<li><p>les variantes : si cette option est selectionnée, le <strong>gestionnaire des stocks</strong> aura la possibilité de prédéfinir des caractéristiques communes pour les articles (couleur, options, …). Pour chaque caractéristique un ensemble de valeurs est prédéfini.</p></li>
+<li><p>les unités de mesures : si cette option est sélectionnée, le <strong>gestionnaire des stocks</strong> aura la possibilité de prédéfinir des unités de mesures utilisables pour les articles (km, kg, …).</p></li>
+<li><p>le conditionnement de produits : si cette option est sélectionnée, le <strong>gestionnaire des stocks</strong> aura la possibilité de prédéfinir des modèles de conditionnement pour les articles (packs de 4/6/8/…).</p></li>
+</ul>
+</div>
+<div class="section" id="configuration-des-entrepots">
+<h3>Configuration des Entrepots<a class="headerlink" href="#configuration-des-entrepots" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet de définir les paramètres des entrepots tel que les emplacements, le multi-entrepots et les routes.</p>
+<p><img alt="../_images/stock-config-entrepot.png" src="../_images/stock-config-entrepot.png" /></p>
+<ul class="simple">
+<li><p>Emplacements de stockage : si cette option est selectionnée, le <strong>gestionnaire des stocks</strong> aura la possibilité de prédéfinir des emplacements spécifiques dans chaque entrepot pour ranger les articles selon la <strong><em>stratégie de rangement définie</em></strong>.</p></li>
+<li><p>Multi-Entrepots : si cette option est selectionnée, le <strong>gestionnaire des stocks</strong> aura la possibilité d’ajouter autant d’entrepots qu’il le souhaite. Sinon <strong>un seul</strong> entrepot sera disponible pour le stockage, celui de l’entreprise.</p></li>
+<li><p>Routes en plusieurs étapes : si cette option est selectionnée, le <strong>gestionnaire des stocks</strong> aura la possibilité de prédéfinir des routes (étapes) standards par lesquelles les articles sont acheminés, ainsi que les règles associées.</p></li>
+</ul>
+</div>
+<div class="section" id="entrepots">
+<h3>Entrepots<a class="headerlink" href="#entrepots" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet de renseigner les informations relatives à l’entrepot principal de l’entreprise et aux autres entrepots si l’option <a class="reference external" href="#configuration-des-entrepots">Multi-Entrepots est activé</a> (identification, nom sourt, adresse).</p>
+</div>
+<div class="section" id="types-d-operations">
+<h3>Types d’opérations<a class="headerlink" href="#types-d-operations" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet de définir les types d’opérations affectant les stocks tel que la réception et la livraison.</p>
+<p><img alt="../_images/stock-type-operation.png" src="../_images/stock-type-operation.png" /></p>
+<p>Les opérations peuvent avoir un code, un type (Reçu, Livraison, Transfert interne) et être associées à des opérations de retours.</p>
+</div>
+<div class="section" id="caterogies-d-articles">
+<h3>Catérogies d’articles<a class="headerlink" href="#caterogies-d-articles" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet de définir une <strong>hiérarchie</strong> des catégories d’articles gérés par l’entreprise, tel que les articles disponibles à la vente, les matières premières, les fournitures, …</p>
+</div>
+</div>
+<div class="section" id="donnees-de-base">
+<h2>Données de base<a class="headerlink" href="#donnees-de-base" title="Permalink to this headline">¶</a></h2>
+<p>Le menu Données de base permet de resneigner les informations relatives aux <strong><em>Articles</em></strong> et aux <strong><em>Règles de réapprovisionnement</em></strong>.</p>
+<div class="section" id="articles">
+<h3>Articles<a class="headerlink" href="#articles" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet de renseigner les informations relatives à tous les articles gérés par l’entreprise.</p>
+<p><img alt="../_images/stock-article.png" src="../_images/stock-article.png" /></p>
+<p>Les articles peuvent être vendu et/ou acheté et selon leur type (consommable, service, stockable) des informations relatives à leur stockage peuvent être renseignées.</p>
+</div>
+<div class="section" id="regles-de-reapprovisionnement">
+<h3>Règles de réapprovisionnement<a class="headerlink" href="#regles-de-reapprovisionnement" title="Permalink to this headline">¶</a></h3>
+<p>Les règles de réapprovisionnement définissent, pour chaque article, les quantités min/max ainsi que les délai de réception/achat.</p>
+</div>
+</div>
+<div class="section" id="operations">
+<h2>Opérations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
+<p>Le menu opération permet de resneigner les informations relatives aux <strong><em>Transferts</em></strong>, <strong><em>Adjustement de stock</em></strong> et les <strong><em>Rebuts</em></strong>. Il permet aussi de <strong><em>lancer le planificateur</em></strong> afin de créer les opérations nécessaires au réapprovisionnement des stocks selon les régles prédifinis dans les <a class="reference external" href="#donn%C3%A9es-de-base">Données de base</a>.</p>
+<div class="section" id="transferts">
+<h3>Transferts<a class="headerlink" href="#transferts" title="Permalink to this headline">¶</a></h3>
+<p>Les transferts permettent d’exécuter des opérations sur les stocks dont les types sont définis dans <a class="reference external" href="#types-dop%C3%A9rations">Types d’opérations</a>.</p>
+<p><img alt="../_images/stock-transfert.png" src="../_images/stock-transfert.png" /></p>
+<p>Une fois définie, l’opération passe par en ensemble d’états, identifiables sur la barre en haut, et qui sont : Brouillon, En attente, Pret, Fait. Aussi le transfert peut être annulé à tous moment par le <strong>gestionnaire des stocks</strong>.</p>
+<p><strong>NB</strong>: de manière générale ces transferts sont rarement exécutés manuellement puisqu’ils sont intégrés avec les modules <strong>Achats</strong> pour les réceptions et <strong>Ventes</strong> pour les livraisons. Ils sont aussi utilisés par le module <strong><em>Compatabilité</em></strong>.</p>
+</div>
+<div class="section" id="adjustement-de-stocks">
+<h3>Adjustement de stocks<a class="headerlink" href="#adjustement-de-stocks" title="Permalink to this headline">¶</a></h3>
+<p>Les adjusments de stocks sont réallisés dans le cadre <strong>d’inventaires</strong> périodiques et affectes un ou plusieurs articles gérés par l’entreprise. Pour ce faire il faut créer un nouveau <strong><em>inventaire</em></strong> (Référence, articles concernés) et le <strong><em>démarrer</em></strong>.</p>
+<p><img alt="../_images/stock-inventaire.png" src="../_images/stock-inventaire.png" /></p>
+<p>Après le décompte physique des stocks, les quantités sont repotrtés dans la colone <strong><em>Compté</em></strong> de chque article. A la fin l’inventaire, le <strong>Gestionnaire des stocks</strong> le valide et les stocks sont automatiquement mis à jours en cas de différences.</p>
+</div>
+<div class="section" id="rebuts">
+<h3>Rebuts<a class="headerlink" href="#rebuts" title="Permalink to this headline">¶</a></h3>
+<p>Les rebuts sont des produits décomptés dans les stocks mais inutilisables pour un quelconque cause. Pour les défalquer des stocks il faut créer un nouveau <strong><em>Rebuts</em></strong> et renseigner l’article concerné et la quantité à défalquer. Une le que <strong>Rebut</strong> est validé par le <strong>Gestionnaire des stocks</strong> les quantités des articles disponibles sont automatiquement mises à jours.</p>
+</div>
+</div>
+<div class="section" id="analyse">
+<h2>Analyse<a class="headerlink" href="#analyse" title="Permalink to this headline">¶</a></h2>
+<p>La partie analyse permet aux <strong>Gestionnaires des stocks</strong> de visualiser des vues synthétiques de la situation des stocks sous différentes formes : listes, tableau croisé, graphes.</p>
+<p><img alt="../_images/stock-analyse.png" src="../_images/stock-analyse.png" /></p>
+</div>
+<div class="section" id="vue-d-ensemble">
+<h2>Vue d’ensemble<a class="headerlink" href="#vue-d-ensemble" title="Permalink to this headline">¶</a></h2>
+<p>La partie vue d’ensemble est un tableau de bord permettant de visualiser en temps réel l’état des différentes opérations selon leur types.</p>
+<p><img alt="../_images/stock-vue-ensemble.png" src="../_images/stock-vue-ensemble.png" /></p>
+</div>
+<div class="section" id="plus-de-details">
+<h2>Plus de détails<a class="headerlink" href="#plus-de-details" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Pour la collaboration sur les formulaires de ce module, consulter la fonctionnalité <a class="reference internal" href="odoo-conversations.html"><span class="doc">conversations</span></a>.</p></li>
+<li><p><a class="reference external" href="https://www.odoo.com/fr_FR/page/warehouse">Site officiel d’odoo</a>.</p></li>
+</ul>
+<hr class="docutils" />
+<p><a class="reference internal" href="odoo-deploy-guidelines-fr.html"><span class="doc">Retour au sommaire</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="odoo-mod-facturation-fr.html" class="btn btn-neutral float-right" title="Module Facturation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="odoo-mod-employee-fr.html" class="btn btn-neutral float-left" title="Module Employés" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Enlight.me
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

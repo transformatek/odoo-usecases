@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Module Projet &mdash; odoo-usecases 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Module Projet Scrum" href="odoo-mod-add-project-scrum-fr.html" />
+    <link rel="prev" title="Module CRM" href="odoo-mod-crm-fr.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> odoo-usecases
+          
+
+          
+            
+            <img src="../_static/logo-enlightme.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-guidelines-fr.html">Sommaire des cas d’utilisation d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-overview-fr.html">Vue d’ensemble d’odoo (overview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-user-preferences-fr.html">Préférences d’utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-configuration-fr.html">Vue d’ensemble de la configuration (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-applications-fr.html">Vue d’ensemble des Applications (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-conversations.html">Conversations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-messages-fr.html">Module Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-employee-fr.html">Module Employés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-stock-fr.html">Module Stock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-facturation-fr.html">Module Facturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-vente-fr.html">Module Vente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-crm-fr.html">Module CRM</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module Projet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#presentation-du-module">Présentation du module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-admin">Configuration (admin)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gestion-des-taches">Gestion des tâches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gestion-du-temps">Gestion du temps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projets-configuration">Projets (Configuration)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etiquettes">Étiquettes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#types-d-activites">Types d’activités</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#projets">Projets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toutes-les-taches">Toutes les tâches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analyse">Analyse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plus-de-details">Plus de détails</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-add-project-scrum-fr.html">Module Projet Scrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-standard.html">Scénario de déploiement standard d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-projet.html">Scénario de déploiement pour une gestion par projet</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">odoo-usecases</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Module Projet</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deploy-guidelines/odoo-mod-projet-fr.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-projet">
+<h1>Module Projet<a class="headerlink" href="#module-projet" title="Permalink to this headline">¶</a></h1>
+<p>Ce document illustre les différentes fonctionnalités du module <strong>Projet</strong> d’odoo 13 community.</p>
+<div class="section" id="presentation-du-module">
+<h2>Présentation du module<a class="headerlink" href="#presentation-du-module" title="Permalink to this headline">¶</a></h2>
+<p>Ce module est destiné à la gestion de projets agiles. Il permet :</p>
+<ul class="simple">
+<li><p>de vérifiez facilement les horaires des équipes et de les replanifier pour garder les échéances.</p></li>
+<li><p>de gardez une trace des échéances et de la progression des projets grâce à un aperçu claire.</p></li>
+<li><p>de gardez un bonne vue sur la charge de travail et sur le statut des tâches individuelles.</p></li>
+<li><p>de programmez les équipes à travers les différents projets en prenant en compte les vacances des employés.
+-de planifiez à l’avance les futurs projets sur base des projets similaires et estimez les échéances plus précisément.</p></li>
+<li><p>de comparez les prévisions avec les feuilles de temps effectives pour améliorer la rentabilité.</p></li>
+<li><p>de divisez les projets en petites tâches et de les assignez à l’équipe pour augmenter la collaboration.</p></li>
+<li><p>de créez des étapes personnalisées pour chaque projet afin de simplifier l’aperçu sur le travail et améliorer l’efficacité générale du projet.</p></li>
+</ul>
+<p><img alt="../_images/projet-overview.png" src="../_images/projet-overview.png" /></p>
+</div>
+<div class="section" id="configuration-admin">
+<h2>Configuration (admin)<a class="headerlink" href="#configuration-admin" title="Permalink to this headline">¶</a></h2>
+<p>Cette section, réservée aux <strong>administrateurs</strong> et <strong>Gestionnaires des ventes</strong>, permet de définir les paramètres généraux du module, tel que la gestion des tâches et du temps.</p>
+<div class="section" id="gestion-des-taches">
+<h3>Gestion des tâches<a class="headerlink" href="#gestion-des-taches" title="Permalink to this headline">¶</a></h3>
+<p><img alt="../_images/projet-config-gestion-taches.png" src="../_images/projet-config-gestion-taches.png" /></p>
+<ul class="simple">
+<li><p>L’option <strong><em>Pads collaboratifs</em></strong> permet d’utiliser des outils intégrés d’édition de texte collaboratifs (<strong>option nécessitant une clé API</strong>).</p></li>
+<li><p>L’option <strong><em>Sous-tâches</em></strong> permet de créer une hiérarchie entre les taches en définissant des <strong>taches parentes</strong>.</p></li>
+<li><p>L’option <strong><em>Utiliser les évaluations de projet</em></strong> active de nouvelles fonctionnalités permettant aux <strong>Gestionnaires des projets</strong> de recevoir des évaluations de la satisfatcion des  clients par emails. Des modèles d’emails de demmande d’évaluation peuvent être définie pour chaque étape. Les évaluations sont visibles directement sur les taches.</p></li>
+</ul>
+</div>
+<div class="section" id="gestion-du-temps">
+<h3>Gestion du temps<a class="headerlink" href="#gestion-du-temps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>L’option <strong><em>Feuilles de temps sur les tâches</em></strong> active de nouvelles fonctionnalités permettant aux <strong>Gestionnaires des projets</strong> d’enregister les volumes horaires réellement alloués à chaque tâche par employé et par projet.</p></li>
+</ul>
+</div>
+<div class="section" id="projets-configuration">
+<h3>Projets (Configuration)<a class="headerlink" href="#projets-configuration" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet de gérer les projets de l’entreprise en renseignant toutes les informations utiles, tel que le nom, le responsable, le client, la visibilité et le mode de planification du temps.</p>
+<p><img alt="../_images/projet-projet-new.png" src="../_images/projet-projet-new.png" /></p>
+<p>Cette vue permet d’avoir un aperçu direct sur le nombre de <strong>Tâches</strong> du projet et les <strong>Documents</strong> asscociés (pièces jointes). En effet plusieurs pièces jointes, de différents formats (url, pdf, doc, xls, ..) peuvent être associés au projet tel que des contrats, des rapports, des liens …</p>
+<p><img alt="../_images/projet-document-new.png" src="../_images/projet-document-new.png" /></p>
+</div>
+<div class="section" id="etiquettes">
+<h3>Étiquettes<a class="headerlink" href="#etiquettes" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet de prédéfinir des étiquettes a associé aux taches, tel que : besoin d’assistance, suspendu, …</p>
+</div>
+<div class="section" id="types-d-activites">
+<h3>Types d’activités<a class="headerlink" href="#types-d-activites" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet de prédéfinir l’ensemble des activités liées aux taches du projet, tel que les appels téléphoniques, l’envoi d’emails, les rendez-vous, …</p>
+</div>
+</div>
+<div class="section" id="projets">
+<h2>Projets<a class="headerlink" href="#projets" title="Permalink to this headline">¶</a></h2>
+<p>Cette partie offre une vue en kanban de l’ensemble des projets de l’entreprise. Pour chaque projet, on peut visualiser le nom, le client, le nombre de taches, …</p>
+<p>Aussi, à partir du menu contextuel, on peut accéder directement aux paramètres du projet avec la commande <strong><em>Modifier</em></strong> et lui affecter une couleur distinctive en fonction de sont type par exemple.</p>
+<p><img alt="../_images/projet-projet-card.png" src="../_images/projet-projet-card.png" /></p>
+<p>En sélectionnant un projet, on passe vers une vue en kanban où chaque tâche du projet est disposé dans une colone correposnadante à l’<strong>étape</strong> dans laquelle la tache se trouve actuellement. Voir section <a class="reference external" href="#toutes-les-t%C3%A2ches">Tâches</a> pour plus de détails.</p>
+<p><img alt="../_images/projet-projet-taches-kanban.png" src="../_images/projet-projet-taches-kanban.png" /></p>
+<p>Pour chaque étape (colone) un ensemble de paramètres peuvent être définis avec la commande <strong><em>Editer l’étape</em></strong>.</p>
+<p><img alt="../_images/projet-etape-config-access.png" src="../_images/projet-etape-config-access.png" /></p>
+<p>Ainsi, pour chaque étape on peut définir :</p>
+<ul class="simple">
+<li><p>le nom.</p></li>
+<li><p>si elle doit être automatiquement repliée dans le kanban.</p></li>
+<li><p>le modèle de mail a envoyer lorsqu’une tâche atteint cette étape.</p></li>
+<li><p>la descritpion des codes couleurs (gris, vert, rouge) de l’état de la tâche qui s’affiche sous forme de point dans la carte kanban de la tâche.</p></li>
+</ul>
+<p><img alt="../_images/projet-etape-edit.png" src="../_images/projet-etape-edit.png" /></p>
+</div>
+<div class="section" id="toutes-les-taches">
+<h2>Toutes les tâches<a class="headerlink" href="#toutes-les-taches" title="Permalink to this headline">¶</a></h2>
+<p>Cette partie offre une vue globale de toutes les taches assignées à l’<strong>utilisateur</strong> connecté actuellement (vue personnalisé). Pour chaque tâche le <strong>gestionnaire de projet</strong> peut renseigner l’ensemble des informations nécessaires, tel que : le nom, la date limite, le responsables, …</p>
+<p><img alt="../_images/projet-tache-edit.png" src="../_images/projet-tache-edit.png" /></p>
+</div>
+<div class="section" id="analyse">
+<h2>Analyse<a class="headerlink" href="#analyse" title="Permalink to this headline">¶</a></h2>
+<p>La partie analyse permet aux <strong>Gestionnaires de projets</strong> de visualiser des vues synthétiques sous différentes formes (listes, tableau croisé ou graphes) de la situation des <strong>projets</strong> et des <strong>taches</strong>.</p>
+<p><img alt="../_images/projet-analyse.png" src="../_images/projet-analyse.png" /></p>
+</div>
+<div class="section" id="plus-de-details">
+<h2>Plus de détails<a class="headerlink" href="#plus-de-details" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Pour la collaboration sur les formulaires de ce module, consulter la fonctionnalité <a class="reference internal" href="odoo-conversations.html"><span class="doc">conversations</span></a>.</p></li>
+<li><p><a class="reference external" href="https://www.odoo.com/fr_FR/page/project-management">Site officiel d’odoo</a>.</p></li>
+</ul>
+<hr class="docutils" />
+<p><a class="reference internal" href="odoo-deploy-guidelines-fr.html"><span class="doc">Retour au sommaire</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="odoo-mod-add-project-scrum-fr.html" class="btn btn-neutral float-right" title="Module Projet Scrum" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="odoo-mod-crm-fr.html" class="btn btn-neutral float-left" title="Module CRM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Enlight.me
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

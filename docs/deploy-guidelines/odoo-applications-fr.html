@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Vue d’ensemble des Applications (admin) &mdash; odoo-usecases 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Conversations" href="odoo-conversations.html" />
+    <link rel="prev" title="Vue d’ensemble de la configuration (admin)" href="odoo-configuration-fr.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> odoo-usecases
+          
+
+          
+            
+            <img src="../_static/logo-enlightme.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-guidelines-fr.html">Sommaire des cas d’utilisation d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-overview-fr.html">Vue d’ensemble d’odoo (overview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-user-preferences-fr.html">Préférences d’utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-configuration-fr.html">Vue d’ensemble de la configuration (admin)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Vue d’ensemble des Applications (admin)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#applications-principales">Applications principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magasin-de-themes-applis-tierces">Magasin de thèmes &amp; Applis tierces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-conversations.html">Conversations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-messages-fr.html">Module Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-employee-fr.html">Module Employés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-stock-fr.html">Module Stock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-facturation-fr.html">Module Facturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-vente-fr.html">Module Vente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-crm-fr.html">Module CRM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-projet-fr.html">Module Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-add-project-scrum-fr.html">Module Projet Scrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-standard.html">Scénario de déploiement standard d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-projet.html">Scénario de déploiement pour une gestion par projet</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">odoo-usecases</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Vue d’ensemble des Applications (admin)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deploy-guidelines/odoo-applications-fr.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vue-d-ensemble-des-applications-admin">
+<h1>Vue d’ensemble des Applications (admin)<a class="headerlink" href="#vue-d-ensemble-des-applications-admin" title="Permalink to this headline">¶</a></h1>
+<p>Cette partie, <strong>réservée aux adminstrateurs</strong>, permet d’installer, de désinstaller et de mettre à jours les modules disponibles sur la platform odoo.</p>
+<p><img alt="../_images/apps-menu.png" src="../_images/apps-menu.png" /></p>
+<div class="section" id="applications-principales">
+<h2>Applications principales<a class="headerlink" href="#applications-principales" title="Permalink to this headline">¶</a></h2>
+<p>Cette vue en <strong>kanban</strong> donne accès à tous les modules disponibles pouvant être installés, et qui couvrent les différentes fonctions d’une entreprise, CRM, Stocks, Ventes, Achats, Ressources Humaines, …</p>
+<p><img alt="../_images/apps-kanban.png" src="../_images/apps-kanban.png" /></p>
+<p>Le mode <strong>kanban</strong> peut être rempplcé par le mode <strong>liste</strong> afin de visualiser plus de détails.</p>
+<p><img alt="../_images/apps-list.png" src="../_images/apps-list.png" /></p>
+<p>Sur chaque carte, représentant un module, on peut lire le <strong>nom</strong> et la <strong>description</strong>. Le boutton <strong><em>Installer</em></strong> permet d’installer le module et les modules avec un boutton <strong><em>Mettre à jour</em></strong> sont des modules de l’édition Entreprise (payant).</p>
+<p><img alt="../_images/apps-cards.png" src="../_images/apps-cards.png" /></p>
+</div>
+<div class="section" id="magasin-de-themes-applis-tierces">
+<h2>Magasin de thèmes &amp; Applis tierces<a class="headerlink" href="#magasin-de-themes-applis-tierces" title="Permalink to this headline">¶</a></h2>
+<p>Ces menus donnent accès à des modules et des thèmes supplémentaires disponibles en lignes. Ces extensions ne sont pas toutes gratuites.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="odoo-deploy-guidelines-fr.html"><span class="doc">Retour au sommaire</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="odoo-conversations.html" class="btn btn-neutral float-right" title="Conversations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="odoo-configuration-fr.html" class="btn btn-neutral float-left" title="Vue d’ensemble de la configuration (admin)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Enlight.me
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

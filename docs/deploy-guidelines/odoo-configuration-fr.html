@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Vue d’ensemble de la configuration (admin) &mdash; odoo-usecases 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Vue d’ensemble des Applications (admin)" href="odoo-applications-fr.html" />
+    <link rel="prev" title="Préférences d’utilisateur" href="odoo-user-preferences-fr.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> odoo-usecases
+          
+
+          
+            
+            <img src="../_static/logo-enlightme.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-guidelines-fr.html">Sommaire des cas d’utilisation d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-overview-fr.html">Vue d’ensemble d’odoo (overview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-user-preferences-fr.html">Préférences d’utilisateur</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Vue d’ensemble de la configuration (admin)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#utilisateurs">Utilisateurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#societes">Sociétés</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parametres-generaux">Paramètres généraux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#documents-commerciaux">Documents commerciaux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#messages">Messages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-applications-fr.html">Vue d’ensemble des Applications (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-conversations.html">Conversations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-messages-fr.html">Module Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-employee-fr.html">Module Employés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-stock-fr.html">Module Stock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-facturation-fr.html">Module Facturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-vente-fr.html">Module Vente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-crm-fr.html">Module CRM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-projet-fr.html">Module Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-add-project-scrum-fr.html">Module Projet Scrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-standard.html">Scénario de déploiement standard d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-projet.html">Scénario de déploiement pour une gestion par projet</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">odoo-usecases</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Vue d’ensemble de la configuration (admin)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deploy-guidelines/odoo-configuration-fr.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vue-d-ensemble-de-la-configuration-admin">
+<h1>Vue d’ensemble de la configuration (admin)<a class="headerlink" href="#vue-d-ensemble-de-la-configuration-admin" title="Permalink to this headline">¶</a></h1>
+<p>Cette partie, <strong>réservée aux adminstrateurs</strong>, permet de définir les paramètres communs les plus importants pour la personnalisation de la platform  odoo aux besoins de l’entreprise.</p>
+<p><strong>Important</strong> : de nouveaux menus/options peuvent apparaitres dans cette partie lorsque des modules sont installés.</p>
+<p><img alt="../_images/config-menu.png" src="../_images/config-menu.png" /></p>
+<div class="section" id="utilisateurs">
+<h2>Utilisateurs<a class="headerlink" href="#utilisateurs" title="Permalink to this headline">¶</a></h2>
+<p>La partie utilisateurs permet de gérer les utilisateurs (ajout / supression / modification / archivage).</p>
+<p><img alt="../_images/config-users-list.png" src="../_images/config-users-list.png" /></p>
+<p>Pour créer un nouvel utilisateur, cliquer sur <strong><em>Créer</em></strong>.</p>
+<p><img alt="../_images/config-users-new.png" src="../_images/config-users-new.png" /></p>
+<p>Ainsi, vous pouver renseigner toutes les informations utiles.</p>
+<ul class="simple">
+<li><p>Nom, photo, email</p></li>
+<li><p>Droits d’accès aux modules installés</p></li>
+<li><p>Préférences (langue, signature, fuseau horaire)</p></li>
+</ul>
+<p>Pour confirmer cliquer sur <strong><em>Sauvegarder</em></strong>. Le nouveau utilisateur est ajouté à la liste.</p>
+<p>Pour modifier le mot de passe de l’utilisateur, séléctionner le dans la liste et chosir le menu <strong><em>Action / modifier le mot de passe</em></strong>.</p>
+<p><img alt="../_images/config-users-password.png" src="../_images/config-users-password.png" /></p>
+<p>Le nouveau utilisateur peut maintenant se connecter et mettre à jour son profil dans <a class="reference internal" href="odoo-user-preferences-fr.html"><span class="doc">Préférences d’utilisateur</span></a>.</p>
+</div>
+<div class="section" id="societes">
+<h2>Sociétés<a class="headerlink" href="#societes" title="Permalink to this headline">¶</a></h2>
+<p>La partie sociétés permet de gérer les sociétés (ajout / supression / modification / archivage). Une société est une entité juridique autonome qui dispose de ses propres personnels, finances, ventes, …</p>
+<p><img alt="../_images/config-company-list.png" src="../_images/config-company-list.png" /></p>
+<p>Pour créer un modifier les informations de la société, séléctionner-la dans la liste et cliquer sur <strong><em>Modifier</em></strong>.</p>
+<p><img alt="../_images/config-company-modify.png" src="../_images/config-company-modify.png" /></p>
+<p>Ainsi, vous pouver renseigner toutes les informations utiles de votre société et qui apparaitrons sur les entêtes et pieds de pages rapports (documents) imprimés.</p>
+<p>Pour avoir un aperçu des rapports, utiliser le menu <strong><em>Imprimer / Aperçu de rapprt externe</em></strong>.</p>
+<p><img alt="../_images/config-company-reports-overview.png" src="../_images/config-company-reports-overview.png" /></p>
+</div>
+<div class="section" id="parametres-generaux">
+<h2>Paramètres généraux<a class="headerlink" href="#parametres-generaux" title="Permalink to this headline">¶</a></h2>
+<p>Le pannaux <strong>Paramètres généraux</strong> permet de définir les paramtètres essentiels utilisés par tous les modules d’ooo. Il donne un accès global aux paramètres : Utilisateurs, Sociétés, Langues, Documents commerciaux, Contacts, Intergrations, …</p>
+<div class="section" id="documents-commerciaux">
+<h3>Documents commerciaux<a class="headerlink" href="#documents-commerciaux" title="Permalink to this headline">¶</a></h3>
+<p>Ces paramètres sont essentiels pour la personnalisation d’odoo aux besoins de l’entreprise.</p>
+<p><img alt="../_images/config-sales-docs.png" src="../_images/config-sales-docs.png" /></p>
+<ul class="simple">
+<li><p><strong>Format</strong> permet de définir la taille, les marges, l’orientation et la résolution de la feuille utilisée lors de l’impression.</p></li>
+<li><p><strong>Document Layout</strong> permet de définir l’agencement, le logo, les couleurs, la fonte, le slogan de la société et le bas de page. Un aperçu dynamique et disponible pour visuliser les modifications.</p></li>
+</ul>
+<p><img alt="../_images/config-docs-layout.png" src="../_images/config-docs-layout.png" /></p>
+<p>Pour avoir un aperçu des rapports, utiliser le menu <strong><em>Imprimer / Aperçu de rapprt externe</em></strong>, dans la page relative à la <a class="reference external" href="#soci%C3%A9t%C3%A9s">société</a>.</p>
+</div>
+<div class="section" id="messages">
+<h3>Messages<a class="headerlink" href="#messages" title="Permalink to this headline">¶</a></h3>
+<p>La section <strong>Messages</strong> permet de définir les paramètres realtifs aux types d’activités et au serveur de messagerie externe.</p>
+<p><img alt="../_images/config-message-activities.png" src="../_images/config-message-activities.png" /></p>
+<p>Dans la section types d’activités, l’administrateur peut définir des activités standardisées qui seront utilisées dans d’autres modules (Employés, Notes, Ventes,…).</p>
+<p><img alt="../_images/config-message-activity-new.png" src="../_images/config-message-activity-new.png" /></p>
+<hr class="docutils" />
+<p><a class="reference internal" href="odoo-deploy-guidelines-fr.html"><span class="doc">Retour au sommaire</span></a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="odoo-applications-fr.html" class="btn btn-neutral float-right" title="Vue d’ensemble des Applications (admin)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="odoo-user-preferences-fr.html" class="btn btn-neutral float-left" title="Préférences d’utilisateur" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Enlight.me
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
