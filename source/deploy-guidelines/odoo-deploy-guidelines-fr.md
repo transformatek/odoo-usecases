@@ -2,7 +2,7 @@
 
 Ce document fait référence aux explications étapes par étapes du déploiment des modules standards d'odoo 13 Community.
 
-## Contents 
+## Sommaire 
 
 <!--ts-->
 

@@ -1,0 +1,37 @@
+.. odoo-usecases documentation master file, created by
+   sphinx-quickstart on Thu Apr 16 23:46:08 2020.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to odoo-usecases's documentation!
+=========================================
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Contents:
+
+   ./deploy-guidelines/odoo-deploy-guidelines-fr.md
+   ./deploy-guidelines/odoo-overview-fr.md
+   ./deploy-guidelines/odoo-user-preferences-fr.md
+   ./deploy-guidelines/odoo-configuration-fr.md
+   ./deploy-guidelines/odoo-applications-fr.md
+   ./deploy-guidelines/odoo-conversations.md
+   ./deploy-guidelines/odoo-mod-messages-fr.md
+   ./deploy-guidelines/odoo-mod-employee-fr.md
+   ./deploy-guidelines/odoo-mod-stock-fr.md
+   ./deploy-guidelines/odoo-mod-facturation-fr.md
+   ./deploy-guidelines/odoo-mod-vente-fr.md
+   ./deploy-guidelines/odoo-mod-crm-fr.md
+   ./deploy-guidelines/odoo-mod-projet-fr.md
+   ./deploy-guidelines/odoo-mod-add-project-scrum-fr.md
+   ./deploy-guidelines/odoo-deploy-scenario-standard.md
+   ./deploy-guidelines/odoo-deploy-scenario-projet.md
+
+
+
+
+Indices and tables
+==================
+
+* :ref:`search`
+

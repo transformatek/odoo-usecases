@@ -12,7 +12,7 @@ For a docker deployment :
 
 # Summary 
 
-* [Deployment guidelines](./src/odoo-deploy-guidelines-fr.md)
+* [Deployment guidelines](./source/deploy-guidelines/odoo-deploy-guidelines-fr.md)
 
 
 # TODO
