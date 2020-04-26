@@ -1,0 +1,76 @@
+
+@startuml deploy-concepts
+' title Déploiment recommandé d'odoo 
+scale 100 width
+scale 1000 height
+
+folder Production {
+   
+    node odooProd {
+        folder ModulesStandards {
+            artifact Employe
+            artifact CRM
+            artifact Autres
+            Employe -right- CRM
+            CRM -right- Autres
+        }
+        folder ModulesPersonnalises {
+            artifact ModuleProd_1
+            artifact ModuleProd_2
+            artifact ModuleProd_n
+            ModuleProd_1 -right- ModuleProd_2
+            ModuleProd_2 -right- ModuleProd_n
+
+        }
+        ModulesStandards -[hidden]down- ModulesPersonnalises
+    }
+
+    node DatabaseServer {
+        component DatabaseManagmentSystem 
+        database EntrepriseDatabases
+        EntrepriseDatabases -up-> DatabaseManagmentSystem
+    }
+    DatabaseServer -[hidden]left- odooProd     
+}
+
+
+folder Preproduction {
+    node odooTest {
+        folder ModulesStandardsTest{
+            artifact ModuleStd_1
+            artifact ModuleStd_2
+        }
+        folder ModulesPersonnalisesTest{
+            artifact ModulePero_1
+            artifact ModulePrso_n
+        }
+        folder ModuleEnPhaseTest{
+            artifact NouveauModule
+        }
+        ModulesPersonnalisesTest -[hidden]up- ModulesStandardsTest
+        ModuleEnPhaseTest -[hidden]up- ModulesPersonnalisesTest
+    }
+    node DataStoreTest{
+        database DatabaseMirroir
+        DatabaseMirroir <-- EntrepriseDatabases
+    }
+    odooTest -[hidden]right- DataStoreTest
+
+}
+
+node Developement {
+    node DevelopperEnvirnment {
+        artifact IDE
+        artifact SDKs
+        artifact odooDev
+        IDE -[hidden]right- SDKs
+        SDKs -[hidden]right-odooDev
+    }
+    database LocalDatabase
+    DevelopperEnvirnment -up-> ModuleEnPhaseTest
+}
+
+Preproduction --[hidden]up- Production
+Developement ---[hidden]up- Preproduction
+
+@enduml

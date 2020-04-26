@@ -1,0 +1,13 @@
+# odoo-usecases
+
+This repository contains documentation for **Odoo** use cases dediacated to small businesses. It includes guidelines for use, deploy, administrate and develop custom geospatially enabled modules.
+
+## Sommaire
+
+<!--ts-->
+
+* [Lignes directrices pour les utilisateurs](./deploy-guidelines/odoo-deploy-guidelines-fr.md)
+* [Scénarios de déploiement](./deploy-guidelines/odoo-deploy-guidelines-fr.md)
+* [Lignes directrices pour les administrateurs](./admin-guidelines/odoo-admin-guidelines-fr.md)
+
+<!--te-->

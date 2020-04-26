@@ -7,8 +7,8 @@ Welcome to odoo-usecases's documentation!
 =========================================
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Contents:
+   :maxdepth: 1
+   :caption: Guides de déploiement:
 
    ./deploy-guidelines/odoo-deploy-guidelines-fr.md
    ./deploy-guidelines/odoo-overview-fr.md
@@ -24,13 +24,25 @@ Welcome to odoo-usecases's documentation!
    ./deploy-guidelines/odoo-mod-crm-fr.md
    ./deploy-guidelines/odoo-mod-projet-fr.md
    ./deploy-guidelines/odoo-mod-add-project-scrum-fr.md
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Scénarios de déploiement:
+
    ./deploy-guidelines/odoo-deploy-scenario-standard.md
    ./deploy-guidelines/odoo-deploy-scenario-projet.md
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Guides d'administration:
+
+   ./admin-guidelines/odoo-admin-guidelines-fr.md
+   ./admin-guidelines/odoo-admin-overview-fr.md
+   ./admin-guidelines/odoo-deploy-mod-in-production-env-fr.md
 
 
-
-Indices and tables
+Indexes et tables
 ==================
 
 * :ref:`search`

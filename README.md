@@ -1,12 +1,13 @@
 # odoo-usecases
-This repository contains documentation for **Odoo** use cases dediacated to small businesses. It includes guidelines for use, deploy, administrate and develop custom geospatially enabled modules.    
 
-## Summary 
+This repository contains documentation for **Odoo** use cases dediacated to small businesses. It includes guidelines for use, deploy, administrate and develop custom geospatially enabled modules.
 
-### Prerequisite 
+## Summary
+
+### Prerequisite
 
 - a proper odoo installation on the machine. See [Odoo Entreprise management system](https://enlight-me.github.io/docker-usecases/setup-images-on-docker/odoo-on-docker.html) for a docker deployment.
- 
+
 ### Content
 
 * [Deployment guidelines](https://enlight-me.github.io/odoo-usecases/)
@@ -14,20 +15,20 @@ This repository contains documentation for **Odoo** use cases dediacated to smal
 #### TODO
 
 - Administration
-- Developement 
+- Developement
 - Geospatial
 
-
-## Setup 
+## Setup
 
 Clone the repository
+
 ```bash
 git clone https://github.com/enlight-me/odoo-usecases.git
 cd odoo-usecases/
 touch .nojekyll
 ```
 
-Install sphinx / python dependiencies 
+Install sphinx / python dependiencies
 
 ```bash
 pip install sphinx
@@ -41,7 +42,7 @@ Make and check the generated documentation
 ```bash
 mkdir docs
 make html
-google-chrome docs/index.html 
+google-chrome docs/index.html
 ```
 
 For more infromations, visit sphinx documentation

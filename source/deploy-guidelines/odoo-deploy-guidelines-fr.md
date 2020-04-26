@@ -2,7 +2,7 @@
 
 Ce document fait référence aux explications étapes par étapes du déploiment des modules standards d'odoo 13 Community.
 
-## Sommaire 
+## Sommaire
 
 <!--ts-->
 
@@ -20,17 +20,18 @@ Ce document fait référence aux explications étapes par étapes du déploiment
     * [Module Vente](./odoo-mod-vente-fr.md)
     * [Module CRM (Gestion de la Relation Client)](./odoo-mod-crm-fr.md)
     * [Module Projet](./odoo-mod-projet-fr.md)
-* Modules additionnels 
+* Modules additionnels
     * [Module Projet Scrum](./odoo-mod-add-project-scrum-fr.md)
 
 <!--te-->
 
 **TODO Modules**
+
 1. Fabrication
 1. Achats
 1. Contacts
 
-## Scénarios de déploiement 
+## Scénarios de déploiement
 
 <!--ts-->
 
@@ -40,12 +41,13 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 <!--te-->
 
 **TODO Scénarios**
+
 1. Déploiement pour industries (achats/stock/fabrication/maintenance/vente).
 1. Déploiement orienté digital marketing (website/CRM/marketing/eCommerce/sondage/évenements).
 1. Déploiement pour entreprise de service (recrutement/compétences/présences/eLearning/notes de frais/ventes)
 1. Déploiement pour boutique (achats/stock/point de vente)
 
-## Ressources supplémentaires 
+## Ressources supplémentaires
 
 - [Site web odoo](https://www.odoo.com/fr_FR/page/all-apps)
 - [Documentation utilisateur odoo](https://www.odoo.com/documentation/user/13.0/fr/index.html)

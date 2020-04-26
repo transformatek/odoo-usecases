@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lignes directrices pour l’administration d’odoo &mdash; odoo-usecases 1.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Aperçu général de l’administration d’odoo" href="odoo-admin-overview-fr.html" />
+    <link rel="prev" title="Scénario de déploiement pour une gestion par projet" href="../deploy-guidelines/odoo-deploy-scenario-projet.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> odoo-usecases
+          
+
+          
+            
+            <img src="../_static/logo-enlightme.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Guides de déploiement:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-deploy-guidelines-fr.html">Sommaire des cas d’utilisation d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-overview-fr.html">Vue d’ensemble d’odoo (overview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-user-preferences-fr.html">Préférences d’utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-configuration-fr.html">Vue d’ensemble de la configuration (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-applications-fr.html">Vue d’ensemble des Applications (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-conversations.html">Conversations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-messages-fr.html">Module Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-employee-fr.html">Module Employés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-stock-fr.html">Module Stock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-facturation-fr.html">Module Facturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-vente-fr.html">Module Vente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-crm-fr.html">Module CRM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-projet-fr.html">Module Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-add-project-scrum-fr.html">Module Projet Scrum</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Scénarios de déploiement:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-deploy-scenario-standard.html">Scénario de déploiement standard d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-deploy-scenario-projet.html">Scénario de déploiement pour une gestion par projet</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Guides d'administration:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lignes directrices pour l’administration d’odoo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sommaire">Sommaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ressources-supplementaires">Ressources supplémentaires</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-admin-overview-fr.html">Aperçu général de l’administration d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-mod-in-production-env-fr.html">Déployer un nouveau module dans un environment en production</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">odoo-usecases</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lignes directrices pour l’administration d’odoo</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/admin-guidelines/odoo-admin-guidelines-fr.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lignes-directrices-pour-l-administration-d-odoo">
+<h1>Lignes directrices pour l’administration d’odoo<a class="headerlink" href="#lignes-directrices-pour-l-administration-d-odoo" title="Permalink to this headline">¶</a></h1>
+<p>Ce document décrit les principales activités d’administration de la platforme odoo 13 Community.</p>
+<div class="section" id="sommaire">
+<h2>Sommaire<a class="headerlink" href="#sommaire" title="Permalink to this headline">¶</a></h2>
+<!--ts--><ul class="simple">
+<li><p>Configuration</p>
+<ul>
+<li><p><a class="reference internal" href="odoo-admin-overview-fr.html"><span class="doc">Aperçu général de l’administration d’odoo</span></a></p></li>
+<li><p>Données techniques</p></li>
+<li><p>Sauvegardes et restauration</p></li>
+</ul>
+</li>
+<li><p>Guides pratiques</p>
+<ul>
+<li><p><a class="reference internal" href="odoo-deploy-mod-in-production-env-fr.html"><span class="doc">Déployer un nouveau module dans un environment en production</span></a></p></li>
+</ul>
+</li>
+</ul>
+<!--te--></div>
+<div class="section" id="ressources-supplementaires">
+<h2>Ressources supplémentaires<a class="headerlink" href="#ressources-supplementaires" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.odoo.com/documentation/user/13.0/fr/index.html">Documentation utilisateur odoo</a></p></li>
+<li><p><a class="reference external" href="https://www.odoo.com/fr_FR/slides">Odoo Connaissances</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=u4uJTeqskxc&amp;list=PL1-aSABtP6AD-t0GEoxMXgCa_qLsHs5PR">Odoo eLearning sur YouTube</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="odoo-admin-overview-fr.html" class="btn btn-neutral float-right" title="Aperçu général de l’administration d’odoo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../deploy-guidelines/odoo-deploy-scenario-projet.html" class="btn btn-neutral float-left" title="Scénario de déploiement pour une gestion par projet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Enlight.me
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

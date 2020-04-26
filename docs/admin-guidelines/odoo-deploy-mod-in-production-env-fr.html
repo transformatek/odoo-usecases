@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Déployer un nouveau module dans un environment en production &mdash; odoo-usecases 1.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Aperçu général de l’administration d’odoo" href="odoo-admin-overview-fr.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> odoo-usecases
+          
+
+          
+            
+            <img src="../_static/logo-enlightme.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Guides de déploiement:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-deploy-guidelines-fr.html">Sommaire des cas d’utilisation d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-overview-fr.html">Vue d’ensemble d’odoo (overview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-user-preferences-fr.html">Préférences d’utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-configuration-fr.html">Vue d’ensemble de la configuration (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-applications-fr.html">Vue d’ensemble des Applications (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-conversations.html">Conversations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-messages-fr.html">Module Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-employee-fr.html">Module Employés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-stock-fr.html">Module Stock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-facturation-fr.html">Module Facturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-vente-fr.html">Module Vente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-crm-fr.html">Module CRM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-projet-fr.html">Module Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-mod-add-project-scrum-fr.html">Module Projet Scrum</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Scénarios de déploiement:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-deploy-scenario-standard.html">Scénario de déploiement standard d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy-guidelines/odoo-deploy-scenario-projet.html">Scénario de déploiement pour une gestion par projet</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Guides d'administration:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="odoo-admin-guidelines-fr.html">Lignes directrices pour l’administration d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-admin-overview-fr.html">Aperçu général de l’administration d’odoo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Déployer un nouveau module dans un environment en production</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#concepts">Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedure">Procédure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#phase-developement">Phase developement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phase-preproduction">Phase préproduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phase-production">Phase production</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">odoo-usecases</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Déployer un nouveau module dans un environment en production</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/admin-guidelines/odoo-deploy-mod-in-production-env-fr.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="deployer-un-nouveau-module-dans-un-environment-en-production">
+<h1>Déployer un nouveau module dans un environment en production<a class="headerlink" href="#deployer-un-nouveau-module-dans-un-environment-en-production" title="Permalink to this headline">¶</a></h1>
+<p>Ce document décrit une approche générique préconisée pour le déploiement d’un nouveau module dans environement <strong>odoo</strong> déjà en production.</p>
+<div class="section" id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<p>Le déploiement en production de tous système d’information d’entreprise doit se faire en respectant les bonnes pratiques internationales en matière de gestion des infrastructures des Technologies de l’Information.</p>
+<p>De ce fait, il est préconisé de disposer de trois modes : le mode production (exploitation), le mode pré-production (stagging) et le mode développement.</p>
+<p><img alt="../_images/deploy-concepts.png" src="../_images/deploy-concepts.png" /></p>
+<ul class="simple">
+<li><p>Le mode <strong>production (exploitation)</strong> est le mode principal accessible aux utilisateurs autorisés. Avec ce mode les utilisateurs disposeront de toutes les données et fonctionnalités mises à disposition dans le catalogue des services.</p></li>
+<li><p>Le mode <strong>pré-production (stagging)</strong> est dédié aux tests avant mise à disposition des utilisateurs finaux. C’est un environnement identique au mode production, mais qui n’est accessible qu’aux experts de l’entreprise responsables des tests et du déploiement des applications.</p></li>
+<li><p>Le mode <strong>développement</strong> est un déploiement simplifié des composants du système servant en premier lieu au développement de nouvelles fonctionnalités ou aux tests de nouveaux modules. Il n’est accessible qu’aux experts développeurs.</p></li>
+</ul>
+<p>Aussi, afin d’assurer la continuité du service en cas de sinistre, un site de secours est préconsé dans lequel une réplication quasi exacte de l’environnement de production sera déployée. Les données et les fonctionnalités offertes à partir de ce site seront synchronisées autant que possible avec le site de production.</p>
+</div>
+<div class="section" id="procedure">
+<h2>Procédure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<p>Afin de déployer un nouveau module d’odoo dans un environement en production, il est indispensable de prendre les précautions suivantes :</p>
+<div class="section" id="phase-developement">
+<h3>Phase developement<a class="headerlink" href="#phase-developement" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>faire une replication de la base de données principale dans l’environement <strong>préproduction</strong>.</p></li>
+<li><p>appliquer les paramètres de configuration de l’environement <strong>production</strong> à l’environement <strong>developpement</strong>.</p></li>
+<li><p>déployer tous les modules en <strong>production</strong> dans l’environement <strong>developpement</strong>.</p></li>
+<li><p>appliquer des test unitaires sur le nouveau module avec les données réelles.</p></li>
+<li><p>documenter les tests effectués.</p></li>
+</ol>
+</div>
+<div class="section" id="phase-preproduction">
+<h3>Phase préproduction<a class="headerlink" href="#phase-preproduction" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>faire une replication de la base de données principale dans l’environement <strong>préproduction</strong>.</p></li>
+<li><p>appliquer les paramètres de configuration de l’environement <strong>production</strong> à l’environement <strong>préproduction</strong>.</p></li>
+<li><p>déployer tous les modules en <strong>production</strong> dans l’environement <strong>préproduction</strong>.</p></li>
+<li><p>solliciter les utilisaeturs clés de tous les modules en <strong>production</strong> afin d’effectuer leurs opérations courantes sur le déploiement en <strong>préproduction</strong> pendant <strong><em>au moins une semaine</em></strong>.</p></li>
+<li><p>vérifier régulièrement les fichiers logs afin de s’assurer que tous fonctionne correctement.</p></li>
+<li><p>si des problèmes sont rencontrés, il est indispensable de les examiner et de reprendre à partir de la <strong>phase développement</strong>.</p></li>
+</ol>
+</div>
+<div class="section" id="phase-production">
+<h3>Phase production<a class="headerlink" href="#phase-production" title="Permalink to this headline">¶</a></h3>
+<p>Si tous les tests en mode <strong>préproduction</strong> sont concluants :</p>
+<ol class="simple">
+<li><p>planifier le mise en production en fonction de la charge de travail des utilisateurs finaux et de la nécessité de disposer des nouvelles fonctionnalités (évaluation des risques).</p></li>
+<li><p>annoncer la date de déploiement du nouveau module à tous les utilisateurs et communiquer sur l’impact (positif/négatif) de ce déploiement sur les activités courantes.</p></li>
+</ol>
+<p>Le jour du déploiement :</p>
+<ol class="simple">
+<li><p>faire une sauvegarde de la base de données, des fichiers de configuration et des codes sources des modules personnalisés déployés en <strong>production</strong>.</p></li>
+<li><p>si le déploiement en production utilise des ressources externes (fichiers liés), il est indispensbale faire une sauvegarde de ces derniers aussi.</p></li>
+<li><p>déployer le nouveau module en <strong>production</strong>.</p></li>
+<li><p>redémmarer le service <strong>bases de données</strong> et le <strong>service odoo</strong>.</p></li>
+<li><p>vérifier les fichiers logs afin de s’assurer que tous fonctionne correctement.</p></li>
+</ol>
+<p>Après mise en production :</p>
+<ol class="simple">
+<li><p>mobiliser toutes les ressources humaines necessaires pour assister les utilisateurs finaux lors de la réception définive des fonctionnalités du nouveau module.</p></li>
+<li><p>vérifier régulièrement les fichiers logs afin de s’assurer que tous fonctionne correctement.</p></li>
+<li><p>faire une évaluation globale de l’opération avec tous les acteurs concernés et docuemnter les leçons apprises.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="odoo-admin-overview-fr.html" class="btn btn-neutral float-left" title="Aperçu général de l’administration d’odoo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Enlight.me
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
