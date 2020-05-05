@@ -19,6 +19,7 @@ Ce document fait référence aux explications étapes par étapes du déploiment
     * [Module Facturation](./odoo-mod-facturation-fr.md)
     * [Module Vente](./odoo-mod-vente-fr.md)
     * [Module CRM (Gestion de la Relation Client)](./odoo-mod-crm-fr.md)
+    * [Module Achats](./odoo-mod-achats-fr.md)
     * [Module Projet](./odoo-mod-projet-fr.md)
 * Modules additionnels
     * [Module Projet Scrum](./odoo-mod-add-project-scrum-fr.md)
@@ -28,8 +29,7 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 **TODO Modules**
 
 1. Fabrication
-1. Achats
-1. Contacts
+1. Maintenance
 
 ## Scénarios de déploiement
 

@@ -1,13 +1,13 @@
 # Module Vente
 
-Ce document illustre les différentes fonctionnalités du module **Vente** d'odoo 13 community. 
+Ce document illustre les différentes fonctionnalités du module **Vente** d'odoo 13 community.
 
-## Présentation du module 
+## Présentation du module
 
-Ce module est destiné à la gestion des devis professionnels. Il permet : 
-- de facturer les clients, d'enregistrez les contrats, de suivre les étapes de facturation et de maintenir les opportunités de renouvellement et de vente incitative. 
+Ce module est destiné à la gestion des devis professionnels. Il permet :
+- de facturer les clients, d'enregistrez les contrats, de suivre les étapes de facturation et de maintenir les opportunités de renouvellement et de vente incitative.
 - de présentez les produits et services de manière profesionnelle.
-- d'envoyez des devis clairs et complets aux prospects et de gardez automatiquement une trace des échanges avec les clients. 
+- d'envoyez des devis clairs et complets aux prospects et de gardez automatiquement une trace des échanges avec les clients.
 - de créez des alertes personnalisées pour les activités.
 - d'augmentez le volume des ventes en proposant automatiquement des accessoires ou des options supplémentaires telles qu’une remise.
 - de créez, déployez et ajustez la stratégie de prix afin de maximiser les revenus.
@@ -51,7 +51,7 @@ Cette partie, permet de définir les paramètres du **_Configurateur de produits
 
 ### Équipes commerciales
 
-Cette section permet de renseigner les informations nécessaires aux équipes commerciales de l'entreprise. Les membes des équipes doivent tous disposer de comptes utilisateurs. 
+Cette section permet de renseigner les informations nécessaires aux équipes commerciales de l'entreprise. Les membes des équipes doivent tous disposer de comptes utilisateurs.
 
 ![](./images/ventes-equipe-com.png)
 
@@ -65,9 +65,9 @@ Cette section permet de gérér les Devis clients en renseigants toutes les info
 
 ![](./images/ventes-devis.png)
 
-Ce Devis, imprimable avec la commande **_Imprimer/Devis**, progresse par plusieurs état qui sont : **_Devis_**, **_Devis envoyé_** et **_Bon de Commande_**. Le Devis peut aussi être envoyé directement par email. La commande **_Confirmer_** permet de promouvoir le **Devis** en **Bon de Commande**. 
+Ce Devis, imprimable avec la commande **_Imprimer/Devis**, progresse par plusieurs état qui sont : **_Devis_**, **_Devis envoyé_** et **_Bon de Commande_**. Le Devis peut aussi être envoyé directement par email. La commande **_Confirmer_** permet de promouvoir le **Devis** en **Bon de Commande**.
 
-### Commandes 
+### Commandes
 
 Cette section permet de gérér les Bons de commandes clients en renseigants toutes les informations nécessaires tel que le client, la date, les conditions de paiement, les termes et les articles commandés.
 
@@ -89,7 +89,7 @@ Cette section offre une tableau de bord synthétique des ventes effectuées pour
 
 ### Clients
 
-Cette section permet de gérer les clients de l'entreprise. Pour plus d'informations, consulter le module  [Facturation](./odoo-mod-facturation-fr.md#clients). 
+Cette section permet de gérer les clients de l'entreprise. Pour plus d'informations, consulter le module  [Facturation](./odoo-mod-facturation-fr.md#clients).
 
 ## A facturer
 
@@ -97,13 +97,13 @@ La section **_Commandes à facturer_** offre une liste synthétique des commande
 
 ## Articles
 
-Cette section permet de consulter les articles gérés par l'entreprise et **pouvant être vendus**. Pour plus d'informations, consulter le module [Stock / Article](./odoo-mod-stock-fr.md#articles) 
+Cette section permet de consulter les articles gérés par l'entreprise et **pouvant être vendus**. Pour plus d'informations, consulter le module [Stock / Article](./odoo-mod-stock-fr.md#articles).
 
-## Analyse 
+## Analyse
 
 La partie analyse permet aux **Gestionnaires des ventes** de visualiser des vues synthétiques de la situation des ventes sous différentes formes : tableau croisé, graphes.
 
-## Plus de détails 
+## Plus de détails
 
 - Pour la collaboration sur les formulaires de ce module, consulter la fonctionnalité [conversations](./odoo-conversations.md).
 - [Site officiel d'odoo](https://www.odoo.com/fr_FR/page/sales).  
