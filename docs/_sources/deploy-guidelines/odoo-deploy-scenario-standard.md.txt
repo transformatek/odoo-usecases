@@ -2,12 +2,13 @@
 
 Ce document décrit quelques lignes directrices pour un déploiement progressif d'odoo 13 community dans une petite ou moyenne entreprise/industrie (PME/PMI) **standard**. Il est structuré sous forme d'activités d'apprentissage destinées aux utilisateurs finaux et dédiées à chaque module.
 
-## Prérequis 
+## Prérequis
 
-- une installation propre d'odoo ERP. Pour un deployment avec docker consulter [setup odoo on docker.](https://enlight-me.github.io/docker-usecases/setup-images-on-docker/odoo-on-docker.html) 
+- une installation propre d'odoo ERP. Pour un deployment avec docker consulter [setup odoo on docker.](https://enlight-me.github.io/docker-usecases/setup-images-on-docker/odoo-on-docker.html).
 - préconfiguration et personnalisation d'odoo selon les spécificités de l'entreprise, particulièrement la **création des comptes utilisateurs pour chaque apprenant**. Pour plus de détails consulter la section [configuration](./odoo-deploy-guidelines-fr.md#configuration).
 
 ## Sommaire
+
 * [Hypothèses](#hypothèses)
 * [Module Messages](#module-messages)
 * [Module Employés](#module-employés)
@@ -15,23 +16,26 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 * [Module Facturation](#module-facturation)
 * [Module Vente](#module-vente)
 * [Module CRM](#module-crm)
+* [Module Achats](#module-achats)
 * [Module Projet](#module-projet)
 
 ## Hypothèses
+
 - Petite ou Moyenne Entreprise/Industrie (PME/PMI) de 20 personnes.
-- Le déploiement final se feait de manière progressive (par module) avec une durrée d'absorption d'au moins **deux (02) semaines**. 
+- Le déploiement final se feait de manière progressive (par module) avec une durrée d'absorption d'au moins **deux (02) semaines**.
 - Groupes de 8 à 10 apprenants ayant chacun mis à jour son profil utilisateur.
-- Processus métier simples et maturés. Si les processus n'existent pas il faudra les créer. 
-- Choix préalable des modules à implémenter. 
-- Outils de collaboration : tableau blanc, post-it, marqueurs, ... 
+- Processus métier simples et maturés. Si les processus n'existent pas il faudra les créer.
+- Choix préalable des modules à implémenter.
+- Outils de collaboration : tableau blanc, post-it, marqueurs, ...
 - Equipe projet composé d'un chef de projet et de membres ayant une autorité suffisante sur les activités qui seront implémentées (RH, Stocks, Ventes, ...).
 
-## Module Messages 
+## Module Messages
 
-Les activités d'apprentissage du [Module Messages](./odoo-mod-messages-fr.md) sont : 
+Les activités d'apprentissage du [Module Messages](./odoo-mod-messages-fr.md) sont :
+
 1. lister les départements / fonctions / projets existants dans l'entreprise et constituer des groupes dont les conversations sont privés selon la liste ci-dessus.
 1. définir les interactions entre les différents groupes.
-1. définir des sujets de discussions directes entre deux (02) interloculteurs. 
+1. définir des sujets de discussions directes entre deux (02) interloculteurs.
 1. définir les types d'informations dont la diffusion est générale à tous les employés.
 
 Pour chaque activité, créer les cannaux correspondants et produire du contenu (texte, emojis, fichiers attachés, ...).
@@ -40,7 +44,8 @@ Pour chaque activité, créer les cannaux correspondants et produire du contenu 
 
 ## Module Employés
 
-Les activités d'apprentissage du [Module Employés](./odoo-mod-employee-fr.md) sont : 
+Les activités d'apprentissage du [Module Employés](./odoo-mod-employee-fr.md) sont :
+
 1. identifier la hiérarchie des structures existantes dans l'entreprise et les postes de travail.
 1. créer les départements.
 1. créer les postes de travail.
@@ -56,7 +61,8 @@ Les activités d'apprentissage du [Module Employés](./odoo-mod-employee-fr.md) 
 
 ## Module Stock
 
-Les activités d'apprentissage du [Module Stock](./odoo-mod-stock-fr.md) sont : 
+Les activités d'apprentissage du [Module Stock](./odoo-mod-stock-fr.md) sont :
+
 1. identifier **sur papier** tous les articles gérés par l'entrprise (consommables, services, produits finis), ainsi que leurs emplacements (entrpots, étagères).
 1. mettre à jour les informations de l'entrepot de l'entreprise.
 1. identifer les types d'opérations standards dans l'entreprise et les renseigner.
@@ -67,31 +73,33 @@ Les activités d'apprentissage du [Module Stock](./odoo-mod-stock-fr.md) sont :
     1. transferts pour chaque type d'opération (passer par tous les états)
     1. inventaire en modifiant manuellement les quantités disponibles afin de constater les changements. Passer par tous les états jusqu'à la validation.
     1. rebuter quelques articles et vérifier les changements dans les stocks.
-1. exécuter les **_Analyse_** et visualiser les résultats sous différentes formes (liste, tableau, graphes).     
+1. exécuter les **_Analyse_** et visualiser les résultats sous différentes formes (liste, tableau, graphes).
 
-### Exercices avancés module stock
+### Exercices avancés stock
 
 Activer une à une les options suivantes et constater les améliorations apportés :
+
 1. les variantes d'articles
 1. les unités de mesures
 1. le conditionnement des produits
 1. les emplacements de stockage
 1. le multi-entrepots
-1. les routes en plusieurs étapes 
+1. les routes en plusieurs étapes
 
 [Retour au sommaire](#sommaire)
 
 ## Module Facturation
 
-Les activités d'apprentissage du [Module Facturation](./odoo-mod-facturation-fr.md) sont : 
-1. identifier **sur papier** tous les paramètres liés à la facturation utilisés par l'entrprise, tel que : 
+Les activités d'apprentissage du [Module Facturation](./odoo-mod-facturation-fr.md) sont :
+
+1. identifier **sur papier** tous les paramètres liés à la facturation utilisés par l'entrprise, tel que :
     - les taxes applicables.
     - les termes et conditions de vente.
     - les catégories de conditions de paiement (délais, montant global/partiel, ...)
     - les journaux comptables.
     - les comptes bancaires.
     - les intermédaires de paiements.
-    - les pièces réccurentes (frais bancaires, ..). 
+    - les pièces réccurentes (frais bancaires, ..).
 1. en groupe, mettre à jour les paramètres du module avce les données collectés.
 1. pour les parties factures clients/fournisseurs :
     - lister au moin 10 clients/fournisseurs de l'entreprise et renseigner leurs informations.
@@ -106,8 +114,9 @@ Les activités d'apprentissage du [Module Facturation](./odoo-mod-facturation-fr
 
 ## Module Vente
 
-Les activités d'apprentissage du [Module Vente](./odoo-mod-vente-fr.md) sont : 
-1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
+Les activités d'apprentissage du [Module Vente](./odoo-mod-vente-fr.md) sont :
+
+1. identifier **sur papier** puis mettre à jours les paramètres suivants :
     1. caractéristiques principales des articles vendus par l'entreprise ainsi que les éventuelles variantes.
     1. Modèle de devis.
     1. Validité par défaut des devis.
@@ -123,24 +132,26 @@ Les activités d'apprentissage du [Module Vente](./odoo-mod-vente-fr.md) sont :
 1. créer des discussion entre équipes autour des devis et des bons de commandes.
 1. Changer de role et refaire le même exercice.
 
-### Exercices avancés 
+### Exercices avancés Vente
 
 Activer une à une les options suivantes et constater les améliorations apportés :
+
 1. Variantes d'articles
 1. Configurateur d'article.
 1. Remises.
 1. Bons et promotions
-1. Liste de prix. 
+1. Liste de prix.
 
 [Retour au sommaire](#sommaire)
 
 ## Module CRM
 
 Les activités d'apprentissage du [Module CRM](./odoo-mod-crm-fr.md) sont :
-1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
+
+1. identifier **sur papier** puis mettre à jours les paramètres suivants :
     1. Types d'activtés.
     1. Etiquettes.
-    1. Motifs de pertes. 
+    1. Motifs de pertes.
     1. créer des comptes utilisateurs pour les commerciaux de l'entreprise, puis intégrer les dans des équipes commerciales.
 1. selon le cas, renseigner au moins 10 clients.
 1. chaque vendeur, crée au moins 10 opportunités avec toutes les informations nécessaires.
@@ -151,23 +162,52 @@ Les activités d'apprentissage du [Module CRM](./odoo-mod-crm-fr.md) sont :
 1. constater régulièrement les changement sur les graphiques d'analyse.
 1. créer des discussion entre équipes autour des opportunités.
 
-### Exercices avancés 
+### Exercices avancés CRM
 
 Activer l'option **Pistes** et exécuter les  taches suivantes :
+
 1. créer au moin 10 nouvelles pistes.
 1. convertir les pistes en opportunités avec les différentes options :
     1. nouveau client.
     1. client existant.
-    1. fusion avec opprtunité existante. 
+    1. fusion avec opprtunité existante.
+
+[Retour au sommaire](#sommaire)
+
+## Module Achats
+
+Les activités d'apprentissage du [Module Achats](./odoo-mod-achats-fr.md) sont :
+
+1. identifier **sur papier** puis mettre à jours les paramètres suivants :
+    1. caractéristiques principales des articles achetés par l'entreprise.
+1. selon le cas, renseigner au moins 10 articles achetés par l'entreprise, ainsi que 10 fournisseurs.
+1. constituer des équipes d'achats où chaque participant prend l'un des roles suivants : gestionnaire des achats, acheteur, gestionnaire des stocks.
+1. chaque équipe d'achat, crée au moins 05 demandes de prix avec toutes les informations nécessaires. Imprimer-les et envoyer-les par mail puis confirmer-les (bon de commandes fournisseurs).
+1. demander au gestionnaire des stocks de valider les réceptions.
+1. visualiser la progression des activités la section Analyse.
+1. créer des discussion entre équipes autour des demandes de prix et des bons de commandes fournisseurs.
+1. Changer de role et refaire le même exercice.
+
+### Exercices avancés Achats
+
+Avec l'option **_Conventions d'achat_** activé dans la configuration :
+
+1. vérifier et valider les types de convetions d'achats existants par défaut.
+1. créer un nouveau type de convention d'achat.
+1. créer un nouveau contrat d'achat.
+1. envoyer des demandes de prix pour recvoir des offres.
+1. confirmer le contrat et passer en mode selection des offres.
+1. confimer les commandes définitives aux fournisseurs selon le mode de passation de contrat choisie.
 
 [Retour au sommaire](#sommaire)
 
 ## Module Projet
 
 Les activités d'apprentissage du [Module Projet](./odoo-mod-projet-fr.md) sont :
-1. identifier **sur papier** puis mettre à jours les paramètres suivants : 
+
+1. identifier **sur papier** puis mettre à jours les paramètres suivants :
     1. Types d'activtés.
-    1. Etiquettes des taches. 
+    1. Etiquettes des taches.
 1. créer des employés pour les memebres des équipes projet de l'entreprise.
 1. selon le cas, renseigner au moins 05 clients.
 1. créer au moins 02 projets et renseigner les informations y relatives.
@@ -178,7 +218,7 @@ Les activités d'apprentissage du [Module Projet](./odoo-mod-projet-fr.md) sont 
 1. ajouter des taches dans chaque étape du projets.
 1. faite glisser les taches entre les différentes étapes et constater les changments dans la partie analyse.
 1. editer les taches et renseigner les informations y relatives.
-1. modifier l'état des taches et constater le indicateurs couleurs sur le kanban projet et dans la partie **Toutes les taches**. 
+1. modifier l'état des taches et constater le indicateurs couleurs sur le kanban projet et dans la partie **Toutes les taches**.
 
 [Retour au sommaire](#sommaire)
 

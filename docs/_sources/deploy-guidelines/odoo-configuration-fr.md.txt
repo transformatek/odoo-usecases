@@ -6,7 +6,7 @@ Cette partie, **réservée aux adminstrateurs**, permet de définir les paramèt
 
 ![](./images/config-menu.png)
 
-## Utilisateurs 
+## Utilisateurs
 La partie utilisateurs permet de gérer les utilisateurs (ajout / supression / modification / archivage).
 
 ![](./images/config-users-list.png)

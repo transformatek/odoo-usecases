@@ -7,29 +7,28 @@ Ce document fait référence aux explications étapes par étapes du déploiment
 <!--ts-->
 
 * Configuration
-    * [Aperçu général](./odoo-overview-fr.md)
-    * [Applications (admin)](./odoo-applications-fr.md)
-    * [Configuration (admin)](./odoo-configuration-fr.md)
-    * [Préférences utilisateur](./odoo-user-preferences-fr.md)
-    * [Conversations](./odoo-conversations.md)
+  * [Aperçu général](./odoo-overview-fr.md)
+  * [Préférences utilisateur](./odoo-user-preferences-fr.md)
+  * [Configuration (admin)](./odoo-configuration-fr.md)
+  * [Applications (admin)](./odoo-applications-fr.md)
+  * [Conversations](./odoo-conversations.md)
 * Modules de base
-    * [Module Messages](./odoo-mod-messages-fr.md)
-    * [Module Employés](./odoo-mod-employee-fr.md)
-    * [Module Stock](./odoo-mod-stock-fr.md)
-    * [Module Facturation](./odoo-mod-facturation-fr.md)
-    * [Module Vente](./odoo-mod-vente-fr.md)
-    * [Module CRM (Gestion de la Relation Client)](./odoo-mod-crm-fr.md)
-    * [Module Achats](./odoo-mod-achats-fr.md)
-    * [Module Projet](./odoo-mod-projet-fr.md)
+  * [Module Messages](./odoo-mod-messages-fr.md)
+  * [Module Employés](./odoo-mod-employee-fr.md)
+  * [Module Stock](./odoo-mod-stock-fr.md)
+  * [Module Facturation](./odoo-mod-facturation-fr.md)
+  * [Module Vente](./odoo-mod-vente-fr.md)
+  * [Module CRM (Gestion de la Relation Client)](./odoo-mod-crm-fr.md)
+  * [Module Achats](./odoo-mod-achats-fr.md)
+  * [Module Projet](./odoo-mod-projet-fr.md)
 * Modules additionnels
-    * [Module Projet Scrum](./odoo-mod-add-project-scrum-fr.md)
+  * [Module Projet Scrum](./odoo-mod-add-project-scrum-fr.md)
 
 <!--te-->
 
 **TODO Modules**
 
-1. Fabrication
-1. Maintenance
+1. Fabrication + scenario
 
 ## Scénarios de déploiement
 

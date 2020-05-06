@@ -16,6 +16,7 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 * [Module Facturation](#module-facturation)
 * [Module Vente](#module-vente)
 * [Module CRM](#module-crm)
+* [Module Achats](#module-achats)
 * [Module Projet](#module-projet)
 
 ## Hypothèses
