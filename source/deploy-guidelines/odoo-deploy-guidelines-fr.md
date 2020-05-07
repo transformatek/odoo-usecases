@@ -20,15 +20,12 @@ Ce document fait référence aux explications étapes par étapes du déploiment
   * [Module Vente](./odoo-mod-vente-fr.md)
   * [Module CRM (Gestion de la Relation Client)](./odoo-mod-crm-fr.md)
   * [Module Achats](./odoo-mod-achats-fr.md)
+  * [Module Fabrication](./odoo-mod-fabrication-fr.md)
   * [Module Projet](./odoo-mod-projet-fr.md)
 * Modules additionnels
   * [Module Projet Scrum](./odoo-mod-add-project-scrum-fr.md)
 
 <!--te-->
-
-**TODO Modules**
-
-1. Fabrication + scenario
 
 ## Scénarios de déploiement
 

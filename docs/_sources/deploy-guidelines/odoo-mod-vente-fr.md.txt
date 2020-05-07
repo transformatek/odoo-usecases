@@ -73,7 +73,7 @@ Cette section permet de gérér les Bons de commandes clients en renseigants tou
 
 ![](./images/ventes-commandes.png)
 
-Ce Bon de commande, imprimable avec la commande **_Imprimer/Commande**, peut être envoyé directement par email. 
+Ce Bon de commande, imprimable avec la commande **_Imprimer/Commande**, peut être envoyé directement par email.
 
 Après validation de la livraison des articles par le  **Gestionnaire des stocks**, les **quantités livrés** se mettront à jours automatiquement.
 
