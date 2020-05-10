@@ -73,7 +73,7 @@ Les ordres de fabrication représentent l'enregistrement principal des opératio
 
 ![](./images/fabrication-ordre-de-fabrication.png)
 
-Cet ordre de fabrication, imprimable avec la commande **_Imprimer/Ordre de fabrication**, progresse par plusieurs état qui sont : **_Brouillon_**, **_Confirmé_**, **_Planifier_** et **_Fait_**.
+Cet ordre de fabrication, imprimable avec la commande **_Imprimer/Ordre de fabrication**, progresse par plusieurs état qui sont : **_Brouillon_**, **_Confirmé_**, **_Planifié_** et **_Fait_**.
 
 En effet, une fois définis, l'ordre de fabrication peut être mis en file d'attente par la commande **_Marquer à faire_** qui fait passer sont état au stade de **_Confirmé_**.
 
