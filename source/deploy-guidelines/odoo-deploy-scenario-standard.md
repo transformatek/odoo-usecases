@@ -18,6 +18,7 @@ Ce document décrit quelques lignes directrices pour un déploiement progressif 
 * [Module CRM](#module-crm)
 * [Module Achats](#module-achats)
 * [Module Projet](#module-projet)
+* [Module Fabrication](#module-fabrication)
 
 ## Hypothèses
 
@@ -222,5 +223,31 @@ Les activités d'apprentissage du [Module Projet](./odoo-mod-projet-fr.md) sont 
 
 [Retour au sommaire](#sommaire)
 
+## Module Fabrication
+
+Les activités d'apprentissage du [Module Fabrication](./odoo-mod-fabrication-fr.md) sont :
+
+1. identifier **sur papier** puis mettre à jours les paramètres suivants :
+    1. Postes de travail / charge.
+    1. Enchainement des taches de fabrication.
+    1. Composition des différents articles (au moins 03).
+1. activer l'option **_Ordres de travail_** dans la confiuration.
+1. renseigner les postes de travail et les gammes de produits.
+1. renseigner au moins 03 articles fabriqués par l'entreprise.
+1. associer les articles crées à leur nomenclatures et gammes.
+1. créer un ordre de fabrication et renseigner les informations utiles (article, quantité, ...).
+1. marquer l'ordre de fabrication **à faire** puis passer le au stade **_Confirmé_** et **_Planifié_**.
+1. constater les ordres de travail crées automatiquement.
+1. faite passer les ordres de travail un à un par les stades **_planifié_** puis **_fait_** et constater les changements dans le tabelau de bord fabrication.
+1. revenir à l'ordre de fabrication et marqué comme **_fait_**.
+1. constater le changement opérés au niveau du stock de l'article produit et de ses composants.
+1. effectuer quelques analyses pour vous familiariser avec cette section.
+
+### Exercices avancés module fabrication
+
+1. exécuter une commande de deconstruction sur l'un des produits choisis et constater le changement opérés au niveau du stock de l'article produit et de ses composants.
+1. exécuter une opération de mise en rebut et constater le changement opérés au niveau du stock de l'article produit et de ses composants.
+
+[Retour au sommaire](#sommaire)
 ----
 [Sommaire général](./odoo-deploy-guidelines-fr.md)
