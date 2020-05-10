@@ -1,0 +1,45 @@
+
+@startuml activity-stocks
+title Workflow pour le module Stock 
+scale 100 width
+scale 1000 height
+
+
+|Gestionnaire de stock|
+start
+partition Configuration {
+    :Renseigner les informations \nsur les **entrepots**;
+    :Renseigner les types \nd'**opérations** standards;
+    :Renseigner les **catégories d'articles**;
+    if (Vartiante d'articles) then (yes)
+        :Renseigner les **variantes**;
+    endif
+    :Renseigner les **articles**;
+    :Pour chaque article Renseigner les \n**règles de réapprovisionnement**;
+}
+:Mettre à jours les quantités \nstockées si nécessaire;
+|#AntiqueWhite|Magasinier / Opérateur|
+fork
+    if (Réception/livraison/fabrication) then
+    :Transferts;
+    endif
+fork again
+    if (Inventaire) then
+    :Adjustement \nde stock;
+    endif
+fork again
+    if (Article non recevable) then
+    :Rebut;
+    endif
+fork again
+    if (Stock minimal) then
+    :Planification \nRéapprovisionnement;
+    endif
+end fork
+
+|Gestionnaire de stock|
+:Analyse;
+
+end
+
+@enduml
