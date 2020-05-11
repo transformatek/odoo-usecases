@@ -5,6 +5,7 @@ Ce document illustre les différentes fonctionnalités du module **Vente** d'odo
 ## Présentation du module
 
 Ce module est destiné à la gestion des devis professionnels. Il permet :
+
 - de facturer les clients, d'enregistrez les contrats, de suivre les étapes de facturation et de maintenir les opportunités de renouvellement et de vente incitative.
 - de présentez les produits et services de manière profesionnelle.
 - d'envoyez des devis clairs et complets aux prospects et de gardez automatiquement une trace des échanges avec les clients.
@@ -77,7 +78,7 @@ Ce Bon de commande, imprimable avec la commande **_Imprimer/Commande**, peut êt
 
 Après validation de la livraison des articles par le  **Gestionnaire des stocks**, les **quantités livrés** se mettront à jours automatiquement.
 
-Une fois que les articles livrés au client, le **Gestionnaire des ventes** peut **_Créer une facture_**, qui doit faire l'objet d'une Comptabilisation par un **Gestionnaire des factures** afin de clôturer la vente. Pour plus de détails, consulter le module [Facturation](./odoo-mod-facturation-fr.md). 
+Une fois que les articles livrés au client, le **Gestionnaire des ventes** peut **_Créer une facture_**, qui doit faire l'objet d'une Comptabilisation par un **Gestionnaire des factures** afin de clôturer la vente. Pour plus de détails, consulter le module [Facturation](./odoo-mod-facturation-fr.md).
 
 ![](./images/ventes-commande-cloture.png)
 
@@ -102,6 +103,10 @@ Cette section permet de consulter les articles gérés par l'entreprise et **pou
 ## Analyse
 
 La partie analyse permet aux **Gestionnaires des ventes** de visualiser des vues synthétiques de la situation des ventes sous différentes formes : tableau croisé, graphes.
+
+## Workflow
+
+![](../diagrams/exports/activity-vente/activity-vente.png)
 
 ## Plus de détails
 

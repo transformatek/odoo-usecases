@@ -1,0 +1,39 @@
+
+@startuml activity-vente
+title Workflow pour le module Vente 
+scale 100 width
+scale 1000 height
+
+|Gestionnaires des stocks|
+    :Renseigner les **articles**;
+
+|Gestionnaire des ventes|
+start
+partition Configuration {
+    :Renseigner les **caractéristiques des articles**;
+    :Renseigner les **Modèle de devis**;
+    :Renseigner les **Validité par défaut des devis**;
+    :Renseigner les **équipes commerciales**;
+    :Renseigner les **clients**;
+}
+|#AntiqueWhite|Vendeur|
+if (Devis) then
+:Créer un Devis;
+:Ajouter articles optionnels;
+:Imprimer / Envoyer Devis;
+:Confirmer Devis;
+endif
+if (Bon de commande) then
+|Gestionnaires des stocks|
+    :Valider les livraisons;
+|Vendeur|
+:Créer une facture;
+endif
+
+
+|Gestionnaire des ventes|
+:Analyse;
+
+end
+
+@enduml
