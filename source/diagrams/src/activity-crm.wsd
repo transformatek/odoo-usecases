@@ -1,0 +1,53 @@
+
+@startuml activity-crm
+title Workflow pour le module CRM 
+scale 100 width
+scale 1000 height
+
+
+|Gestionnaire CRM/Vente|
+start
+partition Configuration {
+    :Renseigner les **types d'activtés**;
+    :Renseigner les **étiquettes**;
+    :Renseigner les **motifs de pertes**;
+    :Renseigner les **équipes commerciales**;
+    :Renseigner les **Clients**;
+}
+|#AntiqueWhite|Vendeur|
+if (Utiliser les pistes) then
+    :Créer piste;
+    if () then (gagné)
+        :Convertir en opportunité;
+    else (perdu)
+        :Enregister motifs de perte;
+        stop
+    endif
+endif
+:Créer une opportunité;
+:Créer des activités pour les opportunités;
+:Créer des réunions;
+if (Qualifié) then (perdu) 
+    :Marquer comme perdu;    
+    :Enregister le \nmotif de perte;
+    stop
+else (gangé)
+    repeat
+        :Faire une proposition (Devis);
+        if (Proposition acceptée) then
+            :Convertir en bon de commande;
+            :Marquer opportunité comme gagné;
+        endif
+    repeat while (Client) is (toujours intéressé)
+    if (Bon de commande) then (non) 
+        :Marquer comme perdu;    
+        :Enregister le \nmotif de perte;
+    endif
+endif
+
+|Gestionnaire CRM/Vente|
+:Analyse;
+
+end
+
+@enduml

@@ -1,8 +1,8 @@
 # Module CRM
 
-Ce document illustre les différentes fonctionnalités du module **CRM** d'odoo 13 community (CRM : Customer Relationship Management / Gestion de la Relation Client). 
+Ce document illustre les différentes fonctionnalités du module **CRM** d'odoo 13 community (CRM : Customer Relationship Management / Gestion de la Relation Client).
 
-## Présentation du module 
+## Présentation du module
 
 Ce module, orienté client par excellence, est destiné au suivi des pistes et à l'élaboration des prévisions de vente. Il permet :
 - d'utilisez des données concrètes afin de prendre les meilleures décisions.
@@ -28,13 +28,13 @@ Si cette option est activé, un nouveau menu **_Pistes_** apparait, et le **Gest
 
 ![](./images/crm-config-pistes-courriels.png)
 
-#### Generation pistes 
+#### Generation pistes
 
 ![](./images/crm-config-generation-pistes.png)
 
 - L'option **_Visits to Leads_** permet de convertir les visiteur du site web en pistes (lead) à partir de leur adresse IP (**option payante**).
 - L'option **_Lead Enrichment_** permet de créer des pistes à partir des données des sociétés en se basant sur les adresses emails (**option payante**).
-- L'option **_Lead Enrichment_** permet de générer de nouvelles pistes en fonction des pays, secteurs d'activité, taille d'entreprise, ... (**option payante**). 
+- L'option **_Lead Enrichment_** permet de générer de nouvelles pistes en fonction des pays, secteurs d'activité, taille d'entreprise, ... (**option payante**).
 
 ### Équipes commerciales
 
@@ -68,7 +68,7 @@ On commence par créer une opportunité en renseignant ses informations.
 
 ![](./images/crm-opportunite-new.png)
 
-L'opportunité peut donner lieu à un ou plusieurs **Devis** et peut être marqué comme gangé ou perdu. 
+L'opportunité peut donner lieu à un ou plusieurs **Devis** et peut être marqué comme gangé ou perdu.
 
 Le vendeur peut créer et suivre les **Réunions** relative à l'opprtunité directement à partir de son formulaire de définition.
 
@@ -90,17 +90,21 @@ Si l'option pistes est activé dans la configuration du module, le **Responsable
 
 ![](./images/crm-piste-new.png)
 
-Si une piste est probante, elle peut **_Convertie en opportunité_** et le vendeur aura la main pour ajouter un nouveau client avec les informations du contact saisies ou de fusionner avec un client/une opportunité existante.   
+Si une piste est probante, elle peut **_Convertie en opportunité_** et le vendeur aura la main pour ajouter un nouveau client avec les informations du contact saisies ou de fusionner avec un client/une opportunité existante.
 
 ![](./images/crm-convertir-piste.png)
 
 Sinon, la piste peut être **_Marqué comme perdue_**.
 
-## Analyse 
+## Analyse
 
 La partie analyse permet aux **Gestionnaires des ventes** de visualiser des vues synthétiques sous différentes formes (listes, tableau croisé ou graphes) de la situation des **pistes**, du **pipeline** et des **activités**.
 
-## Plus de détails 
+## Workflow
+
+![](../diagrams/exports/activity-crm/activity-crm.png)
+
+## Plus de détails
 
 - Pour la collaboration sur les formulaires de ce module, consulter la fonctionnalité [conversations](./odoo-conversations.md).
 - [Site officiel d'odoo](https://www.odoo.com/fr_FR/page/crm).  
