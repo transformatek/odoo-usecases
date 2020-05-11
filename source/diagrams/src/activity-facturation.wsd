@@ -1,0 +1,55 @@
+
+@startuml activity-facturation
+title Workflow pour le module Facturation 
+scale 100 width
+scale 1000 height
+
+
+|Gestionnaires des stocks/ventes/achats|
+    :Renseigner les **articles**;
+    :Renseigner les **clients**;
+    :Renseigner les **fournisseurs**;
+
+|Gestionnaire de la facturation|
+start
+partition Configuration {
+    :Renseigner les **taxes applicables**;
+    :Renseigner les **termes \net conditions de vente**;
+    :Renseigner les **catégories \nde conditions de paiement**;
+    :Renseigner les **journaux comptables**;
+    :Renseigner les **comptes bancaires**;
+    :Renseigner les **intermédaires de paiements**;
+    :Renseigner les **pièces réccurentes**;
+}
+|#AntiqueWhite|Comptable / chargé des encaissements|
+fork
+    if (Achat/Vente) then
+    :Créer une facture;
+    :Comptabiliser;
+    :Enregitrer un ou plusieurs paiements;
+    endif
+fork again
+    if (Avoirs) then
+    :Créer un avoir;
+    :Comptabiliser;
+    :Enregitrer un ou plusieurs paiements;
+    endif
+fork again
+    if (Réceptions / Tickets de caisse) then
+    :Créer une réceptions;
+    :Comptabiliser;
+    :Enregitrer un ou plusieurs paiements;
+    endif
+fork again
+    if (Paiements / Transferts) then
+    :Créer un paiement;
+    :Confirmé le paiement (Validé);
+    endif
+end fork
+
+|Gestionnaire de la facturation|
+:Analyse;
+
+end
+
+@enduml

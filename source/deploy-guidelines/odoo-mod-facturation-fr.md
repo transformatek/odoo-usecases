@@ -1,12 +1,13 @@
 # Module Facturation
 
-Ce document illustre les différentes fonctionnalités du module **Facturation** d'odoo 13 community. 
+Ce document illustre les différentes fonctionnalités du module **Facturation** d'odoo 13 community.
 
-## Présentation du module 
+## Présentation du module
 
 Ce module est destiné à simplifier la facturation afin de se faire payés plus rapidement. Il permet de facturer automatiquement sur la base des bons de commandes, des commandes de livraison, des contrats ou des feuilles de frais générés. Odoo facturation permet aussi :
-* d'acceptez les paiements en ligne. 
-* d'éliminez les soucis des rappels pour des paiements en retard. 
+
+* d'acceptez les paiements en ligne.
+* d'éliminez les soucis des rappels pour des paiements en retard.
 * de simplifier la configuration du suivi automatique.
 * de garder une trace des mouvements sur le compte en banque et sur le statut des factures.
 
@@ -32,7 +33,7 @@ La configuration des **Devises** permet la devise principale utilisée. Si la so
 
 #### Configuration des Factures Clients
 
-Cette section permet de définit les paramètres relatifs aux factures clients, tel que les **_Options d'envoi par défaut_**, **_l'affichage du sous-total des lignes_**, les **_Termes et Conditions par défaut_**, les **_Avertissements lors de la facture de certains clients_** et les **_Arrondis lors du paiement en espèces_**. 
+Cette section permet de définit les paramètres relatifs aux factures clients, tel que les **_Options d'envoi par défaut_**, **_l'affichage du sous-total des lignes_**, les **_Termes et Conditions par défaut_**, les **_Avertissements lors de la facture de certains clients_** et les **_Arrondis lors du paiement en espèces_**.
 
 ![](./images/facturation-config-factures-client.png)
 
@@ -42,13 +43,13 @@ Cette section permet de gérer les différentes catégories de conditions de pai
 
 ![](./images/facturation-conditions-paiement.png)
 
-### Taxes 
+### Taxes
 
 Cette section permet de gérer les différentes catégories de taxes applicables à l'entreprise et de renseigner leurs paramètres comptables, tel que la base du calcul, la portée le motant, la répartition comptable, ...
 
 ![](./images/facturation-taxes.png)
 
-### Position fiscale 
+### Position fiscale
 
 Cette fonctionnalité est utile dans le cas où des régimes fiscaux spécifiques sont appliqués aux clients / fournisseurs (selon la localisation, exonérations à l'export, ...). Odoo permet aussi de définir des correspondances de taxes afin de les appliquer automatiquement en fonction de la position fiscale du client/fournisseur.
 
@@ -70,7 +71,7 @@ Cette commande permet de créer un nouveau compte bancaire ainsi que le journal 
 
 ![](./images/facturation-cree-compte-bancaire.png)
 
-### Comptes bancaires 
+### Comptes bancaires
 
 Cette section liste les différents journaux relatif aux comptes bancaires de l'entreprise.
 
@@ -78,7 +79,7 @@ Cette section liste les différents journaux relatif aux comptes bancaires de l'
 
 ### Intermédiaires de paiement
 
-Cette section liste les différents types d'intermédiaires de paiement disponibles pour les opérations classiques (Virement bancaire, ...) ou enligne. 
+Cette section liste les différents types d'intermédiaires de paiement disponibles pour les opérations classiques (Virement bancaire, ...) ou enligne.
 
 ### Journal Groups
 
@@ -96,7 +97,7 @@ Cette section permet de définir des arrondis modèles réutilisables d'arrondis
 
 Cette partie, qui de manière générale est automatiquement mise à jour par les modules **Ventes** et **Achats**, permet de gérer toutes les opérations de facturation client. Afin de l'exploiter il est indispensable de renseigner en premier la liste des clients de l'entreprise dans la section [Clients](#clients).
 
-### Factures 
+### Factures
 
 Cette section permet de gérér les factures clients en renseigants toutes les informations nécessaires tel que la référence, la date, les conditions de paiement, les termes et les articles.
 
@@ -104,7 +105,7 @@ Cette section permet de gérér les factures clients en renseigants toutes les i
 
 Cette facture, imprimable avec la commande **_Imprimer/Factures_**, progresse par plusieurs état qui sont : **_Brouillon_**, **_Comptabilisé_**.
 
-### Avoirs 
+### Avoirs
 
 Cette section permet de gérér les avoirs (Notes de crédits) clients en renseigants toutes les informations nécessaires tel que la référence, la date, les conditions de paiement et les articles concernés avec leur libellé.
 
@@ -112,13 +113,13 @@ Cette section permet de gérér les avoirs (Notes de crédits) clients en rensei
 
 Cet avoir, imprimable avec la commande **_Imprimer/Factures_**, progresse par plusieurs état qui sont : **_Brouillon_**, **_Comptabilisé_**.
 
-### Réceptions 
+### Réceptions
 
 Cette section permet de gérér les réceptions (Ticket de caisse) clients en renseigants toutes les informations nécessaires tel que la référence, la date, les conditions de paiement et les articles concernés avec leur libellé.
 
 ![](./images/facturation-receptions-client.png)
 
-Cet avoir, imprimable avec la commande **_Imprimer/Factures_**, progresse par plusieurs état qui sont : **_Brouillon_**, **_Comptabilisé_**. 
+Cet avoir, imprimable avec la commande **_Imprimer/Factures_**, progresse par plusieurs état qui sont : **_Brouillon_**, **_Comptabilisé_**.
 
 ### Paiements
 
@@ -128,11 +129,11 @@ Cette section permet de gérér les paiements des clients en renseigants toutes 
 
 Ce paiement, imprimable avec la commande **_Imprimer/Factures_**, progresse par plusieurs état qui sont : **_Brouillon_**, **_Validé_**. Il peut aussi faire référence à un **_paiement lettré_** ou être annnulé.
 
-De manière générale, les paiement sont automatiquement générés à partir des **factures**, **avoirs** ou des **réceptions** (Boutton **_enregistrer un paiement_**). 
+De manière générale, les paiement sont automatiquement générés à partir des **factures**, **avoirs** ou des **réceptions** (Boutton **_enregistrer un paiement_**).
 
-### Articles 
+### Articles
 
-Cette section permet de consulter les articles gérés par l'entreprise et **pouvant être vendus**. Pour plus d'informations, consulter le module [Stock / Article](./odoo-mod-stock-fr.md#articles) 
+Cette section permet de consulter les articles gérés par l'entreprise et **pouvant être vendus**. Pour plus d'informations, consulter le module [Stock / Article](./odoo-mod-stock-fr.md#articles).
 
 ### Clients
 
@@ -143,6 +144,7 @@ Cette section permet de gérer les informations relatives aux clients de l'entre
 ## Fournisseurs (Menu)
 
 Cette section est similaire à celle des **Client** avec les différences suivantes :
+
 * les **_Avoirs_** font référence à des **Remboursement**.
 * les **_Réceptions_** font référence à des **Reçus d'achats**.
 * les articles listés sont ceux **pouvant être achetés**.
@@ -151,7 +153,11 @@ Cette section est similaire à celle des **Client** avec les différences suivan
 
 La partie analyse permet aux **Gestionnaires des factures** de visualiser des vues synthétiques de la situation de la facturation sous différentes formes : listes, tableau croisé, graphes.
 
-## Plus de détails 
+## Workflow
+
+![](../diagrams/exports/activity-facturation/activity-facturation.png)
+
+## Plus de détails
 
 - Pour la collaboration sur les formulaires de ce module, consulter la fonctionnalité [conversations](./odoo-conversations.md).
 - [Site officiel d'odoo](https://www.odoo.com/fr_FR/page/billing).  
