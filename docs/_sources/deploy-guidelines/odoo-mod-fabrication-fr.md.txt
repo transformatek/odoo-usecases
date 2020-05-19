@@ -115,6 +115,10 @@ La vue d'ensemble donne accès un tableau de bord global des **postes de charge*
 
 La partie analyse permet aux **Gestionnaires de la fabrication** de visualiser des vues synthétiques de la situation des ordres de fabrication, des ordres de travail et du taux de rendrement synthétique sous différentes formes : tableau croisé, graphes.
 
+## Workflow
+
+![](../diagrams/exports/activity-fabrication/activity-fabrication.png)
+
 ## Plus de détails
 
 - Pour la collaboration sur les formulaires de ce module, consulter la fonctionnalité [conversations](./odoo-conversations.md).

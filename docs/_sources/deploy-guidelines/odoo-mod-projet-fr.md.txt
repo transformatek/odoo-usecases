@@ -1,15 +1,16 @@
 # Module Projet
 
-Ce document illustre les différentes fonctionnalités du module **Projet** d'odoo 13 community. 
+Ce document illustre les différentes fonctionnalités du module **Projet** d'odoo 13 community.
 
-## Présentation du module 
+## Présentation du module
 
 Ce module est destiné à la gestion de projets agiles. Il permet :
+
 - de vérifiez facilement les horaires des équipes et de les replanifier pour garder les échéances.
 - de gardez une trace des échéances et de la progression des projets grâce à un aperçu claire.
 - de gardez un bonne vue sur la charge de travail et sur le statut des tâches individuelles.
-- de programmez les équipes à travers les différents projets en prenant en compte les vacances des employés. 
--de planifiez à l'avance les futurs projets sur base des projets similaires et estimez les échéances plus précisément. 
+- de programmez les équipes à travers les différents projets en prenant en compte les vacances des employés.
+-de planifiez à l'avance les futurs projets sur base des projets similaires et estimez les échéances plus précisément.
 - de comparez les prévisions avec les feuilles de temps effectives pour améliorer la rentabilité.
 - de divisez les projets en petites tâches et de les assignez à l'équipe pour augmenter la collaboration.
 - de créez des étapes personnalisées pour chaque projet afin de simplifier l'aperçu sur le travail et améliorer l'efficacité générale du projet.
@@ -30,7 +31,7 @@ Cette section, réservée aux **administrateurs** et **Gestionnaires des ventes*
 
 #### Gestion du temps
 
-- L'option **_Feuilles de temps sur les tâches_** active de nouvelles fonctionnalités permettant aux **Gestionnaires des projets** d'enregister les volumes horaires réellement alloués à chaque tâche par employé et par projet. 
+- L'option **_Feuilles de temps sur les tâches_** active de nouvelles fonctionnalités permettant aux **Gestionnaires des projets** d'enregister les volumes horaires réellement alloués à chaque tâche par employé et par projet.
 
 ### Projets (Configuration)
 
@@ -66,11 +67,12 @@ Pour chaque étape (colone) un ensemble de paramètres peuvent être définis av
 
 ![](./images/projet-etape-config-access.png)
 
-Ainsi, pour chaque étape on peut définir : 
+Ainsi, pour chaque étape on peut définir :
+
 - le nom.
 - si elle doit être automatiquement repliée dans le kanban.
 - le modèle de mail a envoyer lorsqu'une tâche atteint cette étape.
-- la descritpion des codes couleurs (gris, vert, rouge) de l'état de la tâche qui s'affiche sous forme de point dans la carte kanban de la tâche. 
+- la descritpion des codes couleurs (gris, vert, rouge) de l'état de la tâche qui s'affiche sous forme de point dans la carte kanban de la tâche.
 
 ![](./images/projet-etape-edit.png)
 
@@ -80,13 +82,17 @@ Cette partie offre une vue globale de toutes les taches assignées à l'**utilis
 
 ![](./images/projet-tache-edit.png)
 
-## Analyse 
+## Analyse
 
 La partie analyse permet aux **Gestionnaires de projets** de visualiser des vues synthétiques sous différentes formes (listes, tableau croisé ou graphes) de la situation des **projets** et des **taches**.
 
 ![](./images/projet-analyse.png)
 
-## Plus de détails 
+## Workflow
+
+![](../diagrams/exports/activity-projets/activity-projets.png)
+
+## Plus de détails
 
 - Pour la collaboration sur les formulaires de ce module, consulter la fonctionnalité [conversations](./odoo-conversations.md).
 - [Site officiel d'odoo](https://www.odoo.com/fr_FR/page/project-management).  
