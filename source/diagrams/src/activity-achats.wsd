@@ -1,0 +1,61 @@
+
+@startuml activity-achats
+title Workflow pour le module Achats 
+scale 200 width
+scale 2000 height
+
+|Gestionnaires des stocks|
+    :Renseigner les **caractéristiques \nprincipales des articles achetés**;
+
+|#AntiqueWhite|Gestionnaire Achats|
+start
+partition Configuration {
+    :Renseigner les **Fournisseurs**;
+    if (Conventions d'achat) then 
+        :Renseigner les types de \n**convetions d'achats**;
+    endif
+}
+
+|Acheteur|
+if (Type d'achat) then (Demande de prix)
+    :Créer une Demande de prix;
+    :Imprimer / Envoyer;
+    :Confirmer (Bon de commande Fournisseur);
+else (**Conventions d'achat**)
+    :Créer un nouveau \n**contrat d'achat**;
+    :envoyer des demandes de prix;
+    :Recvoir des offres;
+    if (Offres intéressantes) then (Oui) 
+        :Confirmer le contrat d'achat;
+        :Passer en mode selection des offres;
+        :Confimer les commandes définitives aux fournisseurs;
+    else (Non)
+        :Daclarer la demande d'offres infructueuse;
+        :Revoir le cahier des charges et la \nliste des fournisseurs à consulter;
+        stop
+    endif
+endif
+if (Bons de commandes) then
+    |Gestionnaires des stocks|
+        :Valider les réceptions;
+    |Acheteur|
+        :Créer des factures;
+endif
+
+
+' Avec l'option **_Conventions d'achat_** activé dans la configuration :
+
+' 1. vérifier et valider les types de convetions d'achats existants par défaut.
+' 1. créer un nouveau type de convention d'achat.
+' 1. créer un nouveau contrat d'achat.
+' 1. envoyer des demandes de prix pour recvoir des offres.
+' 1. confirmer le contrat et passer en mode selection des offres.
+' 1. confimer les commandes définitives aux fournisseurs selon le mode de passation de contrat choisie.
+
+
+|#AntiqueWhite|Gestionnaire Achats|
+:Analyse;
+
+end
+
+@enduml

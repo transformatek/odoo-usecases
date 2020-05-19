@@ -1,0 +1,52 @@
+
+@startuml activity-fabrication
+title Workflow pour le module Fabrication 
+scale 200 width
+scale 2000 height
+
+|#AntiqueWhite|Gestionnaire de la Fabrication|
+start
+
+partition Configuration {
+    :Renseigner les **Types d'activtés**;
+    :Renseigner les **Etiquettes des taches**;
+    :Activer l'option **Ordres de travail**;
+}
+:Renseigner les **Postes de travail/charge**;
+:Renseigner les **Enchainement des** \n**taches de fabrication (Gammes)**;
+:Renseigner la **Composition des articles** \n**à fabriquer (Nomenclatures)**;
+:Associer les articles aux \nnomenclatures et gammes;
+
+|Responsable opérationnel de la fabrication|
+fork
+    if (Produit défectueux) then
+        :Mise en rebut;
+    endif
+
+fork again
+    if (déconstruction) then
+        :Exécuter une commande de deconstruction;
+    endif
+
+fork again
+    :Créer un **ordre de fabrication**;
+    :Marquer l'ordre de fabrication **à faire**;
+    :Passer l'ordre de fabrication à \nl'état **Confirmé** puis **Planifié**;
+    ' 1. constater les ordres de travail crées automatiquement.
+    |#AntiqueWhite|Responsable de poste de travail|
+        repeat
+            :Planifier les ordres de travail;
+            :Commencer le travail;
+            :Marquer les éventuels arrêts/rebuts;
+            :Marquer le ordre de travail comme **Fait**;
+        repeat while (Ordres de travail) is (à faire)
+    |Responsable opérationnel de la fabrication|
+        :Marquer l'ordre de fabrication **Fait**;
+end fork    
+
+|#AntiqueWhite|Gestionnaire de la Fabrication|
+:Analyse;
+
+end
+
+@enduml

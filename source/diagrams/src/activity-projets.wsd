@@ -1,0 +1,35 @@
+
+@startuml activity-projets
+title Workflow pour le module Projets 
+scale 200 width
+scale 2000 height
+
+
+|Gestionnaires des RH/Ventes|
+    :Renseigner les **Employés** \n**membres des équipes projets**;
+    :Renseigner les **Clients**;
+
+|#AntiqueWhite|Gestionnaire des projets|
+start
+
+partition Configuration {
+    :Renseigner les **Types d'activtés**;
+    :Renseigner les **Etiquettes des taches**;
+}
+
+|Chef de projet|
+:Créer un Projet;
+:Ajouter des pièces jointes;
+:Configuer les étapes (colonnes);
+repeat
+    :Ajouter des taches;
+    :Faire avancer les taches dans le pipeline;
+    :Mettre à jour l'état des taches (code couleurs);
+repeat while (Taches restantes) is (Oui)
+
+|#AntiqueWhite|Gestionnaire des projets|
+:Analyse;
+
+end
+
+@enduml

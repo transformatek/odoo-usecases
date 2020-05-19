@@ -8,7 +8,7 @@ scale 1000 height
 |Gestionnaire CRM/Vente|
 start
 partition Configuration {
-    :Renseigner les **types d'activtés**;
+    :Renseigner les **types d'activités**;
     :Renseigner les **étiquettes**;
     :Renseigner les **motifs de pertes**;
     :Renseigner les **équipes commerciales**;

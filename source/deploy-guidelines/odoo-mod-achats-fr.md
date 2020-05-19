@@ -48,7 +48,7 @@ Ce paramétrage est disponible lorsque l'option **_Conventions d'achat_** est ac
 
 Cela permet aux **Gestionnaires des achats** de définir les différents types de conventions d'achat à utiliser, tel que : des appels d'offres, des commandes à livraison échelonée, ...
 
-![](./images/achats-config-type-convention.png) 
+![](./images/achats-config-type-convention.png)
 
 ## Commandes
 
@@ -87,6 +87,10 @@ Cette section permet de consulter les articles gérés par l'entreprise et **pou
 ## Analyse
 
 La partie analyse permet aux **Gestionnaires des achats** de visualiser des vues synthétiques de la situation des achats sous différentes formes : tableau croisé, graphes.
+
+## Workflow
+
+![](../diagrams/exports/activity-achats/activity-achats.png)
 
 ## Plus de détails
 
