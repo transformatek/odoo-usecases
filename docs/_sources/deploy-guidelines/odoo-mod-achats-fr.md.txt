@@ -12,7 +12,7 @@ en fonction des besoins de l'inventaire.
 - de sélectionnez différentes méthodes d’approvisionnement pour chacun des produits en cohérence avec les stratégies de fabrication et de livraison de l'entreprise.
 - de listez les prix des fournisseurs et de vérifiez la disponibilité des produits tout en comparant les meilleurs prix.
 - d'importer facilement les listes de prix et les références des fournisseurs afin de prendre les meilleures décisions concernant les achats selon les promotions et conditions spéciales en vigueur.
-- de lancer des appels d’offres, afin d'obtenir le meilleur prix en négociant avec plusieurs vendeurs.
+- de lancer des appels d’offres, afin d'obtenir le meilleur prix en négociant avec plusieurs fournisseurs.
 - de lancez les procédures d'acquisition, d'intégrer les réponses des sous-traitants et de comparez les devis afin de choisir la meilleure offre.
 - d'obtenir des statistiques sur les achats afin d'analyser, de prévoir et de planifiez efficacement les commandes.
 - de gérer plusieurs entreprises grâce aux règles inter-entreprises.
@@ -27,9 +27,9 @@ Cette section, réservée aux **administrateurs** et **Gestionnaires des achats*
 
 ![](./images/achats-config-commandes.png)
 
-- L'option **_Validation du Bon de Commande_** permet de fixer un montant minimal audela duquel une approbation du manager est requise.
+- L'option **_Validation du Bon de Commande_** permet de fixer un montant minimal au dela duquel une approbation du manager est requise.
 - L'option **_Verrouiller les commandes confirmées_** permet de bloquer automatiquement les bons de commandes confirmés pour empêcher l'édition.
-- L'option **_Avertissements_** permet aux **Responsables des achats** de recevoir des alerts particulières pour des produits ou des vendeurs.
+- L'option **_Avertissements_** permet aux **Responsables des achats** de recevoir des alerts particulières pour des produits ou des acheteurs.
 - L'option **_Conventions d'achat_** permet aux **Responsables des achats** de gérer les contrats d'achats (appels d'offres, commandes ouvertes, ...).
 
 #### Configuration des Articles
