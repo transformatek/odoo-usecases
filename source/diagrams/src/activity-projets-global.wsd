@@ -1,8 +1,9 @@
 
-@startuml activity-projets
-title Workflow pour le module Projets 
+@startuml activity-projets-global
+title Workflow global basé sur les Projets 
 scale 200 width
 scale 2000 height
+
 
 |Gestionnaires des RH/Ventes|
     :Renseigner les **Clients**;
