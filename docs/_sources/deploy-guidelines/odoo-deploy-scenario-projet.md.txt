@@ -160,6 +160,8 @@ Les activités d'apprentissage avancées de ce module sont :
 1. pour associer plusieurs tâches techniques à une même **ligne de vente** (cas général), créer une nouvelle tache dans le projet. dans l'onglet **_infos supplémentaires_** de la tâche sélectionner la **Ligne de vente** désirée. ajouter des **feuilles de temps** à cette tâche.
 1. revenir aux paramètres du **Bon de commande**. on constate que la quantité livrée est automatiquement mise à jours comme étant la somme des heurs réalisées sur l'ensemble des tâches liées à la **ligne de vente**.
 
+![](../diagrams/exports/activity-projets-bc-a-partir-projet/activity-projets-bc-a-partir-projet.png)
+
 **Workflow 2 : Service (article) spécifique à un seul Projet**
 
 1. pour l'un des projets identifiés, activé l'option **_Feuilles de temps_**.
@@ -171,6 +173,8 @@ Les activités d'apprentissage avancées de ce module sont :
 1. pour associer plusieurs tâches techniques à cette **ligne de vente**, créer une nouvelle tache dans le projet. dans l'onglet **_infos supplémentaires_** de la tâche, définir la tâche **parent** sur la tâche liée à la **ligne de vente**. on constate que la ligne de vente de la sous-tâche est automatiquement définie sur la ligne de vente de la tache parente. ajouter des **feuilles de temps** à cette sous-tâche.
 1. revenir aux paramètres du **Bon de commande**. on constate que la quantité livrée est automatiquement mise à jours comme étant la somme des heurs réalisées sur l'ensemble des tâches liées à la **ligne de vente**.
 
+![](../diagrams/exports/activity-projets-service-specifique-a-1-projet/activity-projets-service-specifique-a-1-projet.png)
+
 **Workflow 3 : Projet à partir d'un ou plusieurs Bon de commande**
 
 1. dans le module **Vente** créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**. et **_Suivi du service_** sur **_Créer une tâche dans un projet de bon de commande_**.
@@ -179,6 +183,8 @@ Les activités d'apprentissage avancées de ce module sont :
 1. dans le module projet, on constate qu'une nouvelle tache est automatiquement ajoutée au projet en cours et la ligne de vente fait référence au bon de commande crée.
 1. la facturation est effectuée de la même manière que dans les workflows précédents (ajout de tâches/sous-tâches techniques -> ajout de feuilles de temps -> création d'une facture -> aprçu).
 
+![](../diagrams/exports/activity-projets-a-partir-1-plusieurs-bc/activity-projets-a-partir-1-plusieurs-bc.png)
+
 **Workflow 4 : Service (article) non lié automatiquement à une seule tâche**
 
 1. dans le module **Vente** créer des articles de type service et configurer la **_Politique de facturation du service_** sur **_Feuilles de temps sur les tâches_**. et **_Suivi du service_** sur **_Créer un nouveau projet sans tâche_** (çad Devis).
@@ -186,6 +192,8 @@ Les activités d'apprentissage avancées de ce module sont :
 1. un nouveau projet avec la référence du **Bon de commande** sera crée sans aucune tâche.
 1. toutes les nouvelles tâches créer dans ce projet seront par défaut liées à la ligne de vente définie lors de la création du bon de commande. bien sûre le gestionnaire de projet peut les **lignes de ventes** à tout moment.
 1. la facturation est effectuée de la même manière que dans les workflows précédents (ajout de tâches/sous-tâches techniques -> ajout de feuilles de temps -> création d'une facture -> aprçu).
+
+![](../diagrams/exports/activity-projets-service-non-lie-a-1-tache/activity-projets-service-non-lie-a-1-tache.png)
 
 **Workflow X : Devis et Projets crées séparément**
 
@@ -197,6 +205,8 @@ Les activités d'apprentissage avancées de ce module sont :
 1. un nouveau champ **Ligne de vente** apparait. séléctionner le service (article) précédement définit.
 1. la facturation est effectuée de la même manière que dans les workflows précédents (ajout de tâches/sous-tâches techniques -> ajout de feuilles de temps -> création d'une facture -> aprçu).
 1. maintenant vous pouver ajouter autant de services au bon de commande et y lier autant de tâches que nécessaires :).
+
+![](../diagrams/exports/activity-projets-devis-projets-crees-separement/activity-projets-devis-projets-crees-separement.png)
 
 [Retour au sommaire](#sommaire)
 

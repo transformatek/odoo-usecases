@@ -1,8 +1,8 @@
 
 @startuml activity-projets-devis-projets-crees-separement
 title Workflow X - Devis et Projets crées séparément 
-scale 100 width
-scale 1000 height
+scale 200 width
+scale 2000 height
 
 
 |#AntiqueWhite|Gestionnaire des Ventes|

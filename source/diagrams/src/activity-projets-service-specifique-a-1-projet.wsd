@@ -1,5 +1,5 @@
 
-@startuml activity-projets-service-spécifique-a-1-projet
+@startuml activity-projets-service-specifique-a-1-projet
 title Workflow 2 - Service (article) spécifique à un seul Projet 
 scale 200 width
 scale 2000 height
