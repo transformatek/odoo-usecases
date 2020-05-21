@@ -1,0 +1,45 @@
+
+@startuml activity-projets-service-spécifique-a-1-projet
+title Workflow 2 - Service (article) spécifique à un seul Projet 
+scale 200 width
+scale 2000 height
+
+|Chef de projet|
+start
+    :Créer un Projet;
+    :Activer l'option **Feuilles de temps** \npour le projet concerné;
+    :Ajouter des pièces jointes;
+    :Configuer les étapes (colonnes);
+    :Ajouter des taches et renseigner \nle champ **Heures planifiées**;
+
+|#AntiqueWhite|Gestionnaire des Ventes|
+    :Créer des articles de type **service**;
+    :Configurer la **Politique de facturation du service** \nsur **Feuilles de temps sur les tâches**;
+    :Configurer **Suivi du service** \nsur **Créer une tâche dans un projet existant**;
+    :Sélectionner le projet concerné;
+    :Créer un nouveau **Devis** et insérer \n l'article configuré précédement;
+    :Le devis est automatiquement lié \nau projet référencé dans le service;
+    :Confirmer le **Devis**;
+
+repeat
+    |Chef de projet|
+    :Une nouvelle tache est automatiquement ajoutée au projet;
+    if (associer plusieurs tâches techniques à cette **ligne de vente**) then 
+        :Créer une nouvelle tache dans le projet;
+        :Définir la tâche **parente** sur la tâche liée à la **ligne de vente**;
+        :La ligne de vente de la **sous-tâche** est automatiquement \nliée à la **ligne de vente** de la tache parente;
+        :Ajouter des **feuilles de temps** à cette sous-tâche;
+
+    endif
+
+    |#AntiqueWhite|Gestionnaire des Ventes|
+        :Dans les paramètres du **Bon de commande** la quantité livrée est \nautomatiquement mise à jours comme étant la somme des heures\n réalisées sur l'ensemble des tâches liées à la **ligne de vente**;
+        :Facturation (ajout de feuilles de temps dans \nles tâches -> création d'une facture -> aprçu);
+
+    |Chef de projet|
+        :Les **feuilles de temps** des **Tâches** \nsont automatiquement grisées (facturées);
+repeat while (Toutes les taches sont finalisées) is (Non)
+
+end
+
+@enduml
