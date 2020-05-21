@@ -1,0 +1,58 @@
+
+@startuml activity-projets-bc-a-partir-projet
+title Workflow 1 - Bon de Commandes à partir d'un projet 
+scale 200 width
+scale 2000 height
+
+|#AntiqueWhite|Gestionnaire des Ventes|
+    :Créer des articles de type **service**;
+    :Configurer la **Politique de facturation du service** \nsur **Feuilles de temps sur les tâches**;
+    :Configurer **Suivi du service** \nsur **Ne pas créer la tâche**;
+
+start
+
+|Chef de projet|
+    :Créer un Projet;
+    :Activer l'option **Feuilles de temps** \npour le projet concerné;
+    :Ajouter des pièces jointes;
+    :Configuer les étapes (colonnes);
+    :Ajouter des taches et renseigner \nle champ **Heures planifiées**;
+
+|#AntiqueWhite|Gestionnaire des Ventes|
+    :Sélectionner le projet concerné;
+    :Lancer la commande \n**Créer un bon de commande**;
+
+    if (Type de facturation) then (Au taux du projet)
+        :Selectionner un des artciles de type service;
+        :un bon de commande est crée avec \ncomme référence le projet en cours;
+        :Une seule **ligne de commande** est \najoutée, celle du service séléctionné;
+        
+    else (Au taux de l'employé)
+        :Ajouter des lignes employé / service;
+        :Un employé ne peut être séléctionner qu'une seule fois \n(il ne peut contribuer qu'à un seul service);
+        :Un bon de commande est crée avec \ncomme référence le projet en cours;
+        :Plusieurs **lignes de commande** sont ajoutées, chacune \nayant pour correspondant à un des services séléctionnés;
+
+    endif
+
+
+repeat
+    |Chef de projet|
+    :Renseigner les volumes horaires \nréalisées dans chaque sous-tâche;
+    :Sélectionner le lien du **Bon de commande** dans\n l'onglet **Facturation** des paramètres du projet;
+    :Les **feuilles de temps** réalisées dans le projet sont \nautomatiquement renseigné dans la colonne **Livré**;
+
+    |#AntiqueWhite|Gestionnaire des Ventes|
+        :Lancer la commande **Créer une facture**;
+        :Sélectionner **Facture normale**;
+        :Une nouvelle facture est créee \npour le bon de commande  projet;
+        :La quanitié facturée est mise à jour dans \nles paramètres du **Bon de commande**;
+        :Lancer la commande **Vue d'ensemble du projet** \nà partir du **Bon de commande** du projet;
+        :Vérifier les Heures encodées, la Profitabilité, \nles feuilles de temps par employé;
+    |Chef de projet|
+        :Les **feuilles de temps** des **Tâches** \nsont automatiquement grisées (facturées);
+repeat while (Toutes les taches sont finalisées) is (Non)
+
+end
+
+@enduml

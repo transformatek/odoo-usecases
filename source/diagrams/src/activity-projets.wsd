@@ -36,13 +36,9 @@ repeat while (Taches restantes) is (Oui)
 fork
 
 repeat
-    |Chef de projet|
     :Renseigner les volumes horaires \nréalisées dans chaque sous-tâche;
     :Faire avancer les taches dans le pipeline;
     :Mettre à jour l'état des taches (code couleurs);
-    |Gestionnaires des RH/Ventes|
-        :Facturer les feuilles temps réalisées;
-    |Chef de projet|
 repeat while (Taches finalisées) is (Non)
 
 fork again 
