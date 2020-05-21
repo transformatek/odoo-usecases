@@ -1,0 +1,36 @@
+
+@startuml activity-projets-devis-projets-crees-separement
+title Workflow X - Devis et Projets crées séparément 
+scale 100 width
+scale 1000 height
+
+
+|#AntiqueWhite|Gestionnaire des Ventes|
+start    
+    :Créer des articles de type **service**;
+    :Configurer la **Politique de facturation du service** \nsur **Feuilles de temps sur les tâches**;
+    :Configurer **Suivi du service** sur \n**Ne pas créer la tâche**;
+    :Créer un nouveau **Devis** et insérer \n l'article configuré précédement;
+    :Confirmer le **Devis**;
+
+|Chef de projet|
+    :Créer un nouveau projet ou sélectionner un projet existant;
+    :S'assurer que l'option **Feuilles de temps** est activé;
+
+repeat
+
+
+    |Chef de projet|
+        :Créer une nouvelle tâche;
+        :Séléctionner la société pour laquelle le Devis a \nété crée dans l'onglet **Info supplémentaires**;
+        :Un nouveau champ **Ligne de vente** apparait;
+        :Séléctionner le service précédemment définit;
+
+repeat while (Mise à jour de la commande client) is (Nouveaux services ajoutés \nau bon de commande)
+
+|#AntiqueWhite|Gestionnaire des Ventes|
+    :Facturation (ajout de feuilles de temps dans \nles tâches -> création d'une facture -> aprçu);
+
+end
+
+@enduml

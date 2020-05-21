@@ -1,0 +1,31 @@
+
+@startuml activity-projets-a-partir-1-plusieurs-bc
+title Workflow 3 - Projet à partir d'un ou plusieurs Bon de commande 
+scale 200 width
+scale 2000 height
+
+
+|#AntiqueWhite|Gestionnaire des Ventes|
+start    
+    :Créer des articles de type **service**;
+    :Configurer la **Politique de facturation du service** \nsur **Feuilles de temps sur les tâches**;
+    :Configurer **Suivi du service** sur **Créer une** \n**tâche dans un projet de bon de commande**;
+    :Créer un nouveau **Devis** et insérer \n l'article configuré précédement;
+    if (projet existant) then 
+        :Dans l'onglet **Autres informations**, \nsélectionner le projet souhaité;
+        :Confirmer le **Devis**;
+    else
+        :Laisser le projet vide \n(création d'un nouveau projet);
+        :Confirmer le **Devis**;
+        :Un nouveau projet avec la référence \ndu Bon de commande sera crée;
+    endif
+
+|Chef de projet|
+    :Une nouvelle tache est automatiquement ajoutée au projet;
+
+|#AntiqueWhite|Gestionnaire des Ventes|
+    :Facturation (ajout de feuilles de temps dans \nles tâches -> création d'une facture -> aprçu);
+
+end
+
+@enduml

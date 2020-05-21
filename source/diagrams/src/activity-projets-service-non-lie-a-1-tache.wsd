@@ -1,0 +1,24 @@
+
+@startuml activity-projets-service-non-lie-a-1-tache
+title Workflow 4 - Service (article) non lié automatiquement à une seule tâche 
+scale 200 width
+scale 2000 height
+
+|#AntiqueWhite|Gestionnaire des Ventes|
+start    
+    :Créer des articles de type **service**;
+    :Configurer la **Politique de facturation du service** \nsur **Feuilles de temps sur les tâches**;
+    :Configurer **Suivi du service** sur \n**Créer un nouveau projet sans tâche**;
+    :Créer un nouveau **Devis** et insérer \n l'article configuré précédement;
+    :Confirmer le **Devis**;
+
+|Chef de projet|
+    :Un nouveau projet avec la référence du \n**Bon de commande** sera crée sans aucune tâche;
+    :Toutes les tâches crées seront par défaut liées \nà la ligne de vente du bon de commande;
+
+|#AntiqueWhite|Gestionnaire des Ventes|
+    :Facturation (ajout de feuilles de temps dans \nles tâches -> création d'une facture -> aprçu);
+
+end
+
+@enduml
