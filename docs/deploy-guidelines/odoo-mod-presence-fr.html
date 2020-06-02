@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Module Messages &mdash; odoo-usecases 1.1 documentation</title>
+  <title>Module Présence &mdash; odoo-usecases 1.1 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Module Employés" href="odoo-mod-employee-fr.html" />
-    <link rel="prev" title="Conversations" href="odoo-conversations.html" /> 
+    <link rel="next" title="Module Stock" href="odoo-mod-stock-fr.html" />
+    <link rel="prev" title="Module Employés" href="odoo-mod-employee-fr.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,16 +91,23 @@
 <li class="toctree-l1"><a class="reference internal" href="odoo-configuration-fr.html">Vue d’ensemble de la configuration (admin)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="odoo-applications-fr.html">Vue d’ensemble des Applications (admin)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="odoo-conversations.html">Conversations</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Module Messages</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#apercu">Aperçu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creer-un-nouveau-canal">Créer un nouveau canal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#messages-directes">Messages directes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creer-du-contenu-messages">Créer du contenu (messages)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-messages-fr.html">Module Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-employee-fr.html">Module Employés</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module Présence</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#presentation-du-module">Présentation du module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-admin">Configuration (admin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gestionnaire">Gestionnaire</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#presences">Présences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#employes">Employés</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mode-kiosque">Mode kiosque</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#check-in-check-out">Check in / Check out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analyse">Analyse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workflow">Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#plus-de-details">Plus de détails</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="odoo-mod-employee-fr.html">Module Employés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="odoo-mod-presence-fr.html">Module Présence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="odoo-mod-stock-fr.html">Module Stock</a></li>
 <li class="toctree-l1"><a class="reference internal" href="odoo-mod-facturation-fr.html">Module Facturation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="odoo-mod-vente-fr.html">Module Vente</a></li>
@@ -165,13 +172,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Module Messages</li>
+      <li>Module Présence</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/deploy-guidelines/odoo-mod-messages-fr.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/deploy-guidelines/odoo-mod-presence-fr.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -184,46 +191,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-messages">
-<h1>Module Messages<a class="headerlink" href="#module-messages" title="Permalink to this headline">¶</a></h1>
-<p>Ce document illustre les différentes fonctionnalités du module <strong>Messages</strong> d’odoo 13 community.</p>
-<div class="section" id="apercu">
-<h2>Aperçu<a class="headerlink" href="#apercu" title="Permalink to this headline">¶</a></h2>
-<p>Ce module basic permet d’améliorez la communication en équipe. Il permet de créer des canaux de discussions privées ou en groupe.</p>
-<p><img alt="../_images/message-welcome.png" src="../_images/message-welcome.png" /></p>
-<p>Les messages étant intégrés à tous les modules odoo, cela permet de collaborer sur chaque sujet (facture, devis, employé, article, …).</p>
+  <div class="section" id="module-presence">
+<h1>Module Présence<a class="headerlink" href="#module-presence" title="Permalink to this headline">¶</a></h1>
+<p>Ce document illustre les différentes fonctionnalités du module <strong>Présences</strong> d’odoo 13 community.</p>
+<div class="section" id="presentation-du-module">
+<h2>Présentation du module<a class="headerlink" href="#presentation-du-module" title="Permalink to this headline">¶</a></h2>
+<p>Ce module complémentaire au module <strong>Employés</strong> est destiné à gérer les présences/absences des employés de l’entreprise de manière efficace.</p>
+<p><img alt="presence-overview" src="../_images/presence-overview.png" /></p>
 </div>
-<div class="section" id="creer-un-nouveau-canal">
-<h2>Créer un nouveau canal<a class="headerlink" href="#creer-un-nouveau-canal" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Les canaux publics permettent de diffuser des informations à tous les employées et de recevoir/discuter les feedback afin d’apporter des éclaircissements si nécessaire.</p></li>
-<li><p>Les cannaux privés permettent aux équipes de discuter des sujets qui les concernent (projets, ventes, RH, marketing, …)</p></li>
-</ul>
-<p><img alt="../_images/message-create-channel.png" src="../_images/message-create-channel.png" /></p>
-<p>Une fois le canal privé ou public crée, vous pouvez définir ses propriétes, comme le nom, la description, la confidentialités et les membres.</p>
-<p><img alt="../_images/message-set-channel-props.png" src="../_images/message-set-channel-props.png" /></p>
-<p><img alt="../_images/message-channel-props.png" src="../_images/message-channel-props.png" /></p>
+<div class="section" id="configuration-admin">
+<h2>Configuration (admin)<a class="headerlink" href="#configuration-admin" title="Permalink to this headline">¶</a></h2>
+<p>Cette section, réservée aux <strong>administrateurs</strong>, permet de définir les paramètres généraux du module, tel que les <strong><em>Check-In/Out</em></strong>.</p>
+<p>En effet, l’option <strong><em>PIN de l’employé</em></strong> active une fonctionnalité permettant aux <strong>GRH</strong> de définir des PIN pour chaque employé qui doivent les saisir au moment du pointage.</p>
 </div>
-<div class="section" id="messages-directes">
-<h2>Messages directes<a class="headerlink" href="#messages-directes" title="Permalink to this headline">¶</a></h2>
-<p>Les messages directes sont envoyer directement à la personne concernée sur un canal <strong>MESSAGES DIRECTS</strong>. Ils ne sont visibles que par les interlocuteurs.</p>
-<p><img alt="../_images/message-new-direct.png" src="../_images/message-new-direct.png" /></p>
+<div class="section" id="gestionnaire">
+<h2>Gestionnaire<a class="headerlink" href="#gestionnaire" title="Permalink to this headline">¶</a></h2>
+<p>Cette section est déstinée aux <strong>Gestionnaires des Ressources Humaines</strong>.</p>
+<div class="section" id="presences">
+<h3>Présences<a class="headerlink" href="#presences" title="Permalink to this headline">¶</a></h3>
+<p>Cette section basique, permet de vérifier et corriger si nécessaire les heures d’arrivées/sortie de tous les employés.</p>
+<p><img alt="presence-presences" src="../_images/presence-presences.png" /></p>
 </div>
-<div class="section" id="creer-du-contenu-messages">
-<h2>Créer du contenu (messages)<a class="headerlink" href="#creer-du-contenu-messages" title="Permalink to this headline">¶</a></h2>
-<p>Les messages envoyés dans les cannaux publics, privés ou directes peuvent contenir du texte, des émojis, et des fichiers attachés (images, pdf, text, …).</p>
-<p><img alt="../_images/message-content-call-user.png" src="../_images/message-content-call-user.png" /></p>
-<ul class="simple">
-<li><p>avec <strong>/</strong> vous aver accès à des commandes spécifiques au canal (help, who, leave).</p></li>
-<li><p>avec <strong>&#64;</strong> vous pouver alerter un utilisateur qui recevrera une notifcation dans la barre des <strong>conversations</strong>.</p></li>
-<li><p>avec <strong>:</strong> vous pouver faire appel a une activité (nécessite module LiveChat).</p></li>
-</ul>
+<div class="section" id="employes">
+<h3>Employés<a class="headerlink" href="#employes" title="Permalink to this headline">¶</a></h3>
+<p>Cette section est la même que celle du module <a class="reference external" href="./odoo-mod-employee-fr.md#emlpoyes">Employés</a>.</p>
+</div>
+<div class="section" id="mode-kiosque">
+<h3>Mode kiosque<a class="headerlink" href="#mode-kiosque" title="Permalink to this headline">¶</a></h3>
+<p>Cette fonctionnalité est généralement activé par le <strong>GRH</strong> sur un ou plusieurs postes dédiés à partir desquels les employés peuvent pointer (entegister leurs arrivées/départs), que çà soit en scannant un badge ou en s’identifiant manuellement. Si l’option <strong><em>PIN de l’employé</em></strong> est activé le PIN est exigé pour le pointage.</p>
+<p><img alt="presence-kiosque" src="../_images/presence-kiosque.png" /></p>
+</div>
+</div>
+<div class="section" id="check-in-check-out">
+<h2>Check in / Check out<a class="headerlink" href="#check-in-check-out" title="Permalink to this headline">¶</a></h2>
+<p>Cett interfaçe permet aux utilisateurs d’Odoo d’enregister leurs l’heurs d’arrivée et de départ sur une interface ludique et simple.</p>
+<p><img alt="presence-check-in-out" src="../_images/presence-check-in-out.png" /></p>
+</div>
+<div class="section" id="analyse">
+<h2>Analyse<a class="headerlink" href="#analyse" title="Permalink to this headline">¶</a></h2>
+<p>La partie analyse permet aux <strong>GRH</strong> de visualiser des vues synthétiques sous différentes formes (listes, tableau croisé ou graphes) de la situation des <strong>présences des employés</strong>.</p>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p><img alt="workflow-presence" src="../_images/activity-presence.png" /></p>
 </div>
 <div class="section" id="plus-de-details">
 <h2>Plus de détails<a class="headerlink" href="#plus-de-details" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Pour la collaboration, consulter la fonctionnalité <a class="reference internal" href="odoo-conversations.html"><span class="doc">conversations</span></a>.</p></li>
-<li><p><a class="reference external" href="https://www.odoo.com/fr_FR/page/discuss">Site officiel d’odoo</a>.</p></li>
+<li><p>Pour la collaboration sur les formulaires de ce module, consulter la fonctionnalité <a class="reference internal" href="odoo-conversations.html"><span class="doc">conversations</span></a>.</p></li>
+<li><p><a class="reference external" href="https://www.odoo.com/fr_FR/page/employees">Site officiel d’odoo</a>.</p></li>
 </ul>
 <hr class="docutils" />
 <p><a class="reference internal" href="odoo-deploy-guidelines-fr.html"><span class="doc">Retour au sommaire</span></a></p>
@@ -238,10 +254,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="odoo-mod-employee-fr.html" class="btn btn-neutral float-right" title="Module Employés" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="odoo-mod-stock-fr.html" class="btn btn-neutral float-right" title="Module Stock" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="odoo-conversations.html" class="btn btn-neutral float-left" title="Conversations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="odoo-mod-employee-fr.html" class="btn btn-neutral float-left" title="Module Employés" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
