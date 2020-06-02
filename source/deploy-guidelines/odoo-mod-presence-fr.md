@@ -20,7 +20,7 @@ Cette section est déstinée aux **Gestionnaires des Ressources Humaines**.
 
 ### Présences
 
-Cette section basique, permet de vérifier et corriger si nécessaire les heurs d'arrivées/sortie de tous les employés.
+Cette section basique, permet de vérifier et corriger si nécessaire les heures d'arrivées/sortie de tous les employés.
 
 ![presence-presences](./images/presence-presences.png)
 

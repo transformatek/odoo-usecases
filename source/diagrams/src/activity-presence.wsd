@@ -1,0 +1,28 @@
+
+@startuml activity-presence
+title Workflow pour le module Présences
+scale 100 width
+scale 1000 height
+
+|Gestionnaire GRH|
+start
+partition Configuration {
+    :     Mise en oeuvre des \n**Kiosques** pour le pointage;
+}
+
+|#AntiqueWhite|Employé|
+
+repeat
+    :Enregistrer l'heure d'arrivée;
+    :;
+    :Enregistrer l'heure de sortie;
+repeat while (Employé) is (présent)
+
+
+|Gestionnaire GRH|
+:Vérifier les heures d'arrivée/sortie;
+:Analyses;
+
+end
+
+@enduml
