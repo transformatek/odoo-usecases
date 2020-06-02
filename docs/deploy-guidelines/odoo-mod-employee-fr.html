@@ -95,13 +95,18 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Module Employés</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#presentation-du-module">Présentation du module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configuration-admin">Configuration (admin)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#departements">Départements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-des-employes">Configuration des Employés</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#organisation-professionnelle">Organisation professionnelle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#employee-update-rights">Employee Update Rights</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#postes-occupes">Postes occupés</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#departements">Départements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#plans">Plans</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#emlpoyes">Emlpoyés</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#annuaire-des-salaries">Annuaire des salariés</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gestion-des-contrats">Gestion des contrats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workflow">Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#plus-de-details">Plus de détails</a></li>
 </ul>
 </li>
@@ -200,21 +205,45 @@
 <li><p>de rendre certaines informations publiques, accessible à tous les employés sous forme de répertoire du personnel par exemple.</p></li>
 <li><p>recevoir des alertes pour toute nouvelle demande de congés, demande d’allocation, candidature, évaluation et plus encore (en fonction des modules installés).</p></li>
 </ul>
-<p><img alt="../_images/employes-overview.png" src="../_images/employes-overview.png" /></p>
+<p><img alt="employes-overview" src="../_images/employes-overview.png" /></p>
 </div>
 <div class="section" id="configuration-admin">
 <h2>Configuration (admin)<a class="headerlink" href="#configuration-admin" title="Permalink to this headline">¶</a></h2>
 <p>Cette section, réservée aux <strong>administrateurs</strong>, permet de définir les paramètres généraux du module, tel que l’organisation professionelle et les droits d’accès de l’employé à ces informations.</p>
-<div class="section" id="departements">
-<h3>Départements<a class="headerlink" href="#departements" title="Permalink to this headline">¶</a></h3>
-<p>Cette section, réservée aux <strong>responsables des ressources humaines</strong>, permet de définir la structure et la hiérarchie de l’entreprise (directions, départments, services, …).</p>
-<p><img alt="../_images/employes-dept-new.png" src="../_images/employes-dept-new.png" /></p>
-<p>D’une manière générale, un département au sens odoo est toute unité élémentaire regroupant un ensemble d’employés. Ces départements peuvent être hiérarchisés en définissant le <strong>département parent</strong> et un <strong>gestionnaire</strong> peut être définis pour chacun d’entre eux ce qui permettra de définir les responsabilités/autorités de chaque employé.</p>
+<div class="section" id="configuration-des-employes">
+<h3>Configuration des Employés<a class="headerlink" href="#configuration-des-employes" title="Permalink to this headline">¶</a></h3>
+<p><img alt="employes-config-employe" src="../_images/employes-config-employe.png" /></p>
+<ul class="simple">
+<li><p>L’option <strong><em>Gestion des compétences</em></strong>  active de nouvelles fonctionnalités permettant aux <strong>GRH</strong> d’enrichir les informations des employés avec leurs expériences antérieurs et leurs compétences, tel que notées sur leurs CVs.</p></li>
+</ul>
+<p><img alt="employes-resume" src="../_images/employes-resume.png" /></p>
+<ul class="simple">
+<li><p>L’option <strong><em>Contrôle de présence</em></strong>  active de nouvelles fonctionnalités permettant aux <strong>GRH</strong> de suivre les présences des employés sur la base du <strong>module Présences</strong> ou de leurs status d’utilisateur dans Odoo (login/logout).</p></li>
+<li><p>L’option <strong><em>Advanced Presence Control</em></strong> permettant aux <strong>GRH</strong> de suivre les présences des employés sur la base des emails envoyés ou de leurs adresses IP.</p></li>
+</ul>
+</div>
+<div class="section" id="organisation-professionnelle">
+<h3>Organisation professionnelle<a class="headerlink" href="#organisation-professionnelle" title="Permalink to this headline">¶</a></h3>
+<p><img alt="employes-config-organisation" src="../_images/employes-config-organisation.png" /></p>
+<ul class="simple">
+<li><p>L’option <strong><em>Heures de travail de l’entreprise</em></strong>  permet de renseigner les horaires de travail de l’entreprise.</p></li>
+<li><p>L’option <strong><em>Organizational Chart</em></strong>  permet d’afficher un organigramme sur la fiche employé si son gestionnaire est définis.</p></li>
+</ul>
+</div>
+<div class="section" id="employee-update-rights">
+<h3>Employee Update Rights<a class="headerlink" href="#employee-update-rights" title="Permalink to this headline">¶</a></h3>
+<p>​L’option <strong><em>Employee Edition</em></strong> donne le droits aux employés de mettre à jours leurs propres données.</p>
 </div>
 <div class="section" id="postes-occupes">
 <h3>Postes occupés<a class="headerlink" href="#postes-occupes" title="Permalink to this headline">¶</a></h3>
 <p>Cette section, réservée aux <strong>responsables des ressources humaines</strong>, permet de définir les informations relatives aux postes occupés par les employés, tel que l’intitulé le département y relatif, le nombre d’employés supposés l’occupé et sa description.</p>
-<p><img alt="../_images/employes-poste-new.png" src="../_images/employes-poste-new.png" /></p>
+<p><img alt="employes-poste-new" src="../_images/employes-poste-new.png" /></p>
+</div>
+<div class="section" id="departements">
+<h3>Départements<a class="headerlink" href="#departements" title="Permalink to this headline">¶</a></h3>
+<p>Cette section, réservée aux <strong>responsables des ressources humaines</strong>, permet de définir la structure et la hiérarchie de l’entreprise (directions, départments, services, …).</p>
+<p><img alt="employes-dept-new" src="../_images/employes-dept-new.png" /></p>
+<p>D’une manière générale, un département au sens odoo est toute unité élémentaire regroupant un ensemble d’employés. Ces départements peuvent être hiérarchisés en définissant le <strong>département parent</strong> et un <strong>gestionnaire</strong> peut être définis pour chacun d’entre eux ce qui permettra de définir les responsabilités/autorités de chaque employé.</p>
 </div>
 <div class="section" id="plans">
 <h3>Plans<a class="headerlink" href="#plans" title="Permalink to this headline">¶</a></h3>
@@ -224,22 +253,32 @@
 <li><p>et le départ d’un employé (OffBoarding).</p></li>
 </ul>
 <p>Le responsable des ressources humaines peut créer plusieurs plans en fonction des processus métier de l’entreprise. Pour cela, il suffit de <strong><em>créer</em></strong> un nouveau plan et de définir les activités y relatif.</p>
-<p><img alt="../_images/employes-plan-new.png" src="../_images/employes-plan-new.png" /></p>
+<p><img alt="employes-plan-new" src="../_images/employes-plan-new.png" /></p>
 <p>Les types d’activités peuvent être définis dans la section <a class="reference external" href="./odoo-configuration-fr.md#messages">Configuration / Paramètres généraux / Messages / Activités</a>.</p>
 </div>
 </div>
 <div class="section" id="emlpoyes">
 <h2>Emlpoyés<a class="headerlink" href="#emlpoyes" title="Permalink to this headline">¶</a></h2>
 <p>Cette section, réservée aux <strong>responsables des ressources humaines</strong>, permet de gérer les informations relatives aux employés de l’entreprise.</p>
-<p><img alt="../_images/employes-new.png" src="../_images/employes-new.png" /></p>
+<p><img alt="employes-new" src="../_images/employes-new.png" /></p>
 <p>Les sections <strong><em>Informations professionelles</em></strong> et <strong><em>Informations personnelles</em></strong> contienent les données standards de l’employé, tel que le Lieu de travail, le mentor, les contacts, l’état civil, l’éducation, …</p>
-<p><img alt="../_images/employes-params-hr.png" src="../_images/employes-params-hr.png" /></p>
+<p><img alt="employes-params-hr" src="../_images/employes-params-hr.png" /></p>
 <p>La section <strong><em>Paramètres RH</em></strong> permet de <strong><em>lier</em></strong> l’employé à un utilisateur et de <strong><em>Générer</em></strong> un identifiant de badge en fonction du nom. Une fois l’identifiant du badge généré, les <strong>responsables des ressources humaines</strong> peuvent l’imprimer directement en format PDF.</p>
-<p><img alt="../_images/employes-badge.png" src="../_images/employes-badge.png" /></p>
+<p><img alt="employes-badge" src="../_images/employes-badge.png" /></p>
 </div>
 <div class="section" id="annuaire-des-salaries">
 <h2>Annuaire des salariés<a class="headerlink" href="#annuaire-des-salaries" title="Permalink to this headline">¶</a></h2>
 <p>L’annuaire des salariés est disponibles à tous les <strong>utilistateurs internes</strong> de l’entreprise afin de faciliter l’accès aux informations essentielles tel que les contacts. Les informations personnelles et les paramètres RH des employés ne sont pas accessibles.</p>
+</div>
+<div class="section" id="gestion-des-contrats">
+<h2>Gestion des contrats<a class="headerlink" href="#gestion-des-contrats" title="Permalink to this headline">¶</a></h2>
+<p>Si le composant <strong>Contrats des Employés</strong> est installé, les <strong>GRH</strong> ont la possibilité de gérer les contrats de leurs enmployés selon le pipeline suivant : <strong><em>Nouveau</em></strong>, <strong><em>En cours</em></strong>, <strong><em>Expiré</em></strong> ou <strong><em>Annulé</em></strong>.</p>
+<p>Ainsi pour chaque employés un contrat peut être crée avec tous les renseignements nécessaires.</p>
+<p><img alt="employés-contrat" src="../_images/employes-contrat.png" /></p>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p><img alt="workflow-employes" src="../_images/activity-employes.png" /></p>
 </div>
 <div class="section" id="plus-de-details">
 <h2>Plus de détails<a class="headerlink" href="#plus-de-details" title="Permalink to this headline">¶</a></h2>
