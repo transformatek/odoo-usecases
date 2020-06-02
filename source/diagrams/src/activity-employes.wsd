@@ -1,0 +1,48 @@
+
+@startuml activity-employes
+title Workflow pour le module Employés
+scale 100 width
+scale 1000 height
+
+|Gestionnaire GRH|
+start
+partition Configuration {
+    :Activer l'option **Gestion des compétences**;
+    :   Renseigner les **Heures de travail de l'entreprise**;
+    :Renseigner les **départements**;
+    :Renseigner les **postes de travail**;
+    :Renseigner les **Plans** (Parcours standards);
+    if (Gestion des contrats) then
+        :  Installer le composant **Contrats des Employés**;
+    endif
+}
+|#AntiqueWhite|Agent GRH|
+
+:Créer un Employé;
+:Associer au départment correspondant;    
+:Associer à un compte utilisateur;    
+
+repeat
+    :Lancer un plan sur un employé;
+repeat while (Plan) is (nécessaire)
+
+if (Gestion des contrats) then
+    repeat 
+        :Créer un niuveau contrats;
+        :Entrée en vigeur (en cours);
+        if (Fin de contrat) then
+        :Annulation;
+        stop
+        else
+        :Expiration;
+        endif
+    repeat while (Renouvellement) is (oui)
+endif
+
+
+|Employés|
+:Consulter l'annuaire des \nEmployés de l'entreprise;
+
+end
+
+@enduml
