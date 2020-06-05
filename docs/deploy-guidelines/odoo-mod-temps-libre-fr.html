@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Module Temps Libre &mdash; odoo-usecases 1.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Module Recrutement" href="odoo-mod-recrutement-fr.html" />
+    <link rel="prev" title="Module Présence" href="odoo-mod-presence-fr.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> odoo-usecases
+          
+
+          
+            
+            <img src="../_static/logo-enlightme.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Guides de déploiement:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-guidelines-fr.html">Sommaire des cas d’utilisation d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-overview-fr.html">Vue d’ensemble d’odoo (overview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-user-preferences-fr.html">Préférences d’utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-configuration-fr.html">Vue d’ensemble de la configuration (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-applications-fr.html">Vue d’ensemble des Applications (admin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-conversations.html">Conversations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-messages-fr.html">Module Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-employee-fr.html">Module Employés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-presence-fr.html">Module Présence</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module Temps Libre</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#presentation-du-module">Présentation du module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-admin">Configuration (admin)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#types-de-conges">Types de congés</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mes-conges">Mes congés</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tableau-de-bord">Tableau de bord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#demandes-de-conges">Demandes de congés</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#demandes-d-attribution">Demandes d’attribution</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tout-le-monde">Tout le monde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#responsables">Responsables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analyse">Analyse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workflow">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plus-de-details">Plus de détails</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-recrutement-fr.html">Module Recrutement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-stock-fr.html">Module Stock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-facturation-fr.html">Module Facturation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-vente-fr.html">Module Vente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-crm-fr.html">Module CRM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-achats-fr.html">Module Achats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-fabrication-fr.html">Module Fabrication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-projet-fr.html">Module Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-add-project-scrum-fr.html">Module Projet Scrum</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Scénarios de déploiement:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-standard.html">Scénario de déploiement standard d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-deploy-scenario-projet.html">Scénario de déploiement pour une gestion par projet</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Guides d'administration:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guidelines/odoo-admin-guidelines-fr.html">Lignes directrices pour l’administration d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guidelines/odoo-admin-overview-fr.html">Aperçu général de l’administration d’odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guidelines/odoo-deploy-mod-in-production-env-fr.html">Déployer un nouveau module dans un environment en production</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">odoo-usecases</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Module Temps Libre</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deploy-guidelines/odoo-mod-temps-libre-fr.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-temps-libre">
+<h1>Module Temps Libre<a class="headerlink" href="#module-temps-libre" title="Permalink to this headline">¶</a></h1>
+<p>Ce document illustre les différentes fonctionnalités du module <strong>Temps Libre</strong> d’odoo 13 community.</p>
+<div class="section" id="presentation-du-module">
+<h2>Présentation du module<a class="headerlink" href="#presentation-du-module" title="Permalink to this headline">¶</a></h2>
+<p>Ce module complémentaire au module <strong>Employés</strong> est destiné à gérer les vacances et les absences des employés. Il permet :</p>
+<ul class="simple">
+<li><p>de dispoer d’une vue d’ensemble sur les congés de tous les employés et les jours de vacances pris.</p></li>
+<li><p>aux employés de créer des demandes et aux managers de les approuvées en quelques clics tout en mettant à jour l’agenda de chaque employé.</p></li>
+<li><p>aux managers de garder une vue globale des congés de leur équipes afin que celle-ci reste organisée et de pour prévoir facilement la répartition des tâches en l’absence de certains membres.</p></li>
+<li><p>de recevez des rapports afin de planifier à l’avance.</p></li>
+<li><p>de disposer d’un outil de reporting simple afin de créer des rapports en un seul clic pour chaque demande de congé, détaillés par type de demande, employé, département et même pour l’ensemble de l’entreprise.</p></li>
+<li><p>d’obtenir des statistiques sur les congés et de planifier au long terme afin d’assurer le maintien de la productivité à son plus haut niveau.</p></li>
+</ul>
+<p><img alt="temps-libre-overview" src="../_images/temps-libre-overview.png" /></p>
+</div>
+<div class="section" id="configuration-admin">
+<h2>Configuration (admin)<a class="headerlink" href="#configuration-admin" title="Permalink to this headline">¶</a></h2>
+<p>Cette section, réservée aux <strong>administrateurs</strong>, permet de définir les paramètres généraux du module.</p>
+<div class="section" id="types-de-conges">
+<h3>Types de congés<a class="headerlink" href="#types-de-conges" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet aux <strong>GRH</strong> de gérer les types de congés autorisés par l’entreprise. Ainsi, les <strong>GRH</strong> on la possibilité de renseigner toutes les informations utiles des congés légaux et spécifiques ouverts aux employés, tel que :  la durrée, le mode d’attribution, les autorités de validation et la validité.</p>
+<p><img alt="temps-libre-type-conge" src="../_images/temps-libre-type-conge.png" /></p>
+<p>Aussi, à partir de cette vue, les <strong>GRH</strong> disposent d’une synthèse simplifiée pour chaque type de congés avec <strong><em>Group Days</em></strong> et <strong><em>Congés de groupe</em></strong>.</p>
+</div>
+</div>
+<div class="section" id="mes-conges">
+<h2>Mes congés<a class="headerlink" href="#mes-conges" title="Permalink to this headline">¶</a></h2>
+<p>Employé
+Responsable hiérarchique
+Gestionnaires RH</p>
+<div class="section" id="tableau-de-bord">
+<h3>Tableau de bord<a class="headerlink" href="#tableau-de-bord" title="Permalink to this headline">¶</a></h3>
+<p>Cette section donne accès à une vue en calendrier ou en liste à l’ensemble des congés de l’utilsateur en cours. La vue en calendrier peut être paramétrée pour afficher les congés par jour, semaine ou mois.</p>
+<p>En utlisant la commande <strong>Nouvelle demande de congés</strong> ou en sélectionnant directement les journées qui’il veut prendre sur le calendrier, l’employé peut créer une nouvelle demande de congés et renseigner les informations y afférentes.</p>
+<p>Aussi, la commande <strong>Nouvelle demande d’allocation</strong> permet à l’employé de créer une nouvelle demande d’attribution et renseigner les informations y afférentes.</p>
+</div>
+<div class="section" id="demandes-de-conges">
+<h3>Demandes de congés<a class="headerlink" href="#demandes-de-conges" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet aux employés de demander des congés pour les <strong>types</strong> dont le <strong>mode</strong> d’attribution est soit <strong><em>Pas d’allocation nécessaire</em></strong> ou <strong><em>Alloué par les RH uniquement</em></strong>.</p>
+<p>Dans la demnade, l’employé renseigne toutes les informations utiles, tel que : le type de congés, la période et la description. Cette demande de congés progresse selon un processus en deux (02) étapes, à savoir : <strong>à approuver</strong> et <strong><em>Confirmé par responsable</em></strong>.</p>
+<p><img alt="temps-libre-demande-conges" src="../_images/temps-libre-demande-conges.png" /></p>
+<p>Une fois la demnade créee, et selon le mode de validation du type de congés demandé, le <strong>Responsbale hiérarchique</strong> de l’employé peut <strong>Approuver</strong> ou <strong>Refuser</strong> la demande en utlisant les commandes y afférentes.</p>
+<p>Par la suite, le <strong>GRH</strong> doit <strong>Valider</strong> la demande, si son type le nécessite.</p>
+</div>
+<div class="section" id="demandes-d-attribution">
+<h3>Demandes d’attribution<a class="headerlink" href="#demandes-d-attribution" title="Permalink to this headline">¶</a></h3>
+<p>Cette section permet aux employés de demander des attributions de temps libre pour les <strong>types</strong> dont le <strong>mode</strong> d’attribution est <strong><em>Free Allocation request</em></strong> (demande d’allocation libre) ou dont le nombre de jours a déjà été alloués par le <strong>GRH</strong>. Ainsi, l’employé renseigne les informations suivantes : description, type de congés, durée et commentaire.</p>
+<p><img alt="temps-libre-demande-attribution" src="../_images/temps-libre-demande-attribution.png" /></p>
+<p>Cette demande d’attribution progresse selon le processus suivant : <strong><em>à soumettre</em></strong>, <strong><em>à approuver</em></strong> et <strong><em>Confirmé par responsable</em></strong>. Pour ce faire, le <strong>Responsable hiérarchique</strong> et le <strong>GRH</strong> doivent valider cette demande pour que l’employé puisse faire des demandes de congés dans la limite des journées allouées.</p>
+</div>
+</div>
+<div class="section" id="tout-le-monde">
+<h2>Tout le monde<a class="headerlink" href="#tout-le-monde" title="Permalink to this headline">¶</a></h2>
+<p>Cette section donne accès à une vue en calendrier ou en liste à l’ensemble des congés des employés de l’entreprise. La vue en calendrier peut être paramétrée pour afficher les congés par jour, semaine ou mois.</p>
+</div>
+<div class="section" id="responsables">
+<h2>Responsables<a class="headerlink" href="#responsables" title="Permalink to this headline">¶</a></h2>
+<p>Cette section est déstinée aux <strong>Responsables hiérarchiques</strong> d’accéder directement aux enregistrements de temps libres et d’attribution <strong>à approuvés</strong>, à liste de <strong>Tous</strong> les temps libres et attributions, ainsi qu’aux <strong>Temps libres reportés sur la paie</strong>. La liste de <strong>Tous</strong> les employés et les <strong>Temps libres reportés sur la paie</strong> ne sont accessibles qu’aux <strong>GRH</strong>.</p>
+<p>La liste des demandes de temps libre (congés, attributions) <strong>à approuver</strong> affiche la liste des employés dont le paramètre <strong>Gestionnaire</strong> (fiche de l’employé) est définis sur l’utilisateur en cours.</p>
+<p>Pour les demandes d’attribution, le <strong>GRH</strong> dispose de plusieurs modes d’allocation, soit <strong><em>Par employé</em></strong>, <strong><em>Par société</em></strong>, <strong><em>Par Département</em></strong> ou <strong><em>Par catégorie d’employé</em></strong>. Il peut soit <strong>Approuver</strong> refuser <strong>Refuser</strong> la demande en utlisant les commandes y afférentes.</p>
+<p><img alt="temps-libre-allocation-approbation" src="../_images/temps-libre-demande-allocation-approbation.png" /></p>
+</div>
+<div class="section" id="analyse">
+<h2>Analyse<a class="headerlink" href="#analyse" title="Permalink to this headline">¶</a></h2>
+<p>La partie analyse permet aux <strong>GRH</strong> de visualiser des vues synthétiques sous différentes formes (listes, tableau croisé ou graphes) de la situation des <strong>congés des employés</strong>, soit par <strong>employé</strong> soit par <strong>type</strong>.</p>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p><img alt="workflow-temps-libre" src="../_images/activity-temps-libre.png" /></p>
+</div>
+<div class="section" id="plus-de-details">
+<h2>Plus de détails<a class="headerlink" href="#plus-de-details" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Pour la collaboration sur les formulaires de ce module, consulter la fonctionnalité <a class="reference internal" href="odoo-conversations.html"><span class="doc">conversations</span></a>.</p></li>
+<li><p><a class="reference external" href="https://www.odoo.com/fr_FR/page/leaves">Site officiel d’odoo</a>.</p></li>
+</ul>
+<hr class="docutils" />
+<p><a class="reference internal" href="odoo-deploy-guidelines-fr.html"><span class="doc">Retour au sommaire</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="odoo-mod-recrutement-fr.html" class="btn btn-neutral float-right" title="Module Recrutement" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="odoo-mod-presence-fr.html" class="btn btn-neutral float-left" title="Module Présence" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Enlight.me
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
