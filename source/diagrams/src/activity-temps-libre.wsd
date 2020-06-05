@@ -1,0 +1,34 @@
+
+@startuml activity-temps-libre
+title Workflow pour le module Temps libre
+scale 200 width
+scale 2000 height
+
+|Gestionnaire GRH|
+start
+partition Configuration {
+    :Définir les **Types de congés**;
+    :Créer les allocations pour les employés;
+}
+
+|#AntiqueWhite|Employé|
+
+if (journées allouées) then (non)
+    :Demande d'attribution;
+else (oui)
+    :Demande de congés;
+endif
+
+|Responsable hiérarchique|
+    :Appouver ou Refuser;
+if (nécessite validation GRH) then
+    |Gestionnaire GRH|
+        :Validation ou Refus;            
+endif
+
+|Gestionnaire GRH|
+:Analyses par **Employé** \nou par **Type d'employé**;
+
+end
+
+@enduml
