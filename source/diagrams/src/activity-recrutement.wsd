@@ -1,0 +1,47 @@
+@startuml activity-recrutement
+
+title Workflow pour le module Recrutement
+scale 100 width
+scale 1000 height
+
+|Gestionnaire GRH|
+start
+partition Configuration {
+    :Définir les **Départements**;
+    :Définir les **Types d'activités**;
+    :Définir les **Postes** à pourvoir;
+    if (Formulaires d'entretiens) then
+        :Créer ou associer un formulaire;
+    endif
+    if (Publication en ligne) then
+        :Publier l'offre;
+    endif
+}
+
+|#AntiqueWhite|Recruteur|
+
+repeat
+    if (Candidature en ligne) then (oui)
+        :Réception automatique des candidatures;
+    else (non)
+        :Créer candidat manuellement;
+    endif
+
+    :Examiner les candidatures en cours;
+    :Faire progrésser la candidature dans le pipeline \n(pré-qualification/entretien/proposition/contrat);
+    if (candidat accepté) then (oui)
+        :Signature contrat;
+        :Créer un employé;
+    else (non)
+        :Refuser la candidture;
+    endif
+repeat while (Nouveaux candidats) is (oui)
+
+
+|Gestionnaire GRH|
+:Tableau de Bord;
+:Analyses;
+
+end
+
+@enduml
