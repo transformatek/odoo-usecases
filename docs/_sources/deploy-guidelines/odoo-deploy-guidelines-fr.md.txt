@@ -14,7 +14,6 @@ Ce document fait référence aux explications étapes par étapes du déploiment
   * [Conversations](./odoo-conversations.md)
 * Modules de base
   * [Module Messages](./odoo-mod-messages-fr.md)
-  * [Module Employés](./odoo-mod-employee-fr.md)
   * [Module Stock](./odoo-mod-stock-fr.md)
   * [Module Facturation](./odoo-mod-facturation-fr.md)
   * [Module Vente](./odoo-mod-vente-fr.md)
@@ -22,6 +21,11 @@ Ce document fait référence aux explications étapes par étapes du déploiment
   * [Module Achats](./odoo-mod-achats-fr.md)
   * [Module Fabrication](./odoo-mod-fabrication-fr.md)
   * [Module Projet](./odoo-mod-projet-fr.md)
+* Modules de Ressources Humaines
+  * [Module Employés](./odoo-mod-employee-fr.md)
+  * [Module Présence](./odoo-mod-presence-fr.md)
+  * [Module Temps Libre](./odoo-mod-temps-libre-fr.md)
+  * [Module Recrutement](./odoo-mod-recrutement-fr.md)
 * Modules additionnels
   * [Module Projet Scrum](./odoo-mod-add-project-scrum-fr.md)
 
