@@ -17,6 +17,7 @@ Ce document décrit les principales activités d'administration de la platforme 
 
 ## Ressources supplémentaires
 
-- [Documentation utilisateur odoo](https://www.odoo.com/documentation/user/13.0/fr/index.html)
-- [Odoo Connaissances](https://www.odoo.com/fr_FR/slides)
-- [Odoo eLearning sur YouTube](https://www.youtube.com/watch?v=u4uJTeqskxc&list=PL1-aSABtP6AD-t0GEoxMXgCa_qLsHs5PR)
+* [OpenUpgrade - Open Source upgrade scripts for Odoo](https://doc.therp.nl/openupgrade/)
+* [Documentation utilisateur odoo](https://www.odoo.com/documentation/user/13.0/fr/index.html)
+* [Odoo Connaissances](https://www.odoo.com/fr_FR/slides)
+* [Odoo eLearning sur YouTube](https://www.youtube.com/watch?v=u4uJTeqskxc&list=PL1-aSABtP6AD-t0GEoxMXgCa_qLsHs5PR)

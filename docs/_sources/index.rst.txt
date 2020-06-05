@@ -19,6 +19,7 @@ Welcome to odoo-usecases's documentation!
    ./deploy-guidelines/odoo-mod-messages-fr.md
    ./deploy-guidelines/odoo-mod-employee-fr.md
    ./deploy-guidelines/odoo-mod-presence-fr.md
+   ./deploy-guidelines/odoo-mod-recrutement-fr.md
    ./deploy-guidelines/odoo-mod-stock-fr.md
    ./deploy-guidelines/odoo-mod-facturation-fr.md
    ./deploy-guidelines/odoo-mod-vente-fr.md
