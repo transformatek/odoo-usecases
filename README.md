@@ -10,7 +10,7 @@ This repository contains documentation for **Odoo** use cases dediacated to smal
 
 ### Content
 
-* [Deployment guidelines](https://enlight-me.github.io/odoo-usecases/)
+* [Deployment guidelines](https://transformatek.github.io/odoo-usecases/)
 
 #### TODO
 
@@ -23,7 +23,7 @@ This repository contains documentation for **Odoo** use cases dediacated to smal
 Clone the repository
 
 ```bash
-git clone https://github.com/enlight-me/odoo-usecases.git
+git clone https://github.com/transformatek/odoo-usecases.git
 cd odoo-usecases/
 touch .nojekyll
 ```

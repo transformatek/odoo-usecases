@@ -21,11 +21,11 @@ from recommonmark.transform import AutoStructify
 # -- Project information -----------------------------------------------------
 
 project = 'odoo-usecases'
-copyright = '2020, Enlight.me'
-author = 'BENAHMED DAHO Ali'
+copyright = '2021, SARL TransformaTek'
+author = 'Ali BENAHMED DAHO'
 
 # The full version, including alpha/beta/rc tags
-release = '1.1'
+release = '1.2'
 
 
 # -- General configuration ---------------------------------------------------
@@ -53,7 +53,7 @@ exclude_patterns = []
 #
 # html_theme = 'alabaster'
 html_theme = "sphinx_rtd_theme" # "sphinxdoc" 
-html_logo = "_static/logo-enlightme.png"
+html_logo = "_static/logo-transformatek.png"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -63,7 +63,7 @@ html_static_path = ['_static']
 
 # github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
 
-github_doc_root = 'https://github.com/enlight-me/odoo-usecases/tree/master/docs/'
+github_doc_root = 'https://github.com/transformatek/odoo-usecases/tree/master/docs/'
 
 def setup(app):
     app.add_config_value('recommonmark_config', {
