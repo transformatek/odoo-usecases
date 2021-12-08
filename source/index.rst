@@ -27,6 +27,7 @@ Welcome to odoo-usecases's documentation!
    ./deploy-guidelines/odoo-mod-crm-fr.md
    ./deploy-guidelines/odoo-mod-achats-fr.md
    ./deploy-guidelines/odoo-mod-fabrication-fr.md
+   ./deploy-guidelines/odoo-mod-maintenance-fr.md
    ./deploy-guidelines/odoo-mod-projet-fr.md
    ./deploy-guidelines/odoo-mod-add-project-scrum-fr.md
 

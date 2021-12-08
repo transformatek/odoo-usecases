@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Module Projet Scrum &mdash; odoo-usecases 1.2 documentation</title>
+  <title>Module Maintenance &mdash; odoo-usecases 1.2 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Scénario de déploiement standard d’odoo" href="odoo-deploy-scenario-standard.html" />
-    <link rel="prev" title="Module Projet" href="odoo-mod-projet-fr.html" /> 
+    <link rel="next" title="Module Projet" href="odoo-mod-projet-fr.html" />
+    <link rel="prev" title="Module Fabrication" href="odoo-mod-fabrication-fr.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -57,19 +57,23 @@
 <li class="toctree-l1"><a class="reference internal" href="odoo-mod-crm-fr.html">Module CRM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="odoo-mod-achats-fr.html">Module Achats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="odoo-mod-fabrication-fr.html">Module Fabrication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="odoo-mod-maintenance-fr.html">Module Maintenance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="odoo-mod-projet-fr.html">Module Projet</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Module Projet Scrum</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module Maintenance</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#presentation-du-module">Présentation du module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configuration-admin">Configuration (admin)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sprints">Sprints</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#scrum-teams">Scrum Teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#equipes-de-maintenance">Équipes de maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#categories-d-equipement">Catégories d’équipement</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#taches">Tâches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tableau-de-bord">Tableau de bord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#maintenance">Maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#equipements">Equipements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analyse">Analyse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workflow">Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#plus-de-details">Plus de détails</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-projet-fr.html">Module Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odoo-mod-add-project-scrum-fr.html">Module Projet Scrum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Scénarios de déploiement:</span></p>
 <ul>
@@ -97,9 +101,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Module Projet Scrum</li>
+      <li>Module Maintenance</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/deploy-guidelines/odoo-mod-add-project-scrum-fr.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/deploy-guidelines/odoo-mod-maintenance-fr.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -107,39 +111,66 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-projet-scrum">
-<h1>Module Projet Scrum<a class="headerlink" href="#module-projet-scrum" title="Permalink to this headline"></a></h1>
-<p>Ce document illustre les différentes fonctionnalités du module additionnel <strong>Projet Scrum</strong> d’odoo 13 community.</p>
+  <section id="module-maintenance">
+<h1>Module Maintenance<a class="headerlink" href="#module-maintenance" title="Permalink to this headline"></a></h1>
+<p>Ce document illustre les différentes fonctionnalités du module <strong>Maintenance</strong> d’odoo 13 community.</p>
 <section id="presentation-du-module">
 <h2>Présentation du module<a class="headerlink" href="#presentation-du-module" title="Permalink to this headline"></a></h2>
-<p>Ce module additionnel au <a class="reference internal" href="odoo-mod-projet-fr.html"><span class="doc">Module Projet</span></a>, est destiné à la gestion de projet agiles avec la méthode <strong>Scrum</strong>. Il permet :</p>
+<p>Ce module est destiné à la gestion de la maintenance des équipements de l’entreprise. Il permet :</p>
 <ul class="simple">
-<li><p>de gérer les Sprints et d’associer des équipes scrum à des projets.</p></li>
-<li><p>d’associer les taches à des Sprints afin de faciliter leur suivi.</p></li>
+<li><p>d’automatiser la maintenance préventive pour garder la chaine de production toujours oprationnelle.</p></li>
+<li><p>d’organiser les demandes d’entretien avec des vues en Kanban ou en Calendrier.</p></li>
+<li><p>d’augmenter la performance des équipements avec une maintenance efficace et répondant aux exigences de la production.</p></li>
+<li><p>de disposer de tableaux de bord statistiques complets afin d’optimiser la performance globale.</p></li>
 </ul>
+<p><img alt="../_images/maintenance-overview.png" src="../_images/maintenance-overview.png" /></p>
 </section>
 <section id="configuration-admin">
 <h2>Configuration (admin)<a class="headerlink" href="#configuration-admin" title="Permalink to this headline"></a></h2>
-<section id="sprints">
-<h3>Sprints<a class="headerlink" href="#sprints" title="Permalink to this headline"></a></h3>
-<p>Cette section permet de prédéfinir les informations essentielles des <strong>Sprints</strong> dans les quelles s’exécutes les taches en cours.</p>
-<p><img alt="../_images/scrum-sprint-new.png" src="../_images/scrum-sprint-new.png" /></p>
+<p>Cette section, réservée aux <strong>administrateurs</strong> et <strong>Gestionnaires de la maintenance</strong>, permet de définir les paramètres généraux du module, tel que l’ajout d’une équipe de maintenance et des catégories d’équipements.</p>
+<section id="equipes-de-maintenance">
+<h3>Équipes de maintenance<a class="headerlink" href="#equipes-de-maintenance" title="Permalink to this headline"></a></h3>
+<p>Cette section permet de renseigner les informations nécessaires aux équipes de maintenance, notamment le nom de l’équipe et ses membres.</p>
+<p><img alt="../_images/maintenance-teams.png" src="../_images/maintenance-teams.png" /></p>
 </section>
-<section id="scrum-teams">
-<h3>Scrum Teams<a class="headerlink" href="#scrum-teams" title="Permalink to this headline"></a></h3>
-<p>Cette section permet de prédéfinir les informations essentielles relatives aux <strong>Equipes Scrum</strong> impliquées dans la réalisation des taches du projet.</p>
-<p><img alt="../_images/scrum-equipe-new.png" src="../_images/scrum-equipe-new.png" /></p>
+<section id="categories-d-equipement">
+<h3>Catégories d’équipement<a class="headerlink" href="#categories-d-equipement" title="Permalink to this headline"></a></h3>
+<p>Cette section permet de renseigner les informations nécessaires aux catégories d’équipements, tel que le nom et le resposnable. Dans cette même vue (boutons en haut à droite) l’utilisateur dispose de statistiques et d’un accès directes aux équipements et aux opérations de maintenance associés à cette catégorie.</p>
+<p><img alt="../_images/maintenance-equip-categ.png" src="../_images/maintenance-equip-categ.png" /></p>
 </section>
 </section>
-<section id="taches">
-<h2>Tâches<a class="headerlink" href="#taches" title="Permalink to this headline"></a></h2>
-<p>Ce module ajoute de nouvelles fonctionnalités au module projet, notamment aux <strong>Tâches</strong>, qui dipose ainsi de nouveau paramètres permettant de les liées aux <strong>Sprints</strong>.</p>
-<p><img alt="../_images/scrum-task-link-to-sprint.png" src="../_images/scrum-task-link-to-sprint.png" /></p>
+<section id="tableau-de-bord">
+<h2>Tableau de bord<a class="headerlink" href="#tableau-de-bord" title="Permalink to this headline"></a></h2>
+<p>Le tableau de Bord du module maintenance permet de disposer d’une vue globale de l’activé des équipes et offre des liens directs vers les demandes <strong><strong>A faire</strong></strong> <strong><strong>Non Programmée</strong></strong> et autres.</p>
+<p><img alt="../_images/maintenance-dashboard.png" src="../_images/maintenance-dashboard.png" /></p>
+</section>
+<section id="maintenance">
+<h2>Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this headline"></a></h2>
+<p>Cette section permet de gérer les demandes de maintenance, ainsi que les calendriers y afférents. L’utilisateur peut, créer des demande de maintenance et renseigner toutes les informations y relatives, tel que l’équipement concerné, le type de maintenance <strong>préventive/corrective</strong>, l’équipe resposnable, …</p>
+<p><img alt="../_images/maintenance-request.png" src="../_images/maintenance-request.png" /></p>
+<p>Cette demande de maintenance, progresse par plusieurs état qui sont : <strong><em>Nouvelle demande</em></strong>, <strong><em>En cours</em></strong>, <strong><em>Réparé</em></strong> et <strong><em>Rebut</em></strong>.</p>
+<p>Une fois crées, les demandes de maintenances, peuvent être affichées sous forme de <strong>Pipeline</strong>, de <strong>Calendrier</strong> de <strong>Graph</strong> ou de **Calendrier.</p>
+<p><img alt="../_images/maintenance-pipeline.png" src="../_images/maintenance-pipeline.png" /></p>
+</section>
+<section id="equipements">
+<h2>Equipements<a class="headerlink" href="#equipements" title="Permalink to this headline"></a></h2>
+<p>L’équipement est l’élement principal de tout opération de maintenance et cette partie permet de renseigner toutes informations qui lui sont associés, tel que le nom, la catégorie, le propriétaire (opérateur), l’équipe de maintenance qui lui assicié, les lieux sur lesquels il est exploités, …</p>
+<p><img alt="../_images/maintenace-equipement.png" src="../_images/maintenace-equipement.png" /></p>
+<p>D’autre informations sur l’équipements sont disponibles dans l’onglet <strong>informations de l’article</strong>, tel que le fournisseur, le modèle, le numéro de série, la date effective, …</p>
+<p><img alt="../_images/maintenance-equip-infos.png" src="../_images/maintenance-equip-infos.png" /></p>
+</section>
+<section id="analyse">
+<h2>Analyse<a class="headerlink" href="#analyse" title="Permalink to this headline"></a></h2>
+<p>La partie analyse permet aux <strong>Gestionnaires de la maintenance</strong> de visualiser des vues synthétiques sous différentes formes (listes, tableau croisé ou graphes).</p>
+</section>
+<section id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline"></a></h2>
+<p><img alt="../_images/activity-maintenance.png" src="../_images/activity-maintenance.png" /></p>
 </section>
 <section id="plus-de-details">
 <h2>Plus de détails<a class="headerlink" href="#plus-de-details" title="Permalink to this headline"></a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/enlight-me/odoo-addons">Lien de téléchargement du module</a>.</p></li>
+<li><p><a class="reference external" href="https://www.odoo.com/fr_FR/app/maintenance">Site officiel d’odoo</a>.</p></li>
 </ul>
 <hr class="docutils" />
 <p><a class="reference internal" href="odoo-deploy-guidelines-fr.html"><span class="doc">Retour au sommaire</span></a></p>
@@ -150,8 +181,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="odoo-mod-projet-fr.html" class="btn btn-neutral float-left" title="Module Projet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="odoo-deploy-scenario-standard.html" class="btn btn-neutral float-right" title="Scénario de déploiement standard d’odoo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="odoo-mod-fabrication-fr.html" class="btn btn-neutral float-left" title="Module Fabrication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="odoo-mod-projet-fr.html" class="btn btn-neutral float-right" title="Module Projet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

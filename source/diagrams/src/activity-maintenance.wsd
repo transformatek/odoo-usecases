@@ -1,0 +1,30 @@
+
+@startuml activity-maintenance
+title Workflow pour le module Maintenance
+scale 100 width
+scale 1000 height
+
+
+|Gestionnaire Maintenance|
+start
+partition Configuration {
+    :Renseigner les **équipes de maintenance**;
+    :Renseigner les **catégories d'équipments**;
+}
+|#AntiqueWhite|Vendeur|
+:Créer une demande de maintenance;
+:Planifier les interventions de maintenance;
+if (Intervention) then (Résussie)
+    :Marquer comme **Réparée**;
+else (Echouée)
+    :Marquer comme **Rebut**;
+    :Enregister le motif;
+    stop
+endif
+
+|Gestionnaire Maintenance|
+:Analyse;
+
+end
+
+@enduml
